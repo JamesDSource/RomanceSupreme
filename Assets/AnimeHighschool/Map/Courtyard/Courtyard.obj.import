@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ddu8l4o0rbobx"
+path="res://.godot/imported/Courtyard.obj-f8b2952c0cd68abd252f296c2bf8f1a8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Courtyard.obj-f8b2952c0cd68abd252f296c2bf8f1a8.mesh"]
+
+source_file="res://Assets/AnimeHighschool/Map/Courtyard/Courtyard.obj"
+dest_files=["res://.godot/imported/Courtyard.obj-f8b2952c0cd68abd252f296c2bf8f1a8.mesh", "res://.godot/imported/Courtyard.obj-f8b2952c0cd68abd252f296c2bf8f1a8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://b32uphaqqcdkb"]
+
+[ext_resource type="ArrayMesh" uid="uid://ddu8l4o0rbobx" path="res://Assets/AnimeHighschool/Map/Courtyard/Courtyard.obj" id="1_7efek"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Courtyard" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.294907, 9.53674e-07, -0.31738)
+mesh = ExtResource( "1_7efek" )
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.272556, -0.127954, 0.953594, 0.0274311, 0.989681, 0.140637, -0.961749, 0.0644895, -0.266234, 24.1829, 3.34749, -3.28671)
