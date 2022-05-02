@@ -1,12 +1,29 @@
-[gd_scene load_steps=2 format=3 uid="uid://b32uphaqqcdkb"]
+[gd_scene load_steps=7 format=3 uid="uid://b32uphaqqcdkb"]
 
-[ext_resource type="ArrayMesh" uid="uid://ddu8l4o0rbobx" path="res://Assets/AnimeHighschool/Map/Courtyard/Courtyard.obj" id="1_7efek"]
+[ext_resource type="Script" path="res://Courtyard.gd" id="1_jlh3k"]
+[ext_resource type="PackedScene" uid="uid://brkbsq3phhunr" path="res://ThirdPersonPlayer/player_third_person.tscn" id="2_lwojh"]
+[ext_resource type="PackedScene" uid="uid://bbr2bw63egc4l" path="res://Assets/AnimeHighschool/Map/Courtyard/Courtyard.gltf" id="3_dsg0v"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8m723"]
+
+[sub_resource type="Sky" id="Sky_kq6ws"]
+sky_material = SubResource( "ProceduralSkyMaterial_8m723" )
+radiance_size = 5
+
+[sub_resource type="Environment" id="Environment_82cp0"]
+background_mode = 2
+sky = SubResource( "Sky_kq6ws" )
 
 [node name="Node3D" type="Node3D"]
-
-[node name="Courtyard" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.294907, 9.53674e-07, -0.31738)
-mesh = ExtResource( "1_7efek" )
+script = ExtResource( "1_jlh3k" )
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.272556, -0.127954, 0.953594, 0.0274311, 0.989681, 0.140637, -0.961749, 0.0644895, -0.266234, 24.1829, 3.34749, -3.28671)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource( "2_lwojh" )]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.298487, -9.53675e-07, 4.33555)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( "Environment_82cp0" )
+
+[node name="Courtyard" parent="." instance=ExtResource( "3_dsg0v" )]
