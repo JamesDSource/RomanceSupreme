@@ -20,7 +20,7 @@ length = 0.25
 [sub_resource type="SphereShape3D" id="SphereShape3D_412b1"]
 radius = 1.84854
 
-[node name="CharacterBody3D" type="CharacterBody3D"]
+[node name="Player3P" type="CharacterBody3D"]
 script = ExtResource( "1_pyhrd" )
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
