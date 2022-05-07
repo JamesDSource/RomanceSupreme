@@ -22,9 +22,9 @@ GlobalSettings="*res://global_settings.gd"
 
 [display]
 
-window/size/width=1920
-window/size/height=1080
-window/stretch/mode="viewport"
+window/size/width=2560
+window/size/height=1440
+window/dpi/allow_hidpi=true
 
 [global]
 
@@ -69,4 +69,5 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+quality/filters/msaa=4
 environment/default_environment="res://default_env.tres"
