@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://menus/redirect_button/redirect_button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/fonts/lemon_tea.tres" type="DynamicFont" id=2]
+[ext_resource path="res://menus/selector/selector.tscn" type="PackedScene" id=3]
+[ext_resource path="res://menus/quit_button/quit_button.tscn" type="PackedScene" id=4]
+[ext_resource path="res://menus/settings/settings_menu.tscn" type="PackedScene" id=5]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 2 )
+
+[node name="MainMenu" type="ViewportContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Selector" parent="." instance=ExtResource( 3 )]
+default = NodePath("Main")
+
+[node name="Main" type="VBoxContainer" parent="Selector"]
+visible = false
+anchor_left = 0.3
+anchor_right = 0.7
+anchor_bottom = 1.0
+custom_constants/separation = 30
+alignment = 1
+
+[node name="Label" type="Label" parent="Selector/Main"]
+margin_top = 366.0
+margin_right = 768.0
+margin_bottom = 426.0
+theme = SubResource( 1 )
+text = "Main Menu"
+align = 1
+valign = 1
+
+[node name="RedirectButton" parent="Selector/Main" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_right = 0.0
+margin_top = 456.0
+margin_right = 768.0
+margin_bottom = 522.0
+text = "Settings"
+redirect_to = "Settings"
+
+[node name="RedirectButton2" parent="Selector/Main" instance=ExtResource( 1 )]
+anchor_left = 0.0
+anchor_right = 0.0
+margin_top = 552.0
+margin_right = 768.0
+margin_bottom = 618.0
+text = "Credits"
+redirect_to = "Credits"
+
+[node name="Button" parent="Selector/Main" instance=ExtResource( 4 )]
+anchor_left = 0.0
+anchor_right = 0.0
+margin_top = 648.0
+margin_right = 768.0
+margin_bottom = 714.0
+
+[node name="Settings" parent="Selector" instance=ExtResource( 5 )]

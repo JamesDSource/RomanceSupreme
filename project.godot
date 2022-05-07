@@ -11,11 +11,14 @@ config_version=4
 [application]
 
 config/name="RomanceSupreme"
+run/main_scene="res://james_test_env/test_env.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-InputState="*res://singletons/input_state.gd"
+InputState="*res://input_state.gd"
+TextBoxController="*res://text_box/text_box_controller.gd"
+GlobalSettings="*res://global_settings.gd"
 
 [display]
 

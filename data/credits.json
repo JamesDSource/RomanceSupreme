@@ -1,0 +1,42 @@
+[
+	{
+		"name": "James Duran",
+		"roles": [
+			"Visionary",
+			"Lead Programmer",
+			"Artist"
+		]
+	},
+	{
+		"name": "Grazurra",
+		"roles": [
+			"Visionary",
+			"Lead Writer"
+		]
+	},
+	{
+		"name": "Soren Dugger",
+		"roles": [
+			"Visionary",
+			"Lead Artist"
+		]
+	},
+	{
+		"name": "Maxfield English",
+		"roles": [
+			"Concept Artist"
+		]
+	},
+	{
+		"name": "@fkryall, instagram",
+		"roles": [
+			"Provied \"Lemon Tea\" font"
+		]
+	}
+	{
+		"name": "Nomiqbomi, freesound.org",
+		"roles": [
+			"Provied Xylophone sound"
+		]
+	}
+]

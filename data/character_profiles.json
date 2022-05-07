@@ -1,0 +1,37 @@
+{
+	"talk_types": [
+		"none",
+		"grunt",
+		"talk"
+	],
+
+	"guy": {
+		"name": "Ishigami",
+		"talk_type": "grunt",
+		"talk_sound": ""
+	},
+	"grung": {
+		"name": "Grungledorf, King of Trash",
+		"talk_type": "talk",
+		"talk_sound": ""
+	},
+	"skell-a": {
+		"name": "Samantha",
+		"talk_type": "talk",
+		"talk_sound": "xylophone_sting.mp3"
+	},
+	"skell-b": {
+		"name": "_xx_$4M4NTH4_xx_",
+		"talk_type": "talk",
+		"talk_sound": "xylophone_sting.mp3"
+	},
+	"cube": {
+		"name": "Blender Cube",
+		"talk_type": "none"
+	},
+	"mino": {
+		"name": "Minotaur",
+		"talk_type": "grunt",
+		"talk_sound": ""
+	}
+}
