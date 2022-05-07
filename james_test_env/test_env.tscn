@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://player_first_person/player_first_person.tscn" type="PackedScene" id=1]
 [ext_resource path="res://text_box/text_box.tscn" type="PackedScene" id=2]
+[ext_resource path="res://menus/pause/pause.tscn" type="PackedScene" id=3]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 10, 10 )
@@ -30,6 +31,8 @@ shape = SubResource( 2 )
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+
+[node name="Pause" parent="ViewportContainer" instance=ExtResource( 3 )]
 
 [node name="TextBox" parent="ViewportContainer" instance=ExtResource( 2 )]
 

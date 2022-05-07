@@ -1,8 +1,15 @@
 extends Node
 
+var mouse_needed: int = 0
+
 func _ready():
-	OS.window_fullscreen = true
+	set_pause_mode(PAUSE_MODE_PROCESS)
 
 func _process(delta):
-	if(Input.is_action_just_pressed("pause")):
-		get_tree().quit()
+	var mm = Input.get_mouse_mode()
+	if(mm == Input.MOUSE_MODE_CAPTURED and mouse_needed > 0):
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	elif(mm != Input.MOUSE_MODE_CAPTURED and mouse_needed == 0):
+		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	elif(mouse_needed < 0):
+		print("Mouse needed is " + str(mouse_needed) + ", that is not right")

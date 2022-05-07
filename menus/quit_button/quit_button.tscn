@@ -6,7 +6,7 @@
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 1 )
 
-[node name="Button" type="Button"]
+[node name="QuitButton" type="Button"]
 anchor_left = 0.1
 anchor_right = 0.9
 margin_right = 12.0
@@ -15,4 +15,4 @@ theme = SubResource( 1 )
 text = "Quit"
 script = ExtResource( 2 )
 
-[connection signal="pressed" from="." to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="." to="." method="_on_QuitButton_pressed"]

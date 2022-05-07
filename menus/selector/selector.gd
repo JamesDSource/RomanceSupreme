@@ -18,9 +18,14 @@ func redirect(redirect_to: String):
 		current_open.visible = false
 		current_open = null
 	
-	var children = get_children()
-	for child in children:
-		if(child.name == redirect_to):
-			child.visible = true
-			current_open = child
-			break
+	if(redirect_to == "" and default != null):
+		var default_node = get_node(default)
+		default_node.visible = true
+		current_open = default_node
+	else:
+		var children = get_children()
+		for child in children:
+			if(child.name == redirect_to):
+				child.visible = true
+				current_open = child
+				break
