@@ -1,4 +1,4 @@
-extends CharacterBody3D
+extends KinematicBody
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -6,8 +6,10 @@ const JUMP_VELOCITY = 4.5
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
-var camera_pivot: Node3D
+var camera_pivot: Spatial
 var camera_verticle_rot: float = 0
+
+var velocity = Vector3(0, 0, 0)
 
 func _ready():
 	camera_pivot = $CameraPivot
@@ -15,11 +17,10 @@ func _ready():
 func _input(event):
 	if event is InputEventMouseMotion:
 		camera_pivot.rotation.y -= event.relative.x*0.001
-		camera_verticle_rot = clampf(camera_verticle_rot - event.relative.y*0.001, -deg2rad(90.0), deg2rad(90.0))
+		camera_verticle_rot = clamp(camera_verticle_rot - event.relative.y*0.001, -deg2rad(90.0), deg2rad(90.0))
 		camera_pivot.rotation.x = camera_verticle_rot
 
 func _physics_process(delta):
-	# Add the gravity.4
 	if not is_on_floor():
 		velocity.y -= gravity * delta
 
@@ -38,4 +39,4 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 	
-	move_and_slide()
+	move_and_slide(velocity, Vector3.UP)
