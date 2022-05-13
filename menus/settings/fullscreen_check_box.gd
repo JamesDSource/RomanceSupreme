@@ -2,6 +2,7 @@ extends CheckBox
 
 func _ready():
 	add_to_group("settings_aware", true)
+	pressed = OS.window_fullscreen
 
 func _on_FullscreenCheckBox_pressed():
 	OS.window_fullscreen = pressed
