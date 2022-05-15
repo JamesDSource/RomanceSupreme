@@ -1,0 +1,42 @@
+{
+	"state": {
+		"agreed": false
+	},
+
+	"sequences": {
+		"first": {
+			"actions": [
+				{
+					"type": "dialog",
+					"profile": "guy",
+					"text": "Would you like to go to dinner with me?"
+				},
+				{
+					"type": "option",
+					"options": [
+						{
+							"text": "Sure thing!",
+							"result": {
+								"set": {
+									"var": "agreed",
+									"value": true
+								}
+							}
+						},
+						{
+							"text": "No thank you",
+							"result": {
+
+							}
+						}
+					]
+				}
+			]
+		},
+
+		"agreed": {
+
+
+		}
+	}
+}
