@@ -1,6 +1,6 @@
 extends KinematicBody
 
-const MAX_SPEED = 5.0
+const MAX_SPEED = 3.0
 const ACCELERATION = 0.2
 
 # Get the gravity from the project settings to be synced with RigidDynamicBody nodes.
@@ -10,6 +10,8 @@ var camera_pivot: Spatial
 var camera_verticle_rot: float = 0
 
 var velocity = Vector3(0, 0, 0)
+
+onready var player_model: Spatial = $PlayerModel
 
 func _ready():
 	camera_pivot = $CameraPivot
@@ -30,10 +32,12 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction = (camera_pivot.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
+		var angle = rad2deg(atan2(-direction.z, direction.x))
+		player_model.rotation_degrees.y = angle
 		velocity.x = direction.x * MAX_SPEED
 		velocity.z = direction.z * MAX_SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, MAX_SPEED)
 		velocity.z = move_toward(velocity.z, 0, MAX_SPEED)
 
-	move_and_slide(velocity, Vector3.UP)
+	velocity = move_and_slide(velocity, Vector3.UP)

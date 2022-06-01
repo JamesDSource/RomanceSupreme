@@ -1,0 +1,173 @@
+{
+	"nodes": [
+		{
+			"type": "start",
+			"meta": {
+				"x": 230,
+				"y": 1276
+			},
+			"sequence_name": "lonely"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 228,
+				"y": 834
+			},
+			"sequence_name": "jail"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 214,
+				"y": 394
+			},
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 1886,
+				"y": 397
+			},
+			"sequence_name": "lonely"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 714,
+				"y": 1285
+			},
+			"value_type": "Speaker",
+			"speaker_id": "nar"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1207,
+				"y": 1245
+			},
+			"dialog_text": "You are now super lonely :((((("
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 2934,
+				"y": 152
+			},
+			"sequence_name": "jail"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1574,
+				"y": 744
+			},
+			"dialog_text": "You are now in jail for like 20 year for being a dick"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 1139,
+				"y": 802
+			},
+			"value_type": "Speaker",
+			"speaker_id": "nar"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 692,
+				"y": 861
+			},
+			"value_type": "Custom Variable",
+			"var_name": "criminal",
+			"var_value": "true"
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 787,
+				"y": 337
+			},
+			"choices": [
+				"Walk to him",
+				"Go away"
+			]
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 1861,
+				"y": 58
+			},
+			"value_type": "Speaker",
+			"speaker_id": "guy"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2248,
+				"y": 49
+			},
+			"dialog_text": "Please get the fuck away from me ma'am, I've told you this \nlike 3 times now. I just want to be left alone jesus christ"
+		}
+	],
+	"connections": [
+		{
+			"node_idx": 2,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 10,
+			"outputs": [
+				11,
+				3
+			]
+		},
+		{
+			"node_idx": 11,
+			"outputs": [
+				12
+			]
+		},
+		{
+			"node_idx": 1,
+			"outputs": [
+				9
+			]
+		},
+		{
+			"node_idx": 9,
+			"outputs": [
+				8
+			]
+		},
+		{
+			"node_idx": 8,
+			"outputs": [
+				7
+			]
+		},
+		{
+			"node_idx": 12,
+			"outputs": [
+				6
+			]
+		},
+		{
+			"node_idx": 0,
+			"outputs": [
+				4
+			]
+		},
+		{
+			"node_idx": 4,
+			"outputs": [
+				5
+			]
+		}
+	]
+}

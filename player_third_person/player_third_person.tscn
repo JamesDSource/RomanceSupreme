@@ -1,21 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://player_third_person/player_third_person.gd" type="Script" id=1]
+[ext_resource path="res://assets/player_character/player_character_anime.tscn" type="PackedScene" id=2]
 
 [sub_resource type="RayShape" id=1]
 length = 0.25
 
 [sub_resource type="CapsuleShape" id=2]
-radius = 0.5
-height = 0.5
-
-[sub_resource type="SpatialMaterial" id=3]
-albedo_color = Color( 1, 0, 0, 1 )
-
-[sub_resource type="CapsuleMesh" id=4]
-material = SubResource( 3 )
-radius = 0.5
-mid_height = 0.75
+radius = 0.3
+height = 0.8
 
 [node name="Player3P" type="KinematicBody"]
 script = ExtResource( 1 )
@@ -25,16 +18,20 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.25
 shape = SubResource( 1 )
 
 [node name="CollisionCapsule" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1, 0 )
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.13999, 0 )
 shape = SubResource( 2 )
 
-[node name="MeshInstance" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.88, 0 )
-mesh = SubResource( 4 )
-material/0 = null
+[node name="PlayerModel" parent="." instance=ExtResource( 2 )]
+transform = Transform( 0.085, 0, 0, 0, 0.085, 0, 0, 0, 0.085, 0, 1.7, 0 )
 
 [node name="CameraPivot" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0 )
 
-[node name="Camera" type="Camera" parent="CameraPivot"]
-transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 1.5, 5 )
+[node name="SpringArm" type="SpringArm" parent="CameraPivot"]
+collision_mask = 2
+spring_length = 6.0
+margin = 0.1
+
+[node name="Camera" type="Camera" parent="CameraPivot/SpringArm"]
+transform = Transform( 1, 0, 0, 0, 0.906308, 0.422618, 0, -0.422618, 0.906308, 0, 0, 0 )
+current = true
