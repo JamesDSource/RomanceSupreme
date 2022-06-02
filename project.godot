@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 InputState="*res://input_state.gd"
 TextBoxController="*res://text_box/text_box_controller.gd"
 GlobalSettings="*res://global_settings.gd"
+SequenceManager="*res://sequence_manager.gd"
 
 [display]
 

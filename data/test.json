@@ -75,16 +75,6 @@
 			"speaker_id": "nar"
 		},
 		{
-			"type": "setter",
-			"meta": {
-				"x": 692,
-				"y": 861
-			},
-			"value_type": "Custom Variable",
-			"var_name": "criminal",
-			"var_value": "true"
-		},
-		{
 			"type": "choice",
 			"meta": {
 				"x": 787,
@@ -111,36 +101,46 @@
 				"y": 49
 			},
 			"dialog_text": "Please get the fuck away from me ma'am, I've told you this \nlike 3 times now. I just want to be left alone jesus christ"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 692,
+				"y": 861
+			},
+			"value_type": "Custom Variable",
+			"var_name": "criminal",
+			"var_value": true
 		}
 	],
 	"connections": [
 		{
 			"node_idx": 2,
 			"outputs": [
-				10
-			]
-		},
-		{
-			"node_idx": 10,
-			"outputs": [
-				11,
-				3
-			]
-		},
-		{
-			"node_idx": 11,
-			"outputs": [
-				12
-			]
-		},
-		{
-			"node_idx": 1,
-			"outputs": [
 				9
 			]
 		},
 		{
 			"node_idx": 9,
+			"outputs": [
+				10,
+				3
+			]
+		},
+		{
+			"node_idx": 10,
+			"outputs": [
+				11
+			]
+		},
+		{
+			"node_idx": 1,
+			"outputs": [
+				12
+			]
+		},
+		{
+			"node_idx": 12,
 			"outputs": [
 				8
 			]
@@ -152,7 +152,7 @@
 			]
 		},
 		{
-			"node_idx": 12,
+			"node_idx": 11,
 			"outputs": [
 				6
 			]
