@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://text_box/choice_label.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/lemon_tea.tres" type="DynamicFont" id=2]
+
+[sub_resource type="Theme" id=1]
+default_font = ExtResource( 2 )
+
+[node name="ChoiceLabel" type="Label"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_right = 40.0
+margin_bottom = 14.0
+theme = SubResource( 1 )
+align = 1
+valign = 1
+script = ExtResource( 1 )

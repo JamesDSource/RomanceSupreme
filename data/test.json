@@ -3,170 +3,103 @@
 		{
 			"type": "start",
 			"meta": {
-				"x": 230,
-				"y": 1276
+				"x": 704,
+				"y": 1038
 			},
-			"sequence_name": "lonely"
+			"sequence_name": "third thing"
 		},
 		{
 			"type": "start",
 			"meta": {
-				"x": 228,
-				"y": 834
+				"x": 561,
+				"y": 225
 			},
-			"sequence_name": "jail"
+			"sequence_name": "[root]"
 		},
 		{
-			"type": "start",
+			"type": "dialog",
 			"meta": {
-				"x": 214,
-				"y": 394
+				"x": 1408,
+				"y": 1122
+			},
+			"dialog_text": "Why did you do that?? You get a second chance, don't mess this up!"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 2189,
+				"y": 1265
 			},
 			"sequence_name": "[root]"
 		},
 		{
 			"type": "jump",
 			"meta": {
-				"x": 1886,
-				"y": 397
+				"x": 2487,
+				"y": 817
 			},
-			"sequence_name": "lonely"
-		},
-		{
-			"type": "setter",
-			"meta": {
-				"x": 714,
-				"y": 1285
-			},
-			"value_type": "Speaker",
-			"speaker_id": "nar"
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 1207,
-				"y": 1245
-			},
-			"dialog_text": "You are now super lonely :((((("
-		},
-		{
-			"type": "jump",
-			"meta": {
-				"x": 2934,
-				"y": 152
-			},
-			"sequence_name": "jail"
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 1574,
-				"y": 744
-			},
-			"dialog_text": "You are now in jail for like 20 year for being a dick"
-		},
-		{
-			"type": "setter",
-			"meta": {
-				"x": 1139,
-				"y": 802
-			},
-			"value_type": "Speaker",
-			"speaker_id": "nar"
+			"sequence_name": "third thing"
 		},
 		{
 			"type": "choice",
 			"meta": {
-				"x": 787,
-				"y": 337
+				"x": 1564,
+				"y": 206
 			},
 			"choices": [
-				"Walk to him",
-				"Go away"
+				"Repeat",
+				"Dont",
+				"third thing"
 			]
 		},
 		{
-			"type": "setter",
+			"type": "jump",
 			"meta": {
-				"x": 1861,
-				"y": 58
+				"x": 2387,
+				"y": 202
 			},
-			"value_type": "Speaker",
-			"speaker_id": "guy"
+			"sequence_name": "[root]"
 		},
 		{
 			"type": "dialog",
 			"meta": {
-				"x": 2248,
-				"y": 49
+				"x": 988,
+				"y": 461
 			},
-			"dialog_text": "Please get the fuck away from me ma'am, I've told you this \nlike 3 times now. I just want to be left alone jesus christ"
-		},
-		{
-			"type": "setter",
-			"meta": {
-				"x": 692,
-				"y": 861
-			},
-			"value_type": "Custom Variable",
-			"var_name": "criminal",
-			"var_value": true
+			"dialog_text": "This is some cool test dialog"
 		}
 	],
 	"connections": [
 		{
-			"node_idx": 2,
-			"outputs": [
-				9
-			]
-		},
-		{
-			"node_idx": 9,
-			"outputs": [
-				10,
-				3
-			]
-		},
-		{
-			"node_idx": 10,
-			"outputs": [
-				11
-			]
-		},
-		{
 			"node_idx": 1,
-			"outputs": [
-				12
-			]
-		},
-		{
-			"node_idx": 12,
-			"outputs": [
-				8
-			]
-		},
-		{
-			"node_idx": 8,
 			"outputs": [
 				7
 			]
 		},
 		{
-			"node_idx": 11,
+			"node_idx": 5,
 			"outputs": [
-				6
+				6,
+				null,
+				4
+			]
+		},
+		{
+			"node_idx": 7,
+			"outputs": [
+				5
 			]
 		},
 		{
 			"node_idx": 0,
 			"outputs": [
-				4
+				2
 			]
 		},
 		{
-			"node_idx": 4,
+			"node_idx": 2,
 			"outputs": [
-				5
+				3
 			]
 		}
 	]

@@ -55,14 +55,63 @@ class SeqStepSetVar extends SeqStep:
 		name = name_
 		value = value_
 
-func _ready():
+var current_sequences: Array = []
+var current_step: SeqStep = null
+
+func start_seq(name: String):
 	var file = File.new()
-	file.open("res://data/test.json", File.READ)
+	file.open("res://data/" + name + ".json", File.READ)
 	var json = file.get_as_text()
 	file.close()
 
-	var parsed = parse(json)
-	print(parsed)
+	current_sequences = parse(json)
+	for sequence in current_sequences:
+		if(sequence.name == "[root]"):
+			play_step(sequence.next)
+			break
+
+func play_step(node: SeqStep):
+	current_step = node
+	if(current_step == null):
+		return
+
+	if(current_step is SeqStepJump):
+		for seq in current_sequences:
+			if(seq.name == current_step.name):
+				play_step(seq.next)
+	if(current_step is SeqStepDialog):
+		TextBoxController.set_text_box_visible(true)
+		TextBoxController.set_text(current_step.text)
+	if(current_step is SeqStepChoice):
+		TextBoxController.set_text_box_visible(true)
+		TextBoxController.set_choices(current_step.choices)
+	elif(current_step is SeqStepSetSpeaker):
+		pass
+	elif(current_step is SeqStepSetCamera):
+		pass
+	elif(current_step is SeqStepSetVar):
+		pass
+
+func _process(_delta):
+	if(current_step != null):
+		if(current_step is SeqStepDialog and Input.is_action_just_pressed("dialog_next")):
+			if(TextBoxController.node.text_node.percent_visible < 1):
+				TextBoxController.node.text_node.percent_visible = 1
+			else:
+				TextBoxController.set_text_box_visible(false)
+				play_step(current_step.next)
+		elif(current_step is SeqStepChoice):
+			if(Input.is_action_just_pressed("dialog_next")):
+				var selected: String = TextBoxController.choice_select()
+				TextBoxController.set_text_box_visible(false)
+
+				for i in range(0, current_step.choices.size()):
+					if(current_step.choices[i] == selected):
+						play_step(current_step.choice_steps[i])
+			elif(Input.is_action_just_pressed("dialog_choice_up")):
+				TextBoxController.choice_move_up()
+			elif(Input.is_action_just_pressed("dialog_choice_down")):
+				TextBoxController.choice_move_down()
 
 func parse(json: String) -> Array:
 	var data = JSON.parse(json).result
