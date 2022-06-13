@@ -52,7 +52,7 @@ collision_layer = 3
 shape = SubResource( 4 )
 
 [node name="MeshInstance3" type="MeshInstance" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3.61488 )
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.0903738, 0.494524, 0.860595 )
 mesh = SubResource( 5 )
 material/0 = null
 
@@ -61,16 +61,6 @@ collision_layer = 3
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance3/StaticBody"]
 shape = SubResource( 6 )
-
-[node name="ViewportContainer" type="ViewportContainer" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-
-[node name="TextBox" parent="ViewportContainer" instance=ExtResource( 2 )]
-
-[node name="Pause" parent="ViewportContainer" instance=ExtResource( 3 )]
-
-[node name="Player3P" parent="." instance=ExtResource( 1 )]
 
 [node name="MeshInstance4" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 2.55462, 0, 0, 0, -5.43819, 5.78974, 2.37565, 0.0710096 )
@@ -82,3 +72,22 @@ collision_layer = 3
 
 [node name="CollisionShape" type="CollisionShape" parent="MeshInstance4/StaticBody"]
 shape = SubResource( 8 )
+
+[node name="ViewportContainer" type="ViewportContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextBox" parent="ViewportContainer" instance=ExtResource( 2 )]
+
+[node name="Pause" parent="ViewportContainer" instance=ExtResource( 3 )]
+
+[node name="Player3P" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.63958 )
+
+[node name="CutsceneCameras" type="Spatial" parent="."]
+
+[node name="Camera" type="Camera" parent="CutsceneCameras"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.66001, 6.84319 )
+
+[node name="Camera2" type="Camera" parent="CutsceneCameras"]
+transform = Transform( 1, 0, 0, 0, 0.0188834, 0.999822, 0, -0.999822, 0.0188834, 0.0451539, 4.72444, -1.65376 )

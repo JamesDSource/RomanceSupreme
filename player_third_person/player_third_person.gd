@@ -10,10 +10,14 @@ var camera_pivot: Spatial
 var camera_verticle_rot: float = 0
 
 var velocity = Vector3(0, 0, 0)
+var dir_angle: float = 0
+
+var lock_movement: bool = false
 
 onready var player_model: Spatial = $PlayerModel
 
 func _ready():
+	add_to_group("player3p")
 	camera_pivot = $CameraPivot
 
 func _input(event):
@@ -23,8 +27,11 @@ func _input(event):
 		camera_pivot.rotation.x = camera_verticle_rot
 
 func _physics_process(delta):
+	if(lock_movement):
+		return
+
 	# Add the gravity.
-	if not is_on_floor():
+	if(!is_on_floor()):
 		velocity.y -= gravity * delta
 
 	# Get the input direction and handle the movement/deceleration.
@@ -32,8 +39,7 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("move_left", "move_right", "move_forward", "move_backward")
 	var direction = (camera_pivot.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		var angle = rad2deg(atan2(-direction.z, direction.x))
-		player_model.rotation_degrees.y = angle
+		dir_angle = rad2deg(atan2(-direction.z, direction.x))
 		velocity.x = direction.x * MAX_SPEED
 		velocity.z = direction.z * MAX_SPEED
 	else:
@@ -41,3 +47,10 @@ func _physics_process(delta):
 		velocity.z = move_toward(velocity.z, 0, MAX_SPEED)
 
 	velocity = move_and_slide(velocity, Vector3.UP)
+
+	var cur_angle = player_model.rotation_degrees.y
+
+	var dif1 = dir_angle - cur_angle
+	var dif2 = -cur_angle - (360 - dir_angle)
+	var best_dif = dif1 if abs(dif1) < abs(dif2) else dif2
+	player_model.rotation_degrees.y += best_dif/10

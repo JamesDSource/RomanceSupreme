@@ -38,8 +38,8 @@ func choice_move_down():
 	else:
 		node.set_choice_index(node.choice_index + 1)
 
-func choice_select() -> String:
-	return node.choices_container.get_children()[node.choice_index].text
+func choice_select() -> int:
+	return node.choice_index
 
 func set_text_box_visible(is_visible: bool):
 	node.visible = is_visible

@@ -57,6 +57,7 @@ class SeqStepSetVar extends SeqStep:
 
 var current_sequences: Array = []
 var current_step: SeqStep = null
+var player_3p = null
 
 func start_seq(name: String):
 	var file = File.new()
@@ -64,32 +65,44 @@ func start_seq(name: String):
 	var json = file.get_as_text()
 	file.close()
 
+	var players = get_tree().get_nodes_in_group("player3p")
+	if(players.size() > 0):
+		player_3p = players[0]
+		player_3p.lock_movement = true
+
 	current_sequences = parse(json)
+	var found: bool = false
 	for sequence in current_sequences:
 		if(sequence.name == "[root]"):
 			play_step(sequence.next)
+			found = true
 			break
+	
+	if(!found):
+		player_3p.lock_movement = false
+		player_3p = null
 
 func play_step(node: SeqStep):
-	current_step = node
-	if(current_step == null):
-		return
-
-	if(current_step is SeqStepJump):
+	if(node == null and player_3p != null):
+		player_3p.lock_movement = false
+		player_3p = null
+	elif(node is SeqStepJump):
 		for seq in current_sequences:
-			if(seq.name == current_step.name):
+			if(seq.name == node.name):
 				play_step(seq.next)
-	if(current_step is SeqStepDialog):
+	elif(node is SeqStepDialog):
 		TextBoxController.set_text_box_visible(true)
-		TextBoxController.set_text(current_step.text)
-	if(current_step is SeqStepChoice):
+		TextBoxController.set_text(node.text)
+		current_step = node
+	elif(node is SeqStepChoice):
 		TextBoxController.set_text_box_visible(true)
-		TextBoxController.set_choices(current_step.choices)
-	elif(current_step is SeqStepSetSpeaker):
+		TextBoxController.set_choices(node.choices)
+		current_step = node
+	elif(node is SeqStepSetSpeaker):
 		pass
-	elif(current_step is SeqStepSetCamera):
+	elif(node is SeqStepSetCamera):
 		pass
-	elif(current_step is SeqStepSetVar):
+	elif(node is SeqStepSetVar):
 		pass
 
 func _process(_delta):
@@ -102,12 +115,10 @@ func _process(_delta):
 				play_step(current_step.next)
 		elif(current_step is SeqStepChoice):
 			if(Input.is_action_just_pressed("dialog_next")):
-				var selected: String = TextBoxController.choice_select()
+				var selected: int = TextBoxController.choice_select()
 				TextBoxController.set_text_box_visible(false)
 
-				for i in range(0, current_step.choices.size()):
-					if(current_step.choices[i] == selected):
-						play_step(current_step.choice_steps[i])
+				play_step(current_step.choice_steps[selected])
 			elif(Input.is_action_just_pressed("dialog_choice_up")):
 				TextBoxController.choice_move_up()
 			elif(Input.is_action_just_pressed("dialog_choice_down")):
