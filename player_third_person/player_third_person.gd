@@ -15,13 +15,14 @@ var dir_angle: float = 0
 var lock_movement: bool = false
 
 onready var player_model: Spatial = $PlayerModel
+onready var camera: Camera = $CameraPivot/SpringArm/Camera
 
 func _ready():
 	add_to_group("player3p")
 	camera_pivot = $CameraPivot
 
 func _input(event):
-	if event is InputEventMouseMotion:
+	if event is InputEventMouseMotion and not lock_movement:
 		camera_pivot.rotation.y -= event.relative.x*0.001
 		camera_verticle_rot = clamp(camera_verticle_rot - event.relative.y*0.001, -.5, .5)
 		camera_pivot.rotation.x = camera_verticle_rot
@@ -50,7 +51,7 @@ func _physics_process(delta):
 
 	var cur_angle = player_model.rotation_degrees.y
 
-	var dif1 = dir_angle - cur_angle
-	var dif2 = -cur_angle - (360 - dir_angle)
-	var best_dif = dif1 if abs(dif1) < abs(dif2) else dif2
-	player_model.rotation_degrees.y += best_dif/10
+	var dif = dir_angle - cur_angle
+	var dt = clamp(dif - floor(dif/360)*360, 0, 360)
+	var end = cur_angle + (dt - 360 if dt > 180 else dt)
+	player_model.rotation_degrees.y += .1 + (end - cur_angle)*.1

@@ -24,6 +24,7 @@ var text_node: RichTextLabel
 var choices_container: VBoxContainer
 
 func _ready():
+	visible = false
 	text_node = $DialogText
 	choices_container = $ChoicesContainer
 	TextBoxController.set_text_box_node(self)

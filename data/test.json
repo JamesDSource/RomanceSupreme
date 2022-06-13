@@ -3,18 +3,28 @@
 		{
 			"type": "start",
 			"meta": {
+				"x": 292,
+				"y": 295
+			},
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "start",
+			"meta": {
 				"x": 704,
 				"y": 1038
 			},
 			"sequence_name": "third thing"
 		},
 		{
-			"type": "start",
+			"type": "setter",
 			"meta": {
-				"x": 561,
-				"y": 225
+				"x": 653,
+				"y": 438
 			},
-			"sequence_name": "[root]"
+			"value_type": "Custom Variable",
+			"var_name": "stupid",
+			"var_value": true
 		},
 		{
 			"type": "dialog",
@@ -35,8 +45,24 @@
 		{
 			"type": "jump",
 			"meta": {
-				"x": 2487,
-				"y": 817
+				"x": 2387,
+				"y": 202
+			},
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 988,
+				"y": 461
+			},
+			"dialog_text": "This is some cool test dialog"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 2853,
+				"y": 796
 			},
 			"sequence_name": "third thing"
 		},
@@ -53,41 +79,46 @@
 			]
 		},
 		{
-			"type": "jump",
+			"type": "setter",
 			"meta": {
-				"x": 2387,
-				"y": 202
+				"x": 2333,
+				"y": 646
 			},
-			"sequence_name": "[root]"
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 988,
-				"y": 461
-			},
-			"dialog_text": "This is some cool test dialog"
+			"value_type": "Camera Angle",
+			"cam_index": 1
 		}
 	],
 	"connections": [
 		{
-			"node_idx": 1,
+			"node_idx": 8,
 			"outputs": [
-				7
+				5,
+				null,
+				9
 			]
 		},
 		{
-			"node_idx": 5,
+			"node_idx": 6,
 			"outputs": [
-				6,
-				null,
+				8
+			]
+		},
+		{
+			"node_idx": 1,
+			"outputs": [
+				3
+			]
+		},
+		{
+			"node_idx": 3,
+			"outputs": [
 				4
 			]
 		},
 		{
-			"node_idx": 7,
+			"node_idx": 9,
 			"outputs": [
-				5
+				7
 			]
 		},
 		{
@@ -99,7 +130,7 @@
 		{
 			"node_idx": 2,
 			"outputs": [
-				3
+				6
 			]
 		}
 	]
