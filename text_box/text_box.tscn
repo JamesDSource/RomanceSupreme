@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://text_box/default_textbox.png" type="Texture" id=1]
 [ext_resource path="res://assets/fonts/open_dyslexic.tres" type="DynamicFont" id=2]
 [ext_resource path="res://text_box/text_box.gd" type="Script" id=3]
 [ext_resource path="res://text_box/choice_label.tscn" type="PackedScene" id=4]
@@ -14,10 +14,11 @@ anchor_top = 0.4
 anchor_right = 0.7
 anchor_bottom = 0.9
 texture = ExtResource( 1 )
-patch_margin_left = 15
-patch_margin_top = 24
-patch_margin_right = 14
-patch_margin_bottom = 12
+region_rect = Rect2( 0, 0, 64, 65 )
+patch_margin_left = 16
+patch_margin_top = 16
+patch_margin_right = 16
+patch_margin_bottom = 16
 axis_stretch_horizontal = 2
 axis_stretch_vertical = 2
 script = ExtResource( 3 )
