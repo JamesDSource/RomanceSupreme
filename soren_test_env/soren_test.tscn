@@ -1,8 +1,8 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://player_third_person/player_third_person.tscn" type="PackedScene" id=1]
 [ext_resource path="res://menus/pause/pause.tscn" type="PackedScene" id=2]
-[ext_resource path="res://assets/player_character/player_character_anime.gltf" type="PackedScene" id=3]
+[ext_resource path="res://assets/anime_high_school/map/interior_door/interior_door_1_open.tscn" type="PackedScene" id=3]
 [ext_resource path="res://courtyard.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/anime_high_school/map/grass_plate/grass_plate.gltf" type="PackedScene" id=5]
 [ext_resource path="res://assets/anime_high_school/map/fountain/courtyard_fountain.tscn" type="PackedScene" id=6]
@@ -17,6 +17,8 @@
 [ext_resource path="res://assets/anime_high_school/map/school_desk_1/school_desk_1.tscn" type="PackedScene" id=15]
 [ext_resource path="res://assets/anime_high_school/map/chalkboard/chalkboard.gltf" type="PackedScene" id=16]
 [ext_resource path="res://assets/anime_high_school/map/school_interior/school_interior.tscn" type="PackedScene" id=17]
+[ext_resource path="res://assets/anime_high_school/map/interior_door/interior_door_1.tscn" type="PackedScene" id=18]
+[ext_resource path="res://assets/anime_high_school/map/exterior_door/exterior_door_1.gltf" type="PackedScene" id=19]
 
 [sub_resource type="ProceduralSky" id=10]
 
@@ -75,9 +77,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 
 [node name="Pause" parent="ViewportContainer" instance=ExtResource( 2 )]
-
-[node name="PlayerCharacterAnime" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 19.6255, 2.842, 0.799268 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.375787, -0.62401, 0.685125, -0.0941953, 0.761203, 0.641636, -0.921906, 0.176583, -0.344829, 34.0215, 8.17389, -9.91678 )
@@ -193,7 +192,52 @@ transform = Transform( 1, 0, 0, 0, 0.95, 0, 0, 0, 1, -8.41073, 1.27894, 18.5173 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3532, 0, 18.5173 )
 
 [node name="school_desk_1" parent="." instance=ExtResource( 15 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.85782, 2.38419e-07, 4.24349 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 21.2841, 2.38419e-07, -7.37523 )
+
+[node name="school_desk_2" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 21.2841, 2.38419e-07, -10.4361 )
+
+[node name="school_desk_3" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 21.2841, 2.38419e-07, -13.5322 )
+
+[node name="school_desk_4" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 21.2841, 2.38419e-07, -16.5795 )
+
+[node name="school_desk_5" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25.1664, 2.38419e-07, -7.37523 )
+
+[node name="school_desk_6" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25.1664, 2.38419e-07, -10.4361 )
+
+[node name="school_desk_7" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25.1664, 2.38419e-07, -13.5322 )
+
+[node name="school_desk_8" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 25.1664, 2.38419e-07, -16.5795 )
+
+[node name="school_desk_9" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28.7921, 2.38419e-07, -7.37523 )
+
+[node name="school_desk_10" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28.7921, 2.38419e-07, -10.4361 )
+
+[node name="school_desk_11" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28.7921, 2.38419e-07, -13.5322 )
+
+[node name="school_desk_12" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 28.7921, 2.38419e-07, -16.5795 )
+
+[node name="school_desk_13" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32.1146, 2.38419e-07, -7.37523 )
+
+[node name="school_desk_14" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32.1146, 2.38419e-07, -10.4361 )
+
+[node name="school_desk_15" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32.1146, 2.38419e-07, -13.5322 )
+
+[node name="school_desk_16" parent="." instance=ExtResource( 15 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 32.1146, 2.38419e-07, -16.5795 )
 
 [node name="chalkboard" parent="." instance=ExtResource( 16 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6483, 3.32584, -11.2683 )
@@ -205,3 +249,12 @@ omni_range = 9.587
 
 [node name="school_interior" parent="." instance=ExtResource( 17 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5704, -0.05739, 1.01292 )
+
+[node name="interior_door_1" parent="." instance=ExtResource( 18 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41.644, 0.0463949, -3.91066 )
+
+[node name="interior_door_1_open" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.6249, 0.0851755, -3.78319 )
+
+[node name="exterior_door_1" parent="." instance=ExtResource( 19 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5828, -0.0858676, 0.994656 )
