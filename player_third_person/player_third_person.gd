@@ -36,7 +36,7 @@ func _ready():
 func _input(event):
 	if event is InputEventMouseMotion and not lock_movement:
 		camera_pivot.rotation.y -= event.relative.x*0.001
-		camera_verticle_rot = clamp(camera_verticle_rot - event.relative.y*0.001, -.7, .5)
+		camera_verticle_rot = clamp(camera_verticle_rot - event.relative.y*0.001, -.3, .3)
 		camera_pivot.rotation.x = camera_verticle_rot
 
 func _physics_process(delta):

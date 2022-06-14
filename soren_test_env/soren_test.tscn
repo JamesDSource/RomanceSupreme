@@ -90,7 +90,7 @@ shadow_enabled = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3 )
 
 [node name="Player3P" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.61652, 0.0977026, 1.89095 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7829, 0.0977026, -0.341208 )
 
 [node name="school_wall_1" parent="." instance=ExtResource( 8 )]
 
