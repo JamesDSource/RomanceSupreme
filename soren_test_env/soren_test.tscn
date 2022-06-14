@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://player_third_person/player_third_person.tscn" type="PackedScene" id=1]
 [ext_resource path="res://menus/pause/pause.tscn" type="PackedScene" id=2]
@@ -14,6 +14,9 @@
 [ext_resource path="res://assets/anime_high_school/map/exterior_assets/road_exterior.gltf" type="PackedScene" id=12]
 [ext_resource path="res://assets/anime_high_school/map/exterior_assets/house_exterior_brown.gltf" type="PackedScene" id=13]
 [ext_resource path="res://assets/anime_high_school/map/exterior_assets/house_exterior_white.gltf" type="PackedScene" id=14]
+[ext_resource path="res://assets/anime_high_school/map/school_desk_1/school_desk_1.tscn" type="PackedScene" id=15]
+[ext_resource path="res://assets/anime_high_school/map/chalkboard/chalkboard.gltf" type="PackedScene" id=16]
+[ext_resource path="res://assets/anime_high_school/map/school_interior/school_interior.tscn" type="PackedScene" id=17]
 
 [sub_resource type="ProceduralSky" id=10]
 
@@ -74,10 +77,11 @@ anchor_bottom = 1.0
 [node name="Pause" parent="ViewportContainer" instance=ExtResource( 2 )]
 
 [node name="PlayerCharacterAnime" parent="." instance=ExtResource( 3 )]
-transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -3.11796, 2.14696, -0.670853 )
+transform = Transform( 0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 19.6255, 2.842, 0.799268 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( -0.375787, -0.62401, 0.685125, -0.0941953, 0.761203, 0.641636, -0.921906, 0.176583, -0.344829, 34.0215, 9.86522, -8.72294 )
+transform = Transform( -0.375787, -0.62401, 0.685125, -0.0941953, 0.761203, 0.641636, -0.921906, 0.176583, -0.344829, 34.0215, 8.17389, -9.91678 )
+light_energy = 0.861
 shadow_enabled = true
 
 [node name="courtyard" parent="." instance=ExtResource( 4 )]
@@ -86,6 +90,7 @@ shadow_enabled = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3 )
 
 [node name="Player3P" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.61652, 0.0977026, 1.89095 )
 
 [node name="school_wall_1" parent="." instance=ExtResource( 8 )]
 
@@ -186,3 +191,17 @@ transform = Transform( 1, 0, 0, 0, 0.95, 0, 0, 0, 1, -8.41073, 1.27894, 18.5173 
 
 [node name="house_exterior_brown10" parent="." instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 21.3532, 0, 18.5173 )
+
+[node name="school_desk_1" parent="." instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.85782, 2.38419e-07, 4.24349 )
+
+[node name="chalkboard" parent="." instance=ExtResource( 16 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.6483, 3.32584, -11.2683 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9706, 4.91389, -11.9194 )
+shadow_enabled = true
+omni_range = 9.587
+
+[node name="school_interior" parent="." instance=ExtResource( 17 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5704, -0.05739, 1.01292 )
