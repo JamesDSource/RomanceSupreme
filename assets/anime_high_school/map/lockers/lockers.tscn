@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/anime_high_school/map/lockers/lockers.gltf" type="PackedScene" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1.44142, 2.32515, 0.486381 )
+
+[node name="lockers" instance=ExtResource( 1 )]
+
+[node name="StaticBody" type="StaticBody" parent="lockers" index="0"]
+collision_layer = 3
+
+[node name="CollisionShape" type="CollisionShape" parent="lockers/StaticBody" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01732, 1.31896, -0.122913 )
+shape = SubResource( 1 )
