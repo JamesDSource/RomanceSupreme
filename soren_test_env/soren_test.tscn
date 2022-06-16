@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://player_third_person/player_third_person.tscn" type="PackedScene" id=1]
 [ext_resource path="res://menus/pause/pause.tscn" type="PackedScene" id=2]
@@ -21,12 +21,14 @@
 [ext_resource path="res://assets/anime_high_school/map/exterior_door/exterior_door_1.gltf" type="PackedScene" id=19]
 [ext_resource path="res://assets/anime_high_school/map/lockers/lockers.tscn" type="PackedScene" id=20]
 [ext_resource path="res://assets/anime_high_school/map/light_fixture_roof/light_fixture_roof.tscn" type="PackedScene" id=21]
+[ext_resource path="res://assets/spookytown/characters/grungulus/Grungulus.gltf" type="PackedScene" id=22]
 
 [sub_resource type="ProceduralSky" id=10]
 
 [sub_resource type="Environment" id=11]
 background_mode = 2
 background_sky = SubResource( 10 )
+ambient_light_energy = 0.0
 tonemap_mode = 3
 ss_reflections_enabled = true
 ss_reflections_max_steps = 50
@@ -83,6 +85,7 @@ anchor_bottom = 1.0
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.375787, -0.62401, 0.685125, -0.0941953, 0.761203, 0.641636, -0.921906, 0.176583, -0.344829, 34.0215, 14.4687, -9.91678 )
+light_energy = 0.0
 shadow_enabled = true
 
 [node name="courtyard" parent="." instance=ExtResource( 4 )]
@@ -91,7 +94,7 @@ shadow_enabled = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -3 )
 
 [node name="Player3P" parent="." instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20.7829, 0.0977026, -0.341208 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.1725, 0.0977026, 0.536906 )
 
 [node name="school_wall_1" parent="." instance=ExtResource( 8 )]
 
@@ -282,3 +285,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 23.3332, 5.82911, -12.4505 )
 
 [node name="light_fixture_roof4" parent="." instance=ExtResource( 21 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 32.3658, 5.82911, -12.4505 )
+
+[node name="Grungulus" parent="." instance=ExtResource( 22 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 43.6064, 2.96626, 0.026422 )
