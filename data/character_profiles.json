@@ -5,33 +5,50 @@
 		"talk"
 	],
 
-	"guy": {
-		"name": "Ishigami",
-		"talk_type": "grunt",
-		"talk_sound": ""
-	},
-	"grung": {
-		"name": "Grungledorf, King of Trash",
-		"talk_type": "talk",
-		"talk_sound": ""
-	},
-	"skell-a": {
-		"name": "Samantha",
-		"talk_type": "talk",
-		"talk_sound": "xylophone_sting.mp3"
-	},
-	"skell-b": {
-		"name": "_xx_$4M4NTH4_xx_",
-		"talk_type": "talk",
-		"talk_sound": "xylophone_sting.mp3"
-	},
-	"cube": {
-		"name": "Blender Cube",
-		"talk_type": "none"
-	},
-	"mino": {
-		"name": "Minotaur",
-		"talk_type": "grunt",
-		"talk_sound": ""
-	}
+	"profiles": [
+		{
+			"id": "guy",
+			"name": "Takashi",
+			"talk_type": "grunt",
+			"talk_sounds": [],
+			"text_box": "rose_textbox.png",
+			"font": "chatty_teenage.tres"
+		},
+		{
+			"id": "grung",
+			"name": "Grungledorf, King of Trash",
+			"talk_type": "talk",
+			"talk_sounds": []
+		},
+		{
+			"id": "skell-a",
+			"name": "Samantha",
+			"talk_type": "talk",
+			"talk_sounds": ["xylophone_sting.mp3"]
+		},
+		{
+			"id": "skell-b",
+			"name": "_xx_$4M4NTH4_xx_",
+			"talk_type": "talk",
+			"talk_sounds": ["xylophone_sting.mp3"]
+		},
+		{
+			"id": "cube",
+			"name": "Blender Cube",
+			"talk_type": "none",
+			"text_box": "grey_textbox.png"
+		},
+		{
+			"id": "mino",
+			"name": "Minotaur",
+			"talk_type": "grunt",
+			"talk_sounds": []
+		},
+		{
+			"id": "mayor",
+			"name": "Mayor Grungulas the Suckubus",
+			"talk_type": "talk",
+			"talk_sounds": ["moan.mp3"]
+		}
+	]
 }

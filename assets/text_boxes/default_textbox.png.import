@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/default_textbox.png-d9eff19abb4d1c9f8e401197959b278e.s3tc.stex"
-path.etc2="res://.import/default_textbox.png-d9eff19abb4d1c9f8e401197959b278e.etc2.stex"
+path.s3tc="res://.import/default_textbox.png-ebad0e8d18cfecd17254aa86ea8b4a3a.s3tc.stex"
+path.etc2="res://.import/default_textbox.png-ebad0e8d18cfecd17254aa86ea8b4a3a.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://text_box/default_textbox.png"
-dest_files=[ "res://.import/default_textbox.png-d9eff19abb4d1c9f8e401197959b278e.s3tc.stex", "res://.import/default_textbox.png-d9eff19abb4d1c9f8e401197959b278e.etc2.stex" ]
+source_file="res://assets/text_boxes/default_textbox.png"
+dest_files=[ "res://.import/default_textbox.png-ebad0e8d18cfecd17254aa86ea8b4a3a.s3tc.stex", "res://.import/default_textbox.png-ebad0e8d18cfecd17254aa86ea8b4a3a.etc2.stex" ]
 
 [params]
 

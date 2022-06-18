@@ -4,7 +4,7 @@
 [ext_resource path="res://text_box/text_box.tscn" type="PackedScene" id=2]
 [ext_resource path="res://menus/pause/pause.tscn" type="PackedScene" id=3]
 [ext_resource path="res://james_test_env/james_test.gd" type="Script" id=4]
-[ext_resource path="res://text_box/default_textbox.png" type="Texture" id=5]
+[ext_resource path="res://assets/text_boxes/default_textbox.png" type="Texture" id=5]
 
 [sub_resource type="PlaneMesh" id=1]
 size = Vector2( 10, 10 )

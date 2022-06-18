@@ -65,6 +65,33 @@ var on_finished_callback: FuncRef
 
 var custom_vars: Dictionary
 
+var profiles: Dictionary = {}
+const DEFAULT_TEXT_BOX: String = "default_textbox.png"
+const DEFAULT_FONT: String = "lemon_tea.tres"
+
+func _ready():
+	var file = File.new()
+	file.open("res://data/character_profiles.json", File.READ)
+	var json = file.get_as_text()
+	file.close()
+
+	var data = JSON.parse(json).result
+
+	for profile in data["profiles"]:
+		var new_char_profile = TextBoxController.CharacterProfile.new(
+			profile["name"], 
+			profile["text_box"] if profile.has("text_box") else DEFAULT_TEXT_BOX,
+			profile["talk_sounds"] if profile.has("talk_sounds") else [],
+			profile["font"] if profile.has("font") else DEFAULT_FONT)
+		match(profile["talk_type"]):
+			"none":
+				pass
+			"talk":
+				new_char_profile.talk_type = TextBox.CharacterTalkType.Talk
+			"grunt":
+				new_char_profile.talk_type = TextBox.CharacterTalkType.Grunt
+		profiles[profile["id"]] = new_char_profile
+
 func start_seq(name: String, cameras: Array, on_finished: FuncRef):
 	var file = File.new()
 	file.open("res://data/" + name + ".json", File.READ)
@@ -82,6 +109,14 @@ func start_seq(name: String, cameras: Array, on_finished: FuncRef):
 
 	on_finished_callback = on_finished
 	custom_vars = {}
+
+	var initial_profile = TextBoxController.CharacterProfile.new(
+		"",
+		DEFAULT_TEXT_BOX,
+		[],
+		DEFAULT_FONT
+	)
+	TextBoxController.set_text_box_profile(initial_profile)
 
 	current_sequences = parse(json)
 	var found: bool = false
@@ -121,6 +156,16 @@ func play_step(node: SeqStep):
 		TextBoxController.set_choices(node.choices)
 		current_step = node
 	elif(node is SeqStepSetSpeaker):
+		if profiles.has(node.id):
+			TextBoxController.set_text_box_profile(profiles[node.id])
+		else:
+			var profile = TextBoxController.CharacterProfile.new(
+				node.id,
+				DEFAULT_TEXT_BOX,
+				[],
+				DEFAULT_FONT
+			)
+			TextBoxController.set_text_box_profile(profile)
 		play_step(node.next)
 	elif(node is SeqStepSetCamera):
 		current_cameras[node.cam_index].current = true	

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/moan.mp3-a707da7e0aea25d4cb20789789184ffe.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/talk_sounds/moan.mp3"
+dest_files=[ "res://.import/moan.mp3-a707da7e0aea25d4cb20789789184ffe.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

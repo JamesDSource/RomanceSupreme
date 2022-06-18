@@ -3,50 +3,16 @@
 		{
 			"type": "start",
 			"meta": {
-				"x": 292,
-				"y": 295
-			},
-			"sequence_name": "[root]"
-		},
-		{
-			"type": "start",
-			"meta": {
-				"x": 704,
-				"y": 1038
+				"x": 453,
+				"y": 1150
 			},
 			"sequence_name": "third thing"
 		},
 		{
-			"type": "setter",
+			"type": "start",
 			"meta": {
-				"x": 653,
-				"y": 438
-			},
-			"value_type": "Custom Variable",
-			"var_name": "stupid",
-			"var_value": true
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 1408,
-				"y": 1122
-			},
-			"dialog_text": "Why did you do that?? You get a second chance, don't mess this up!"
-		},
-		{
-			"type": "jump",
-			"meta": {
-				"x": 2189,
-				"y": 1265
-			},
-			"sequence_name": "[root]"
-		},
-		{
-			"type": "jump",
-			"meta": {
-				"x": 2387,
-				"y": 202
+				"x": -369,
+				"y": 415
 			},
 			"sequence_name": "[root]"
 		},
@@ -56,15 +22,16 @@
 				"x": 988,
 				"y": 461
 			},
-			"dialog_text": "This is some cool test dialog"
+			"dialog_text": "This is some cool test dialog\nasfasdffffffffasdfasdfasdfasdfaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 		},
 		{
-			"type": "jump",
+			"type": "setter",
 			"meta": {
-				"x": 2853,
-				"y": 796
+				"x": 2333,
+				"y": 646
 			},
-			"sequence_name": "third thing"
+			"value_type": "Camera Angle",
+			"cam_index": 1
 		},
 		{
 			"type": "choice",
@@ -79,58 +46,121 @@
 			]
 		},
 		{
+			"type": "jump",
+			"meta": {
+				"x": 2853,
+				"y": 796
+			},
+			"sequence_name": "third thing"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 2387,
+				"y": 202
+			},
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1408,
+				"y": 1122
+			},
+			"dialog_text": "Why did you do that?? You get a second chance, don't mess this up!"
+		},
+		{
 			"type": "setter",
 			"meta": {
-				"x": 2333,
-				"y": 646
+				"x": 957,
+				"y": 1224
 			},
-			"value_type": "Camera Angle",
-			"cam_index": 1
+			"value_type": "Speaker",
+			"speaker_id": "Fucker"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 2206,
+				"y": 1295
+			},
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 123,
+				"y": 585
+			},
+			"value_type": "Custom Variable",
+			"var_name": "stupid",
+			"var_value": true
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 525,
+				"y": 248
+			},
+			"value_type": "Speaker",
+			"speaker_id": "guy"
 		}
 	],
 	"connections": [
 		{
-			"node_idx": 8,
+			"node_idx": 4,
 			"outputs": [
-				5,
+				6,
 				null,
-				9
-			]
-		},
-		{
-			"node_idx": 6,
-			"outputs": [
-				8
-			]
-		},
-		{
-			"node_idx": 1,
-			"outputs": [
 				3
-			]
-		},
-		{
-			"node_idx": 3,
-			"outputs": [
-				4
-			]
-		},
-		{
-			"node_idx": 9,
-			"outputs": [
-				7
-			]
-		},
-		{
-			"node_idx": 0,
-			"outputs": [
-				2
 			]
 		},
 		{
 			"node_idx": 2,
 			"outputs": [
-				6
+				4
+			]
+		},
+		{
+			"node_idx": 3,
+			"outputs": [
+				5
+			]
+		},
+		{
+			"node_idx": 1,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 0,
+			"outputs": [
+				8
+			]
+		},
+		{
+			"node_idx": 8,
+			"outputs": [
+				7
+			]
+		},
+		{
+			"node_idx": 7,
+			"outputs": [
+				9
+			]
+		},
+		{
+			"node_idx": 10,
+			"outputs": [
+				11
+			]
+		},
+		{
+			"node_idx": 11,
+			"outputs": [
+				2
 			]
 		}
 	]

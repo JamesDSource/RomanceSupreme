@@ -1,5 +1,26 @@
 extends Node
 
+class CharacterProfile:
+	var name: String
+	var text_box_tex: Texture
+
+	var talk_type: int = TextBox.CharacterTalkType.None
+	var talk_sounds: Array
+
+	var font: DynamicFont
+
+	func _init(name_: String, text_box_name: String, talk_sound_names: Array, font_name: String):
+		name = name_
+
+		text_box_tex = load("res://assets/text_boxes/" + text_box_name)
+		for sound_name in talk_sound_names:
+			var sound = load("res://assets/sounds/talk_sounds/" + sound_name)
+			sound.loop = false
+			talk_sounds.append(sound)
+
+		font = load("res://assets/fonts/" + font_name)
+
+
 const CHOICE_LABEL = preload("res://text_box/choice_label.tscn")
 var node: TextBox = null
 
@@ -10,6 +31,12 @@ func set_text(text: String):
 	node.set_mode(TextBox.TextBoxMode.Dialog)
 	node.text_node.text = text
 	node.text_node.percent_visible = 0
+
+	if node.talk_sounds.size() > 0 and node.talk_type != TextBox.CharacterTalkType.None:
+		node.dialog_audio.pitch_scale = 1
+		node.dialog_audio.stream = node.talk_sounds[randi()%node.talk_sounds.size()]
+		node.dialog_audio.play()
+
 
 func set_choices(choices: Array):
 	node.set_mode(TextBox.TextBoxMode.Choice)
@@ -43,3 +70,11 @@ func choice_select() -> int:
 
 func set_text_box_visible(is_visible: bool):
 	node.visible = is_visible
+
+func set_text_box_profile(profile: CharacterProfile):
+	node.get_node("DialogText/Speaker").text = profile.name
+
+	node.dialog_text_box = profile.text_box_tex
+	node.talk_type = profile.talk_type
+	node.talk_sounds = profile.talk_sounds
+	node.dialog_font = profile.font

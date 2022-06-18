@@ -20,13 +20,26 @@ enum TextBoxMode {
 	Choice
 }
 
-var text_node: RichTextLabel
-var choices_container: VBoxContainer
+enum CharacterTalkType {
+	None,
+	Talk,
+	Grunt
+}
+var talk_type: int = CharacterTalkType.None
+var talk_sounds: Array = []
+
+onready var text_node: RichTextLabel = $DialogText
+onready var choices_container: VBoxContainer = $ChoicesContainer
+onready var dialog_audio: AudioStreamPlayer = $DialogAudioPlayer
+
+var dialog_text_box: Texture = preload("res://assets/text_boxes/default_textbox.png")
+var choice_text_box: Texture = preload("res://assets/text_boxes/default_textbox.png")
+
+var dialog_font: DynamicFont = preload("res://assets/fonts/lemon_tea.tres")
+var choice_font: DynamicFont = preload("res://assets/fonts/lemon_tea.tres")
 
 func _ready():
 	visible = false
-	text_node = $DialogText
-	choices_container = $ChoicesContainer
 	TextBoxController.set_text_box_node(self)
 
 func _process(delta):
@@ -42,6 +55,9 @@ func set_mode(mode):
 			anchor_bottom = DIALOG_ANCHOR_BOTTOM
 			text_node.visible = true
 			choices_container.visible = false
+
+			set_text_box(dialog_text_box)
+			$DialogText.theme.set_default_font(dialog_font)
 		TextBoxMode.Choice:
 			anchor_left = CHOICE_ANCHOR_LEFT
 			anchor_top = CHOICE_ANCHOR_TOP
@@ -50,9 +66,28 @@ func set_mode(mode):
 			choices_container.visible = true
 			text_node.visible = false
 
+			set_text_box(choice_text_box)
+			text_node.theme.set_default_font(choice_font)
+
+func set_text_box(tex: Texture):
+	texture = tex
+
+	var w_div_3 = floor(tex.get_width()/3.0)
+	region_rect = Rect2(0, 0, tex.get_width(), tex.get_height())
+	patch_margin_top = w_div_3
+	patch_margin_left = w_div_3
+	patch_margin_right = w_div_3
+	patch_margin_bottom = w_div_3
+
 func set_choice_index(index):
 	var children = choices_container.get_children()
 	if(choice_index != -1):
 		children[choice_index].add_color_override("font_color", Color.white)
 	children[index].add_color_override("font_color", Color.yellow)
 	choice_index = index
+
+func _on_DialogAudioPlayer_finished():
+	if talk_type == CharacterTalkType.Talk and text_node.percent_visible < 1:
+		dialog_audio.pitch_scale = 1.0 + rand_range(-0.2, 0.2)
+		dialog_audio.stream = talk_sounds[randi()%talk_sounds.size()]
+		dialog_audio.play()
