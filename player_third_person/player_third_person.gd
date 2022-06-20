@@ -1,4 +1,5 @@
 extends KinematicBody
+class_name Player3P
 
 const MAX_SPEED = 3.0
 const ACCELERATION = 0.2
