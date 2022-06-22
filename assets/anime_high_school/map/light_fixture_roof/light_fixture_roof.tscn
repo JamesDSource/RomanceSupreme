@@ -5,5 +5,7 @@
 [node name="light_fixture_roof" instance=ExtResource( 1 )]
 
 [node name="OmniLight" type="OmniLight" parent="." index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0509912, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.124974, 0 )
+shadow_enabled = true
+shadow_bias = 1.0
 omni_range = 8.918

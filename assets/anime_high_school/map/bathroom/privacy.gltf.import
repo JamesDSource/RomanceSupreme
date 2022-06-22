@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/BackgroundCharacters.gltf-8ca8f986dca1e5b00d4daa2f0a4a79b9.scn"
+path="res://.import/privacy.gltf-4082fcec2c175552bc3ce40a8b58dea7.scn"
 
 [deps]
 
-source_file="res://assets/anime_high_school/characters/background_character/BackgroundCharacters.gltf"
-dest_files=[ "res://.import/BackgroundCharacters.gltf-8ca8f986dca1e5b00d4daa2f0a4a79b9.scn" ]
+source_file="res://assets/anime_high_school/map/bathroom/privacy.gltf"
+dest_files=[ "res://.import/privacy.gltf-4082fcec2c175552bc3ce40a8b58dea7.scn" ]
 
 [params]
 
@@ -31,7 +31,7 @@ external_files/store_in_subdir=false
 animation/import=true
 animation/fps=15
 animation/filter_script=""
-animation/storage=1
+animation/storage=false
 animation/keep_custom_tracks=false
 animation/optimizer/enabled=true
 animation/optimizer/max_linear_error=0.05
