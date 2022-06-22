@@ -26,11 +26,11 @@
 [ext_resource path="res://assets/anime_high_school/map/bathroom_sink/bathroom_sink.gltf" type="PackedScene" id=24]
 [ext_resource path="res://assets/anime_high_school/map/bathroom/bathroom.tscn" type="PackedScene" id=25]
 
-[sub_resource type="ProceduralSky" id=10]
+[sub_resource type="ProceduralSky" id=12]
 
 [sub_resource type="Environment" id=11]
 background_mode = 2
-background_sky = SubResource( 10 )
+background_sky = SubResource( 12 )
 ambient_light_energy = 0.0
 tonemap_mode = 3
 ss_reflections_enabled = true
