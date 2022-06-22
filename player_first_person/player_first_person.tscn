@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://player_first_person/player_first_person.gd" type="Script" id=1]
 [ext_resource path="res://assets/first_person_HUD/crosshair_needle.png" type="Texture" id=2]
 [ext_resource path="res://player_first_person/Crosshair.gd" type="Script" id=3]
+[ext_resource path="res://assets/FPS/PPSH/PPSH.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape" id=2]
 radius = 0.3
@@ -59,3 +60,6 @@ texture = ExtResource( 2 )
 position = Vector2( 20, 0 )
 rotation = -1.5708
 texture = ExtResource( 2 )
+
+[node name="PPSH" parent="CameraPivot" instance=ExtResource( 4 )]
+transform = Transform( -0.130734, 0, 1.49429, 0, 1.5, 0, -1.49429, 0, -0.130734, 0.4, -0.259, -0.259 )
