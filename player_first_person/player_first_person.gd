@@ -15,12 +15,22 @@ const IDLE_CROSSHAIR_SEP = 75
 const FIRED_CROSSHAIR_SEP_STEP = 10
 const MAX_CROSSHAIR_SEP = 160
 
+onready var gun_anim: AnimationPlayer = $CameraPivot/PPSH/AnimationPlayer
+
 var adsing: bool = false
+var reloading: bool = false
+const FIRE_DELAY: float = .12
+var fire_timer: float = FIRE_DELAY
+
+const AMMO_CLIP_MAX = 70
+const AMMO_RESERVE_MAX = 210
+var ammo_clip = AMMO_CLIP_MAX
+var ammo_reserve = AMMO_RESERVE_MAX
 
 var velocity = Vector3(0, 0, 0)
 
 func _ready():
-	camera_pivot = $CameraPivot
+	gun_anim.play("firing")
 
 func _input(event):
 	if event is InputEventMouseMotion:
@@ -28,11 +38,32 @@ func _input(event):
 		camera_verticle_rot = clamp(camera_verticle_rot - event.relative.y*0.001, -deg2rad(90.0), deg2rad(90.0))
 		camera_pivot.rotation.x = camera_verticle_rot
 
-func _process(_delta):
-	if Input.is_action_pressed("shoot"):
-		crosshair.set_seperation(min(crosshair.seperation + FIRED_CROSSHAIR_SEP_STEP, MAX_CROSSHAIR_SEP))
-	else:
-		crosshair.set_seperation(lerp(crosshair.seperation, IDLE_CROSSHAIR_SEP, 0.1))
+func _process(delta):
+	fire_timer = max(0, fire_timer - delta)
+
+	if Input.is_action_pressed("shoot") and fire_timer <= 0 and ammo_clip > 0 and !reloading:
+		gun_anim.play("firing")
+		ammo_clip -= 1
+		update_ammo_display()
+		fire_timer = FIRE_DELAY
+	elif ammo_clip < AMMO_CLIP_MAX and Input.is_action_just_pressed("reload") and !reloading:
+		gun_anim.play("reload")
+		reloading = true
+	elif reloading and !gun_anim.is_playing():
+		var ammo_needed = AMMO_CLIP_MAX - ammo_clip
+		ammo_clip += min(ammo_needed, ammo_reserve)
+		ammo_reserve = max(0, ammo_reserve - ammo_needed)
+		update_ammo_display()
+		reloading = false
+
+	if Input.is_action_pressed("ads") and !adsing:
+		$AnimationPlayer.play("ads")
+		crosshair.visible = false
+		adsing = true
+	elif !Input.is_action_pressed("ads") and adsing:
+		$AnimationPlayer.play_backwards("ads")
+		crosshair.visible = true
+		adsing = false
 
 func _physics_process(delta):
 	velocity.y -= gravity * delta
@@ -55,3 +86,6 @@ func _physics_process(delta):
 	velocity.y = y
 	
 	velocity = move_and_slide(velocity, Vector3.UP)
+
+func update_ammo_display():
+	$CameraPivot/Camera/HUD/AmmoCount.text = str(ammo_clip) + "/" + str(ammo_reserve)
