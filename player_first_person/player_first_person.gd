@@ -11,9 +11,11 @@ onready var camera_pivot: Spatial = $CameraPivot
 var camera_verticle_rot: float = 0
 
 onready var crosshair: Crosshair = $CameraPivot/Camera/HUD/Crosshair
-const IDLE_CROSSHAIR_SEP = 20
-const FIRED_CROSSHAIR_SEP_STEP = 35
-const MAX_CROSSHAIR_SEP = 100
+const IDLE_CROSSHAIR_SEP = 75
+const FIRED_CROSSHAIR_SEP_STEP = 10
+const MAX_CROSSHAIR_SEP = 160
+
+var adsing: bool = false
 
 var velocity = Vector3(0, 0, 0)
 
@@ -27,7 +29,7 @@ func _input(event):
 		camera_pivot.rotation.x = camera_verticle_rot
 
 func _process(_delta):
-	if Input.is_action_just_pressed("shoot"):
+	if Input.is_action_pressed("shoot"):
 		crosshair.set_seperation(min(crosshair.seperation + FIRED_CROSSHAIR_SEP_STEP, MAX_CROSSHAIR_SEP))
 	else:
 		crosshair.set_seperation(lerp(crosshair.seperation, IDLE_CROSSHAIR_SEP, 0.1))

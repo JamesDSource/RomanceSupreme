@@ -8,9 +8,6 @@ const FADE_SPEED: float = 0.8
 func _ready():
 	pause_mode = PAUSE_MODE_PROCESS
 
-func _enter_tree():
-	print("This might print multiple times")
-
 func _process(delta):
 	if loader != null:
 		get_tree().paused = true

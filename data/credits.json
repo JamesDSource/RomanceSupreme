@@ -54,7 +54,13 @@
 	{
 		"name": "Nomiqbomi: freesound.org",
 		"roles": [
-			"Provied Xylophone sound"
+			"Xylophone sound"
+		]
+	},
+	{
+		"name": "joedeshon: freesound.org",
+		"roles": [
+			"Classroom Ambiance"
 		]
 	}
 ]
