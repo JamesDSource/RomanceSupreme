@@ -65,6 +65,7 @@ enabled=PoolStringArray( "res://addons/scatter/plugin.cfg" )
 
 display=false
 window=false
+physics=false
 
 [input]
 
@@ -138,6 +139,7 @@ reload={
 [physics]
 
 common/enable_pause_aware_picking=true
+3d/physics_engine="GodotPhysics"
 3d/default_gravity=14.0
 
 [rendering]
