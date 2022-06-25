@@ -21,6 +21,9 @@ onready var anim_player: AnimationPlayer = $AnimationPlayer
 var casing_particle = preload("res://casing_particle/casing_particle.tscn")
 onready var casing_particle_spawn: Spatial = $Armature/Skeleton/GunAttachment/CasingParticleSpawn
 
+var gunshot_sound = preload("res://assets/sounds/ppsh/gunshot.wav")
+var gunshot_players = []
+
 func _process(delta):
 	fire_timer = max(0, fire_timer - delta)
 
@@ -30,6 +33,18 @@ func _process(delta):
 				anim_player.play("firing")
 				ammo_clip -= 1
 				emit_signal("on_fire")
+
+				for i in range(gunshot_players.size() - 1, 0, -1):
+					if !gunshot_players[i]:
+						gunshot_players[i].queue_free()
+						remove_child(gunshot_players[i])
+						gunshot_players.remove(i)
+
+				var player = AudioStreamPlayer.new()
+				add_child(player)
+				player.stream = gunshot_sound
+				player.play()
+				gunshot_players.append(player)
 				
 				var particle = casing_particle.instance()
 				get_tree().root.add_child(particle)

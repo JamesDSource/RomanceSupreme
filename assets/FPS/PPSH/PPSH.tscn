@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://assets/FPS/PPSH/PPSH.gltf" type="PackedScene" id=1]
 [ext_resource path="res://assets/FPS/PPSH/PPSH.gd" type="Script" id=2]
+[ext_resource path="res://assets/sounds/ppsh/reload.wav" type="AudioStream" id=3]
 
 [sub_resource type="Animation" id=1]
 length = 0.001
@@ -9,11 +10,14 @@ length = 0.001
 [node name="PPSH" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 
+[node name="Skeleton" parent="Armature" index="0"]
+bones/0/bound_children = [ NodePath("GunAttachment") ]
+
 [node name="trigun" parent="Armature/Skeleton" index="0"]
 layers = 2
 
 [node name="GunAttachment" type="BoneAttachment" parent="Armature/Skeleton" index="1"]
-transform = Transform( 0.000625551, 1, 2.20979e-11, -1, 0.000625551, 2.23739e-08, 2.23738e-08, -3.60938e-11, 1, 2.98023e-08, -5.96046e-08, 0 )
+transform = Transform( 0.000625551, 1, 2.20979e-11, -1, 0.000625551, 2.23739e-08, 2.23738e-08, -3.60938e-11, 1, 0, -3.55271e-15, 1.05879e-22 )
 bone_name = "gun"
 
 [node name="CasingParticleSpawn" type="Spatial" parent="Armature/Skeleton/GunAttachment" index="0"]
@@ -21,3 +25,6 @@ transform = Transform( 1, -6.98492e-10, 0, -6.98492e-10, 1, 1.38778e-17, 0, 1.04
 
 [node name="AnimationPlayer" parent="." index="1"]
 anims/RESET = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="2"]
+stream = ExtResource( 3 )
