@@ -1,0 +1,384 @@
+{
+	"nodes": [
+		{
+			"type": "start",
+			"meta": {
+				"x": 500,
+				"y": 1512
+			},
+			"sequence_name": "Minotaur Labyrinth\n"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 871,
+				"y": 1509
+			},
+			"sequence_name": "Grungledorf"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": -696,
+				"y": 378
+			},
+			"sequence_name": "Meet Guy Boyfriend"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": -13,
+				"y": 10
+			},
+			"sequence_name": "Wake up"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": -664,
+				"y": 1758
+			},
+			"sequence_name": "Finding Blender cube"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": -667,
+				"y": 1305
+			},
+			"sequence_name": "Back to halloween "
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": -670,
+				"y": 997
+			},
+			"sequence_name": "Abduction to Halloween Town"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1191,
+				"y": 1510
+			},
+			"dialog_text": "Last Britain, Bastion under the Bridge & Empire of Treasured Trash"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": -280,
+				"y": 1758
+			},
+			"dialog_text": "Blender cube upside down dimension, empty and devoid of most\nlife\nhow you find it is by\n- weird see through cube through walls that you follow\nor\n- confronted by weird cube\nor\n- bugging your way off the map?\n\nblender cube is\n\nhas"
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": -351,
+				"y": 1315
+			},
+			"choices": [
+				"Grungulus the Succubus Mayor of Halloween Town",
+				"Samantha & Samantha"
+			]
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 162,
+				"y": 897
+			},
+			"choices": [
+				"wake up at home, new day and you have to go figure out what's happening",
+				"loop back to wake up"
+			]
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": -319,
+				"y": 557
+			},
+			"dialog_text": "\"Hello, did you get my note? I left it on your desk but you were\nkinda asleep at the time. You should have read it surely.\""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": -345,
+				"y": 997
+			},
+			"dialog_text": "wake up in a cage hanging from a tall tree in halloween town\ncrowd gathered around you just kinda awkwardly staring\nyou are dizzy and your vision is spotty\nyou are greeted by mayor grungulus before he turns away to start\nthe festivities\na celebration happens around the prison tree, goes on for hours until\nplayer falls asleep in a daze and wakes up back in highschool or\nsomething"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 869,
+				"y": 1006
+			},
+			"dialog_text": "speedrun ending, if you punch enough you reach the hell dream and\nwin [gore warning]\nif you stop before that, you can beat anime boy to death or ko"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2010,
+				"y": 925
+			},
+			"dialog_text": "kidnap sequence"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1488,
+				"y": 925
+			},
+			"dialog_text": "you are a liar, dunno what that means yet"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2025,
+				"y": 601
+			},
+			"dialog_text": "gets really offended, hurt his feelings and he runs away\nmight abduct you later"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1474,
+				"y": 541
+			},
+			"dialog_text": "Oh, that's such a relief, I was so nervous when I wrote that\n\nasks you to meet somewhere where he'll take you to halloween town\n[with drugs] abduction"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3770,
+				"y": -103
+			},
+			"dialog_text": "Soppy anime bullshit nonsense, you're free to move on."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 225,
+				"y": 557
+			},
+			"dialog_text": "Approached by a fairly average looking boy with intense eyes, you\nvaguely remember him as one of the more popular kids that some\nfawned over but you have no memory whatever for. He must\nhave been the one that left you that little note in class."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3769,
+				"y": 211
+			},
+			"dialog_text": "You know to mind your own business and go on with your life, time\nto go home or something."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1492,
+				"y": -92
+			},
+			"dialog_text": "Their aim was not true, and you dodge into a glass soda bottle thrown\nat you by your teacher."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 339,
+				"y": 10
+			},
+			"dialog_text": "You wake up with your face flat against a school desk.\nThere is a puddle of drool pooling around you on the table\n coming from your mouth.\nYou hear a shout and the sound of something flying at you."
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 767,
+				"y": 583
+			},
+			"choices": [
+				"Of course, it was really sweet actually",
+				"What letter?",
+				"[Lie] Yes of course. I should have a response back to you in 2 days.",
+				"I mean I did but you're a bit of a creep",
+				"[Punch]"
+			]
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 867,
+				"y": 13
+			},
+			"choices": [
+				"Dodge!",
+				"Stay where you are."
+			]
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 4391,
+				"y": 48
+			},
+			"sequence_name": ""
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 3106,
+				"y": 4
+			},
+			"choices": [
+				"Open the letter",
+				"Leave it and move on"
+			]
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2574,
+				"y": 54
+			},
+			"dialog_text": "You do your best to collect yourself and shrug off the remarks.\nAs you go to get up you notice a little folded note left on your desk,\nprobably left there while you were taking your nap.\n\nOpen it?"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1493,
+				"y": 219
+			},
+			"dialog_text": "With nerves of steel you don't even flinch, and a glass soda bottle\nsmashes to pieces on the floor next to you. Looking up you see your\nteacher."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2047,
+				"y": 54
+			},
+			"dialog_text": "Teacher\n\"Pay Attention!\"\n\"It's numbnutz like you that make me regret ever becoming a\nteacher... whatever. Class dismissed!\""
+		}
+	],
+	"connections": [
+		{
+			"node_idx": 3,
+			"outputs": [
+				22
+			]
+		},
+		{
+			"node_idx": 22,
+			"outputs": [
+				24
+			]
+		},
+		{
+			"node_idx": 24,
+			"outputs": [
+				21,
+				28
+			]
+		},
+		{
+			"node_idx": 21,
+			"outputs": [
+				29
+			]
+		},
+		{
+			"node_idx": 28,
+			"outputs": [
+				29
+			]
+		},
+		{
+			"node_idx": 29,
+			"outputs": [
+				27
+			]
+		},
+		{
+			"node_idx": 27,
+			"outputs": [
+				26
+			]
+		},
+		{
+			"node_idx": 26,
+			"outputs": [
+				18,
+				20
+			]
+		},
+		{
+			"node_idx": 18,
+			"outputs": [
+				25
+			]
+		},
+		{
+			"node_idx": 20,
+			"outputs": [
+				25
+			]
+		},
+		{
+			"node_idx": 2,
+			"outputs": [
+				11
+			]
+		},
+		{
+			"node_idx": 11,
+			"outputs": [
+				19
+			]
+		},
+		{
+			"node_idx": 19,
+			"outputs": [
+				23
+			]
+		},
+		{
+			"node_idx": 23,
+			"outputs": [
+				17,
+				16,
+				15,
+				14,
+				13
+			]
+		},
+		{
+			"node_idx": 6,
+			"outputs": [
+				12
+			]
+		},
+		{
+			"node_idx": 12,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 4,
+			"outputs": [
+				8
+			]
+		},
+		{
+			"node_idx": 5,
+			"outputs": [
+				9
+			]
+		},
+		{
+			"node_idx": 1,
+			"outputs": [
+				7
+			]
+		}
+	]
+}
