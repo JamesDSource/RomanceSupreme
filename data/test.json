@@ -3,45 +3,26 @@
 		{
 			"type": "start",
 			"meta": {
-				"x": -369,
-				"y": 415
-			},
-			"sequence_name": "[root]"
-		},
-		{
-			"type": "start",
-			"meta": {
 				"x": 453,
 				"y": 1150
 			},
 			"sequence_name": "third thing"
 		},
 		{
+			"type": "start",
+			"meta": {
+				"x": -369,
+				"y": 415
+			},
+			"sequence_name": "[root]"
+		},
+		{
 			"type": "dialog",
 			"meta": {
-				"x": 1408,
-				"y": 1122
+				"x": 1925,
+				"y": 984
 			},
-			"dialog_text": "Why did you do that?? You get a second chance, don't mess this up!\npppppooopopopopopooppoppoooopy\nbkrarrappprrappapapappapappprtttrprprprp\n\n\n\npenis"
-		},
-		{
-			"type": "setter",
-			"meta": {
-				"x": 123,
-				"y": 585
-			},
-			"value_type": "Custom Variable",
-			"var_name": "stupid",
-			"var_value": true
-		},
-		{
-			"type": "setter",
-			"meta": {
-				"x": 525,
-				"y": 248
-			},
-			"value_type": "Speaker",
-			"speaker_id": "guy"
+			"dialog_text": "\npenis"
 		},
 		{
 			"type": "jump",
@@ -52,29 +33,29 @@
 			"sequence_name": "[root]"
 		},
 		{
+			"type": "dialog",
+			"meta": {
+				"x": 1408,
+				"y": 1122
+			},
+			"dialog_text": "Why did you do that?? You get a second chance, don't mess this up!\npppppooopopopopopooppoppoooopy\nbkrarrappprrappapapappapappprtttrprprprp\n\n\n\n"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 988,
+				"y": 461
+			},
+			"dialog_text": "This is some cool test dialog\nasfasdffffffffasdfasdfasdfasdfaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+		},
+		{
 			"type": "setter",
 			"meta": {
-				"x": 957,
-				"y": 1224
+				"x": 2333,
+				"y": 646
 			},
-			"value_type": "Speaker",
-			"speaker_id": "Fucker"
-		},
-		{
-			"type": "jump",
-			"meta": {
-				"x": 2387,
-				"y": 202
-			},
-			"sequence_name": "[root]"
-		},
-		{
-			"type": "jump",
-			"meta": {
-				"x": 2853,
-				"y": 796
-			},
-			"sequence_name": "third thing"
+			"value_type": "Camera Angle",
+			"cam_index": 1
 		},
 		{
 			"type": "choice",
@@ -89,58 +70,103 @@
 			]
 		},
 		{
-			"type": "setter",
+			"type": "jump",
 			"meta": {
-				"x": 2333,
-				"y": 646
+				"x": 2853,
+				"y": 796
 			},
-			"value_type": "Camera Angle",
-			"cam_index": 1
+			"sequence_name": "third thing"
 		},
 		{
-			"type": "dialog",
+			"type": "jump",
 			"meta": {
-				"x": 988,
-				"y": 461
+				"x": 2387,
+				"y": 202
 			},
-			"dialog_text": "This is some cool test dialog\nasfasdffffffffasdfasdfasdfasdfaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 957,
+				"y": 1224
+			},
+			"value_type": "Speaker",
+			"speaker_id": "Fucker"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 525,
+				"y": 248
+			},
+			"value_type": "Speaker",
+			"speaker_id": "guy"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 123,
+				"y": 585
+			},
+			"value_type": "Custom Variable",
+			"var_name": "stupid",
+			"var_value": true
 		}
 	],
 	"connections": [
 		{
-			"node_idx": 9,
+			"node_idx": 7,
 			"outputs": [
-				7,
+				9,
 				null,
-				10
+				6
 			]
 		},
 		{
-			"node_idx": 11,
+			"node_idx": 5,
 			"outputs": [
-				9
+				7
 			]
 		},
 		{
-			"node_idx": 10,
+			"node_idx": 6,
 			"outputs": [
 				8
 			]
 		},
 		{
-			"node_idx": 0,
-			"outputs": [
-				3
-			]
-		},
-		{
 			"node_idx": 1,
 			"outputs": [
-				6
+				12
 			]
 		},
 		{
-			"node_idx": 6,
+			"node_idx": 0,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 10,
+			"outputs": [
+				4
+			]
+		},
+		{
+			"node_idx": 12,
+			"outputs": [
+				11
+			]
+		},
+		{
+			"node_idx": 11,
+			"outputs": [
+				5
+			]
+		},
+		{
+			"node_idx": 4,
 			"outputs": [
 				2
 			]
@@ -148,19 +174,7 @@
 		{
 			"node_idx": 2,
 			"outputs": [
-				5
-			]
-		},
-		{
-			"node_idx": 3,
-			"outputs": [
-				4
-			]
-		},
-		{
-			"node_idx": 4,
-			"outputs": [
-				11
+				3
 			]
 		}
 	]
