@@ -3,63 +3,18 @@
 		{
 			"type": "start",
 			"meta": {
-				"x": 453,
-				"y": 1150
-			},
-			"sequence_name": "third thing"
-		},
-		{
-			"type": "start",
-			"meta": {
 				"x": -369,
 				"y": 415
 			},
 			"sequence_name": "[root]"
 		},
 		{
-			"type": "dialog",
+			"type": "start",
 			"meta": {
-				"x": 988,
-				"y": 461
-			},
-			"dialog_text": "This is some cool test dialog\nasfasdffffffffasdfasdfasdfasdfaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-		},
-		{
-			"type": "setter",
-			"meta": {
-				"x": 2333,
-				"y": 646
-			},
-			"value_type": "Camera Angle",
-			"cam_index": 1
-		},
-		{
-			"type": "choice",
-			"meta": {
-				"x": 1564,
-				"y": 206
-			},
-			"choices": [
-				"Repeat",
-				"Dont",
-				"third thing"
-			]
-		},
-		{
-			"type": "jump",
-			"meta": {
-				"x": 2853,
-				"y": 796
+				"x": 453,
+				"y": 1150
 			},
 			"sequence_name": "third thing"
-		},
-		{
-			"type": "jump",
-			"meta": {
-				"x": 2387,
-				"y": 202
-			},
-			"sequence_name": "[root]"
 		},
 		{
 			"type": "dialog",
@@ -67,24 +22,7 @@
 				"x": 1408,
 				"y": 1122
 			},
-			"dialog_text": "Why did you do that?? You get a second chance, don't mess this up!"
-		},
-		{
-			"type": "setter",
-			"meta": {
-				"x": 957,
-				"y": 1224
-			},
-			"value_type": "Speaker",
-			"speaker_id": "Fucker"
-		},
-		{
-			"type": "jump",
-			"meta": {
-				"x": 2206,
-				"y": 1295
-			},
-			"sequence_name": "[root]"
+			"dialog_text": "Why did you do that?? You get a second chance, don't mess this up!\npppppooopopopopopooppoppoooopy\nbkrarrappprrappapapappapappprtttrprprprp\n\n\n\npenis"
 		},
 		{
 			"type": "setter",
@@ -104,49 +42,81 @@
 			},
 			"value_type": "Speaker",
 			"speaker_id": "guy"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 2206,
+				"y": 1295
+			},
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 957,
+				"y": 1224
+			},
+			"value_type": "Speaker",
+			"speaker_id": "Fucker"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 2387,
+				"y": 202
+			},
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 2853,
+				"y": 796
+			},
+			"sequence_name": "third thing"
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 1564,
+				"y": 206
+			},
+			"choices": [
+				"Repeat",
+				"Dont",
+				"third thing"
+			]
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 2333,
+				"y": 646
+			},
+			"value_type": "Camera Angle",
+			"cam_index": 1
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 988,
+				"y": 461
+			},
+			"dialog_text": "This is some cool test dialog\nasfasdffffffffasdfasdfasdfasdfaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
 		}
 	],
 	"connections": [
 		{
-			"node_idx": 4,
+			"node_idx": 9,
 			"outputs": [
-				6,
+				7,
 				null,
-				3
-			]
-		},
-		{
-			"node_idx": 2,
-			"outputs": [
-				4
-			]
-		},
-		{
-			"node_idx": 3,
-			"outputs": [
-				5
-			]
-		},
-		{
-			"node_idx": 1,
-			"outputs": [
 				10
 			]
 		},
 		{
-			"node_idx": 0,
-			"outputs": [
-				8
-			]
-		},
-		{
-			"node_idx": 8,
-			"outputs": [
-				7
-			]
-		},
-		{
-			"node_idx": 7,
+			"node_idx": 11,
 			"outputs": [
 				9
 			]
@@ -154,13 +124,43 @@
 		{
 			"node_idx": 10,
 			"outputs": [
-				11
+				8
 			]
 		},
 		{
-			"node_idx": 11,
+			"node_idx": 0,
+			"outputs": [
+				3
+			]
+		},
+		{
+			"node_idx": 1,
+			"outputs": [
+				6
+			]
+		},
+		{
+			"node_idx": 6,
 			"outputs": [
 				2
+			]
+		},
+		{
+			"node_idx": 2,
+			"outputs": [
+				5
+			]
+		},
+		{
+			"node_idx": 3,
+			"outputs": [
+				4
+			]
+		},
+		{
+			"node_idx": 4,
+			"outputs": [
+				11
 			]
 		}
 	]
