@@ -45,6 +45,7 @@ anchor_bottom = 1.0
 [node name="Header" type="Label" parent="Choices"]
 anchor_right = 1.0
 anchor_bottom = 0.15
+margin_top = 10.0
 theme = SubResource( 2 )
 align = 1
 valign = 1

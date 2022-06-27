@@ -16,9 +16,11 @@ func _process(delta):
 		if abs(gui.fade_screen.modulate.a - 1) < 0.00001 and err == ERR_FILE_EOF:
 			var scene = loader.get_resource()
 			loader = null
+
+			InputState.mouse_needed = 0
 			get_tree().change_scene_to(scene)
 			get_tree().paused = false
-	elif gui.fade_screen.modulate.a > 0:
+	elif gui != null and gui.fade_screen.modulate.a > 0:
 		gui.fade_screen.modulate.a = move_toward(gui.fade_screen.modulate.a, 0, delta*FADE_SPEED)
 
 func to_scene(scene: String, in_port: int):

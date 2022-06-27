@@ -3,114 +3,95 @@
 		{
 			"type": "start",
 			"meta": {
-				"x": 276,
+				"x": -562,
 				"y": 330
 			},
 			"sequence_name": "[root]"
 		},
 		{
-			"type": "dialog",
+			"type": "choice",
 			"meta": {
-				"x": 3201,
-				"y": 174
+				"x": 4569,
+				"y": 293
 			},
-			"dialog_text": "Pay Attention numbnutz!\n\nIt's pupils like you that make me regret ever becoming a teacher..."
+			"header": "",
+			"choices": [
+				"Open the letter",
+				"Leave it and move on"
+			]
 		},
 		{
 			"type": "setter",
 			"meta": {
-				"x": 5741,
-				"y": 503
+				"x": 4044,
+				"y": 819
 			},
-			"value_type": "Custom Variable",
-			"var_name": "LetterRead",
-			"var_value": false
+			"value_type": "Camera Angle",
+			"cam_index": 1
 		},
 		{
 			"type": "setter",
 			"meta": {
-				"x": 6291,
-				"y": 179
+				"x": 166,
+				"y": 787
 			},
-			"value_type": "Custom Variable",
-			"var_name": "LetterRead",
-			"var_value": true
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 634,
-				"y": 187
-			},
-			"dialog_text": "You wake up with your face flat against a school desk.\nThere is a puddle of drool pooling around you on the table \ncoming from your mouth."
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 5742,
-				"y": 179
-			},
-			"dialog_text": "In summary they seem to probing your interest and promise to be \nin touch very soon."
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 5193,
-				"y": 179
-			},
-			"dialog_text": "You read through an anonymous love letter of sorts, presumably\nfrom a well wisher."
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 3201,
-				"y": 516
-			},
-			"dialog_text": "I'm so disappointed I can't even go on with class, whatever\n\nClass dismissed - because of this loser right here."
-		},
-		{
-			"type": "setter",
-			"meta": {
-				"x": 3725,
-				"y": 347
-			},
-			"value_type": "Speaker",
-			"speaker_id": ""
+			"value_type": "Camera Angle",
+			"cam_index": 2
 		},
 		{
 			"type": "choice",
 			"meta": {
-				"x": 1170,
-				"y": 296
+				"x": 780,
+				"y": 271
 			},
+			"header": "There's a bottle flying twords your face!",
 			"choices": [
 				"Dodge!",
 				"Stay where you are."
 			]
 		},
 		{
+			"type": "event",
+			"meta": {
+				"x": 1451,
+				"y": 253
+			},
+			"name": "bottle hit",
+			"outputs": 1
+		},
+		{
+			"type": "event",
+			"meta": {
+				"x": 1452,
+				"y": 576
+			},
+			"name": "bottle miss",
+			"outputs": 1
+		},
+		{
 			"type": "dialog",
 			"meta": {
-				"x": 635,
-				"y": 507
+				"x": 219,
+				"y": 494
 			},
 			"dialog_text": "\nYou hear a shout and the sound of something flying at you."
 		},
 		{
 			"type": "dialog",
 			"meta": {
-				"x": 2348,
-				"y": 349
+				"x": 223,
+				"y": 187
 			},
-			"dialog_text": "\nLooking up you see your teacher"
+			"dialog_text": "You wake up with your face flat against a school desk.\nThere is a puddle of drool pooling around you on the table \ncoming from your mouth."
 		},
 		{
-			"type": "dialog",
+			"type": "event",
 			"meta": {
-				"x": 1805,
-				"y": 505
+				"x": -155,
+				"y": 331
 			},
-			"dialog_text": "[glass bottle event - miss]\nWith nerves of steel you don't even flinch, and a glass soda bottle\nsmashes to pieces on the floor next to you."
+			"name": "open eyes",
+			"outputs": 1
 		},
 		{
 			"type": "dialog",
@@ -118,7 +99,39 @@
 				"x": 1805,
 				"y": 193
 			},
-			"dialog_text": "[glass bottle event - hit]\nYou skillfully dodge away from your desk-\nand right into the path of a glass soda bottle!"
+			"dialog_text": "You skillfully dodge away from your desk-\nand right into the path of a glass soda bottle!"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1805,
+				"y": 505
+			},
+			"dialog_text": "With nerves of steel you don't even flinch, and a glass soda bottle\nsmashes to pieces on the floor next to you."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 5193,
+				"y": 503
+			},
+			"dialog_text": "You know to mind your own business and go on with your life, time\nto move on."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 4044,
+				"y": 507
+			},
+			"dialog_text": "\nOpen it?"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 4042,
+				"y": 173
+			},
+			"dialog_text": "You do your best to collect yourself and shrug off the remarks.\nAs you go to get up you notice a little folded note left on your desk,\nprobably left there while you were taking your nap."
 		},
 		{
 			"type": "setter",
@@ -132,115 +145,88 @@
 		{
 			"type": "dialog",
 			"meta": {
-				"x": 4042,
-				"y": 173
+				"x": 2348,
+				"y": 349
 			},
-			"dialog_text": "You do your best to collect yourself and shrug off the remarks.\nAs you go to get up you notice a little folded note left on your desk,\nprobably left there while you were taking your nap."
+			"dialog_text": "\nLooking up you see your teacher"
 		},
 		{
-			"type": "choice",
+			"type": "setter",
 			"meta": {
-				"x": 4569,
-				"y": 293
+				"x": 3725,
+				"y": 347
 			},
-			"choices": [
-				"Open the letter",
-				"Leave it and move on"
-			]
+			"value_type": "Speaker",
+			"speaker_id": ""
 		},
 		{
 			"type": "dialog",
 			"meta": {
-				"x": 4044,
-				"y": 507
+				"x": 3201,
+				"y": 516
 			},
-			"dialog_text": "\nOpen it?"
+			"dialog_text": "I'm so disappointed I can't even go on with class, whatever\n\nClass dismissed - because of this loser right here."
 		},
 		{
 			"type": "dialog",
 			"meta": {
 				"x": 5193,
+				"y": 179
+			},
+			"dialog_text": "You read through an anonymous love letter of sorts, presumably\nfrom a well wisher."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 5742,
+				"y": 179
+			},
+			"dialog_text": "In summary they seem to probing your interest and promise to be \nin touch very soon."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 6291,
+				"y": 179
+			},
+			"value_type": "Custom Variable",
+			"var_name": "LetterRead",
+			"var_value": true
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 5741,
 				"y": 503
 			},
-			"dialog_text": "You know to mind your own business and go on with your life, time\nto move on."
+			"value_type": "Custom Variable",
+			"var_name": "LetterRead",
+			"var_value": false
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3201,
+				"y": 174
+			},
+			"dialog_text": "Pay Attention numbnutz!\n\nIt's pupils like you that make me regret ever becoming a teacher..."
 		}
 	],
 	"connections": [
 		{
-			"node_idx": 0,
-			"outputs": [
-				4
-			]
-		},
-		{
-			"node_idx": 4,
-			"outputs": [
-				10
-			]
-		},
-		{
-			"node_idx": 10,
-			"outputs": [
-				9
-			]
-		},
-		{
-			"node_idx": 9,
-			"outputs": [
-				13,
-				12
-			]
-		},
-		{
-			"node_idx": 13,
-			"outputs": [
-				11
-			]
-		},
-		{
-			"node_idx": 12,
-			"outputs": [
-				11
-			]
-		},
-		{
-			"node_idx": 11,
-			"outputs": [
-				14
-			]
-		},
-		{
-			"node_idx": 14,
-			"outputs": [
-				1
-			]
-		},
-		{
-			"node_idx": 1,
+			"node_idx": 8,
 			"outputs": [
 				7
 			]
 		},
 		{
-			"node_idx": 7,
+			"node_idx": 10,
 			"outputs": [
-				8
+				16
 			]
 		},
 		{
-			"node_idx": 8,
-			"outputs": [
-				15
-			]
-		},
-		{
-			"node_idx": 15,
-			"outputs": [
-				17
-			]
-		},
-		{
-			"node_idx": 17,
+			"node_idx": 11,
 			"outputs": [
 				16
 			]
@@ -248,26 +234,117 @@
 		{
 			"node_idx": 16,
 			"outputs": [
-				6,
+				15
+			]
+		},
+		{
+			"node_idx": 15,
+			"outputs": [
+				23
+			]
+		},
+		{
+			"node_idx": 23,
+			"outputs": [
 				18
 			]
 		},
 		{
 			"node_idx": 18,
 			"outputs": [
-				2
+				17
+			]
+		},
+		{
+			"node_idx": 17,
+			"outputs": [
+				14
+			]
+		},
+		{
+			"node_idx": 14,
+			"outputs": [
+				13
+			]
+		},
+		{
+			"node_idx": 1,
+			"outputs": [
+				19,
+				12
+			]
+		},
+		{
+			"node_idx": 12,
+			"outputs": [
+				22
+			]
+		},
+		{
+			"node_idx": 19,
+			"outputs": [
+				20
+			]
+		},
+		{
+			"node_idx": 20,
+			"outputs": [
+				21
+			]
+		},
+		{
+			"node_idx": 0,
+			"outputs": [
+				9
+			]
+		},
+		{
+			"node_idx": 9,
+			"outputs": [
+				8
+			]
+		},
+		{
+			"node_idx": 4,
+			"outputs": [
+				5,
+				6
 			]
 		},
 		{
 			"node_idx": 6,
 			"outputs": [
-				5
+				11
 			]
 		},
 		{
 			"node_idx": 5,
 			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 7,
+			"outputs": [
 				3
+			]
+		},
+		{
+			"node_idx": 3,
+			"outputs": [
+				4
+			]
+		},
+		{
+			"node_idx": 13,
+			"outputs": [
+				2
+			]
+		},
+		{
+			"node_idx": 2,
+			"outputs": [
+				1
 			]
 		}
 	]
