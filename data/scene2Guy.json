@@ -1,0 +1,303 @@
+{
+	"nodes": [
+		{
+			"type": "start",
+			"meta": {
+				"x": 196,
+				"y": 2201
+			},
+			"sequence_name": "WhatLetter"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 198,
+				"y": 2534
+			},
+			"sequence_name": "Punch"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 195,
+				"y": 1870
+			},
+			"sequence_name": "Lie"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 194,
+				"y": 1537
+			},
+			"sequence_name": "Confusion"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 195,
+				"y": 1202
+			},
+			"sequence_name": "Negative"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 194,
+				"y": 869
+			},
+			"sequence_name": "Positive"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 194,
+				"y": 370
+			},
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "condition",
+			"meta": {
+				"x": 2237,
+				"y": 368
+			},
+			"v1_is_var": false,
+			"v1": true,
+			"op": "==",
+			"v2_is_var": false,
+			"v2": "LetterRead"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2159,
+				"y": -534
+			},
+			"dialog_text": "Oh yeah you were supposed to be answering if you got his note..."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2015,
+				"y": -233
+			},
+			"dialog_text": "Somehow despite that you know that he is one of the popular kids\nat your school, always respected, liked and even fawned over, but \nyou can never remember what for."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1894,
+				"y": 68
+			},
+			"dialog_text": "You recognize him from around your school as someone who \nyou've actually shared quite a few classes with, and aside from a few\nbrief interactions he usually had a quiet demeanor."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 782,
+				"y": 864
+			},
+			"dialog_text": ""
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 2707,
+				"y": 699
+			},
+			"header": "Did you read my letter?",
+			"choices": [
+				"Uhhh, no sorry, I didn't realize it was for me",
+				"[Lie] Yes, of course! I should have a response back to you in 2 days",
+				"What Letter?",
+				"[Punch]"
+			]
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 3894,
+				"y": 91
+			},
+			"sequence_name": "Positive"
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 2708,
+				"y": 69
+			},
+			"header": "Did you read my letter?",
+			"choices": [
+				"Of course, it was really sweet actually",
+				"I mean I did but you're a bit of a creep",
+				"What Letter?",
+				"[Punch]"
+			]
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1062,
+				"y": 368
+			},
+			"dialog_text": "Hey there.. did you get my note?\nI left it on your desk but you were kinda asleep at the time.\nSurely you read it?"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 3890,
+				"y": 504
+			},
+			"sequence_name": "Confusion"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 4105,
+				"y": 1173
+			},
+			"sequence_name": "Punch"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 3753,
+				"y": 989
+			},
+			"sequence_name": "WhatLetter"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 4220,
+				"y": 686
+			},
+			"sequence_name": "Lie"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 4216,
+				"y": 276
+			},
+			"sequence_name": "Negative"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 537,
+				"y": 370
+			},
+			"dialog_text": "\"Hello?\" a voice calls down to you from the hallway"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 1062,
+				"y": 68
+			},
+			"value_type": "Speaker",
+			"speaker_id": "guy"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 1593,
+				"y": 68
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1593,
+				"y": 368
+			},
+			"dialog_text": "You are approached by a boy who aside from intense eyes looks \ncompletely average. It would seem he is your secret penpal."
+		}
+	],
+	"connections": [
+		{
+			"node_idx": 6,
+			"outputs": [
+				21
+			]
+		},
+		{
+			"node_idx": 21,
+			"outputs": [
+				22
+			]
+		},
+		{
+			"node_idx": 22,
+			"outputs": [
+				15
+			]
+		},
+		{
+			"node_idx": 15,
+			"outputs": [
+				23
+			]
+		},
+		{
+			"node_idx": 23,
+			"outputs": [
+				24
+			]
+		},
+		{
+			"node_idx": 24,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 10,
+			"outputs": [
+				9
+			]
+		},
+		{
+			"node_idx": 9,
+			"outputs": [
+				8
+			]
+		},
+		{
+			"node_idx": 14,
+			"outputs": [
+				13,
+				20,
+				18,
+				17
+			]
+		},
+		{
+			"node_idx": 12,
+			"outputs": [
+				16,
+				19,
+				18,
+				17
+			]
+		},
+		{
+			"node_idx": 7,
+			"outputs": [
+				14,
+				12
+			]
+		},
+		{
+			"node_idx": 8,
+			"outputs": [
+				7
+			]
+		}
+	]
+}
