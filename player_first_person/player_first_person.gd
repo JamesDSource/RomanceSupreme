@@ -1,4 +1,5 @@
 extends KinematicBody
+class_name Player1P
 
 const SPEED = 6.0
 const ACCELERATION = 0.8
@@ -24,8 +25,14 @@ onready var aim_cast: RayCast = $CameraPivotH/CameraPivotV/Camera/AimCast
 var adsing: bool = false
 
 var velocity = Vector3(0, 0, 0)
+var knockback_vel = Vector3.ZERO
+
+const HP_MAX: int = 100
+var hp: int = HP_MAX
 
 func _ready():
+	add_to_group("player1p")
+
 	aim_cast.add_exception(self)
 
 	update_ammo_display()
@@ -37,7 +44,7 @@ func _input(event):
 		camera_verticle_rot = clamp(camera_verticle_rot - event.relative.y*0.001, -deg2rad(90.0), deg2rad(90.0))
 		camera_pivot_v.rotation.x = camera_verticle_rot
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_pressed("ads") and !adsing:
 		$AnimationPlayer.play("ads")
 		crosshair.visible = false
@@ -77,9 +84,23 @@ func _physics_process(delta):
 	velocity.y = y
 	
 	velocity = move_and_slide(velocity, Vector3.UP)
+	knockback_vel = move_and_slide(knockback_vel, Vector3.UP)
+	knockback_vel = lerp(knockback_vel, Vector3.ZERO, 0.1)
 
 	if aim_cast.is_colliding():
 		$Test.global_transform.origin = aim_cast.get_collision_point()
+
+func damage(amount: int, knockback: float, dir: Vector3):
+	hp -= amount
+	if hp <= 0 :
+		var second_chance: int = randi()%3 + 2
+		if hp + second_chance <= 0:
+			#death
+			return
+		else:
+			hp += second_chance
+	
+	knockback_vel += dir*knockback
 
 func update_ammo_display():
 	var ammo_clip = $CameraPivotH/CameraPivotV/PPSH.ammo_clip
@@ -99,9 +120,9 @@ func _on_PPSH_on_fire():
 		aim_cast.cast_to.y = -sep/2 + randf()*sep
 
 	aim_cast.force_raycast_update()
-	var colliding_with = aim_cast.get_collider()
-	if colliding_with != null:
-		print("Hit ", colliding_with)
+	var colliding_with: Spatial = aim_cast.get_collider()
+	if colliding_with != null and colliding_with.is_in_group("hit box"):
+		colliding_with.shot(10)
 
 func _on_PPSH_on_reloaded():
 	update_ammo_display()
