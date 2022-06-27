@@ -25,10 +25,12 @@ class SeqStepDialog extends SeqStep:
 		text = text_
 
 class SeqStepChoice extends SeqStep:
+	var header: String
 	var choices: Array
 	var choice_steps: Array
 
-	func _init():
+	func _init(header_: String):
+		header = header_
 		choices = []
 		choice_steps = []
 
@@ -55,13 +57,41 @@ class SeqStepSetVar extends SeqStep:
 		name = name_
 		value = value_
 
+class SeqStepCondition extends SeqStep:
+	var v1_is_var: bool
+	var v1
+	var v2_is_var: bool
+	var v2
+	var op: String
+
+	var next_true: SeqStep = null
+	var next_false: SeqStep = null
+
+	func _init(v1_is_var_: bool, v1_, v2_is_var_: bool, v2_, op_: String):
+		v1_is_var = v1_is_var_
+		v1 = v1_
+		v2_is_var = v2_is_var_
+		v2 = v2_
+		op = op_
+
+class SeqStepEvent extends SeqStep:
+	var name: String
+	var paths: Array
+
+	func _init(name_: String, paths_: Array):
+		name = name_
+		paths = paths_
+
 var current_sequences: Array = []
 var current_step: SeqStep = null
 var current_cameras: Array
 
 var player_3p = null
 var original_cam: Camera = null
+
 var on_finished_callback: FuncRef
+var on_event_callback: FuncRef
+var after_event: Array
 
 var custom_vars: Dictionary
 
@@ -92,7 +122,7 @@ func _ready():
 				new_char_profile.talk_type = TextBox.CharacterTalkType.Grunt
 		profiles[profile["id"]] = new_char_profile
 
-func start_seq(name: String, cameras: Array, on_finished: FuncRef):
+func start_seq(name: String, cameras: Array, on_finished: FuncRef, on_event: FuncRef):
 	var file = File.new()
 	file.open("res://data/" + name + ".json", File.READ)
 	var json = file.get_as_text()
@@ -108,6 +138,7 @@ func start_seq(name: String, cameras: Array, on_finished: FuncRef):
 		cameras[0].current = true
 
 	on_finished_callback = on_finished
+	on_event_callback = on_event
 	custom_vars = {}
 
 	var initial_profile = TextBoxController.CharacterProfile.new(
@@ -143,19 +174,19 @@ func play_step(node: SeqStep):
 			original_cam = null
 
 		on_finished_callback.call_func(custom_vars)
-	elif(node is SeqStepJump):
+	elif node is SeqStepJump:
 		for seq in current_sequences:
 			if(seq.name == node.name):
 				play_step(seq.next)
-	elif(node is SeqStepDialog):
+	elif node is SeqStepDialog:
 		TextBoxController.set_text_box_visible(true)
 		TextBoxController.set_text(node.text)
 		current_step = node
-	elif(node is SeqStepChoice):
+	elif node is SeqStepChoice:
 		TextBoxController.set_text_box_visible(true)
-		TextBoxController.set_choices(node.choices)
+		TextBoxController.set_choices(node.header, node.choices)
 		current_step = node
-	elif(node is SeqStepSetSpeaker):
+	elif node is SeqStepSetSpeaker:
 		if profiles.has(node.id):
 			TextBoxController.set_text_box_profile(profiles[node.id])
 		else:
@@ -167,12 +198,54 @@ func play_step(node: SeqStep):
 			)
 			TextBoxController.set_text_box_profile(profile)
 		play_step(node.next)
-	elif(node is SeqStepSetCamera):
+	elif node is SeqStepSetCamera:
 		current_cameras[node.cam_index].current = true	
 		play_step(node.next)
-	elif(node is SeqStepSetVar):
+	elif node is SeqStepSetVar:
 		custom_vars[node.name] = node.value
 		play_step(node.next)
+	elif node is SeqStepEvent:
+		after_event = node.paths
+		on_event_callback.call_func(node.name, custom_vars, funcref(self, "finish_event"))
+	elif node is SeqStepCondition:
+		var v1
+		var v2
+
+		if node.v1_is_var:
+			v1 = custom_vars[node.v1] if custom_vars.has(node.v1) else null
+		else:
+			v1 = node.v1
+
+		if node.v2_is_var:
+			v2 = custom_vars[node.v2] if custom_vars.has(node.v2) else null
+		else:
+			v2 = node.v2
+
+		var is_true: bool = false
+		match node.op:
+			"==":
+				is_true = v2 == v1
+			"!=":
+				is_true = v2 != v1
+			"<":
+				is_true = v2 < v1
+			">":
+				is_true = v2 > v1
+			"<=":
+				is_true = v2 <= v1
+			">=":
+				is_true = v2 >= v1
+			"and":
+				is_true = v2 and v1
+			"or":
+				is_true = v2 or v1
+			"Xor":
+				is_true = (v1 or v2) and !(v1 and v2)
+
+		if is_true:
+			play_step(node.next_true)
+		else:
+			play_step(node.next_false)
 
 func _process(_delta):
 	if(current_step != null):
@@ -234,7 +307,7 @@ func fill_node(nodes: Array, node_index: int, connections: Array) -> SeqStep:
 				dialog.next = fill_node(nodes, node_connection["outputs"][0], connections)
 			return dialog
 		"choice":
-			var choice = SeqStepChoice.new()
+			var choice = SeqStepChoice.new(node["header"])
 			for i in range(0, node["choices"].size()):
 				choice.choices.append(node["choices"][i])
 				if(node_connection["outputs"].size() > i and node_connection["outputs"][i] != null):
@@ -264,4 +337,27 @@ func fill_node(nodes: Array, node_index: int, connections: Array) -> SeqStep:
 					var custom = SeqStepSetVar.new(var_name, var_value)
 					custom.next = next
 					return custom
+		"event":
+			var name = node["name"]
+
+			var paths: Array = []
+			for con in node_connection["outputs"]:
+				paths.append(fill_node(nodes, con, connections))
+			var event = SeqStepEvent.new(name, paths)
+			return event
+		"condition":
+			var condition = SeqStepCondition.new(
+				node["v1_is_var"],
+				node["v1"], 
+				node["v2_is_var"],
+				node["v2"], 
+				node["op"])
+
+			condition.next_true = fill_node(nodes, node_connection["outputs"][0], connections)
+			condition.next_false = fill_node(nodes, node_connection["outputs"][1], connections)
+
+			return condition
 	return null
+
+func finish_event(output: int = 0):
+	play_step(after_event[output])

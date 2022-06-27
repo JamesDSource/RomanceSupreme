@@ -38,7 +38,7 @@ func set_text(text: String):
 		node.dialog_audio.play()
 
 
-func set_choices(choices: Array):
+func set_choices(header: String, choices: Array):
 	node.set_mode(TextBox.TextBoxMode.Choice)
 	var existing_children = node.choices_container.get_children()
 	for child in existing_children:
@@ -49,6 +49,8 @@ func set_choices(choices: Array):
 		var inst = CHOICE_LABEL.instance()
 		node.choices_container.add_child(inst)
 		inst.text = choice
+	
+	node.choices_header.text = header
 	
 	node.choice_index = -1
 	node.set_choice_index(0)

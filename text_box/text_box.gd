@@ -29,7 +29,9 @@ var talk_type: int = CharacterTalkType.None
 var talk_sounds: Array = []
 
 onready var text_node: RichTextLabel = $DialogText
-onready var choices_container: VBoxContainer = $ChoicesContainer
+onready var choices_node: Control = $Choices
+onready var choices_container: VBoxContainer = $Choices/ChoicesContainer
+onready var choices_header: Label = $Choices/Header
 onready var dialog_audio: AudioStreamPlayer = $DialogAudioPlayer
 
 var dialog_text_box: Texture = preload("res://assets/text_boxes/default_textbox.png")
@@ -54,7 +56,7 @@ func set_mode(mode):
 			anchor_right = DIALOG_ANCHOR_RIGHT
 			anchor_bottom = DIALOG_ANCHOR_BOTTOM
 			text_node.visible = true
-			choices_container.visible = false
+			choices_node.visible = false
 
 			set_text_box(dialog_text_box)
 			$DialogText.theme.set_default_font(dialog_font)
@@ -63,7 +65,7 @@ func set_mode(mode):
 			anchor_top = CHOICE_ANCHOR_TOP
 			anchor_right = CHOICE_ANCHOR_RIGHT
 			anchor_bottom = CHOICE_ANCHOR_BOTTOM
-			choices_container.visible = true
+			choices_node.visible = true
 			text_node.visible = false
 
 			set_text_box(choice_text_box)
