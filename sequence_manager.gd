@@ -180,7 +180,7 @@ func play_step(node: SeqStep):
 				play_step(seq.next)
 	elif node is SeqStepDialog:
 		TextBoxController.set_text_box_visible(true)
-		TextBoxController.set_text(node.text)
+		TextBoxController.set_text(node.text.replace("\n", " "))
 		current_step = node
 	elif node is SeqStepChoice:
 		TextBoxController.set_text_box_visible(true)

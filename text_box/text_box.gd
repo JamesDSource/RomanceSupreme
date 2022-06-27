@@ -40,7 +40,17 @@ var choice_text_box: Texture = preload("res://assets/text_boxes/default_textbox.
 var dialog_font: DynamicFont = preload("res://assets/fonts/lemon_tea.tres")
 var choice_font: DynamicFont = preload("res://assets/fonts/lemon_tea.tres")
 
+func _settings_changed():
+	if(GlobalSettings.open_dyslexia):
+		text_node.add_font_override("normal_font", GlobalSettings.open_dyslexia_menu_font)
+		choices_header.add_font_override("font", GlobalSettings.open_dyslexia_menu_font)
+	else:
+		text_node.add_font_override("normal_font", null)
+		choices_header.add_font_override("font", null)
+
 func _ready():
+	add_to_group("settings_aware", true)
+	_settings_changed()
 	visible = false
 	TextBoxController.set_text_box_node(self)
 

@@ -9,64 +9,21 @@
 			"sequence_name": "[root]"
 		},
 		{
-			"type": "choice",
+			"type": "dialog",
 			"meta": {
-				"x": 4569,
-				"y": 293
+				"x": 5193,
+				"y": 503
 			},
-			"header": "",
-			"choices": [
-				"Open the letter",
-				"Leave it and move on"
-			]
+			"dialog_text": "You know to mind your own business and go on with your life, time \nto move on."
 		},
 		{
 			"type": "setter",
 			"meta": {
-				"x": 4044,
-				"y": 819
-			},
-			"value_type": "Camera Angle",
-			"cam_index": 1
-		},
-		{
-			"type": "setter",
-			"meta": {
-				"x": 166,
-				"y": 787
+				"x": 209,
+				"y": 804
 			},
 			"value_type": "Camera Angle",
 			"cam_index": 2
-		},
-		{
-			"type": "choice",
-			"meta": {
-				"x": 780,
-				"y": 271
-			},
-			"header": "There's a bottle flying twords your face!",
-			"choices": [
-				"Dodge!",
-				"Stay where you are."
-			]
-		},
-		{
-			"type": "event",
-			"meta": {
-				"x": 1451,
-				"y": 253
-			},
-			"name": "bottle hit",
-			"outputs": 1
-		},
-		{
-			"type": "event",
-			"meta": {
-				"x": 1452,
-				"y": 576
-			},
-			"name": "bottle miss",
-			"outputs": 1
 		},
 		{
 			"type": "dialog",
@@ -74,24 +31,40 @@
 				"x": 219,
 				"y": 494
 			},
-			"dialog_text": "\nYou hear a shout and the sound of something flying at you."
+			"dialog_text": "You hear a shout and the sound of something flying at you."
 		},
 		{
 			"type": "dialog",
 			"meta": {
-				"x": 223,
-				"y": 187
+				"x": 2348,
+				"y": 349
 			},
-			"dialog_text": "You wake up with your face flat against a school desk.\nThere is a puddle of drool pooling around you on the table \ncoming from your mouth."
+			"dialog_text": "Looking up you see your teacher"
 		},
 		{
-			"type": "event",
+			"type": "setter",
 			"meta": {
-				"x": -155,
-				"y": 331
+				"x": 4180,
+				"y": 547
 			},
-			"name": "open eyes",
-			"outputs": 1
+			"value_type": "Camera Angle",
+			"cam_index": 1
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 4042,
+				"y": 173
+			},
+			"dialog_text": "You do your best to collect yourself and shrug off the remarks.\nAs you go to get up you notice a little folded note left on your desk,\nprobably left there while you were taking your nap."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2347,
+				"y": 33
+			},
+			"dialog_text": "Sharp pains scatter across your face as the little pieces of glass cut your skin"
 		},
 		{
 			"type": "dialog",
@@ -107,73 +80,7 @@
 				"x": 1805,
 				"y": 505
 			},
-			"dialog_text": "With nerves of steel you don't even flinch, and a glass soda bottle\nsmashes to pieces on the floor next to you."
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 5193,
-				"y": 503
-			},
-			"dialog_text": "You know to mind your own business and go on with your life, time\nto move on."
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 4044,
-				"y": 507
-			},
-			"dialog_text": "\nOpen it?"
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 4042,
-				"y": 173
-			},
-			"dialog_text": "You do your best to collect yourself and shrug off the remarks.\nAs you go to get up you notice a little folded note left on your desk,\nprobably left there while you were taking your nap."
-		},
-		{
-			"type": "setter",
-			"meta": {
-				"x": 2877,
-				"y": 349
-			},
-			"value_type": "Speaker",
-			"speaker_id": "Teacher"
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 2348,
-				"y": 349
-			},
-			"dialog_text": "\nLooking up you see your teacher"
-		},
-		{
-			"type": "setter",
-			"meta": {
-				"x": 3725,
-				"y": 347
-			},
-			"value_type": "Speaker",
-			"speaker_id": ""
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 3201,
-				"y": 516
-			},
-			"dialog_text": "I'm so disappointed I can't even go on with class, whatever\n\nClass dismissed - because of this loser right here."
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 5193,
-				"y": 179
-			},
-			"dialog_text": "You read through an anonymous love letter of sorts, presumably\nfrom a well wisher."
+			"dialog_text": "With nerves of steel you don't even flinch, as a glass soda bottle\nsmashes to pieces on the floor next to you."
 		},
 		{
 			"type": "dialog",
@@ -181,7 +88,41 @@
 				"x": 5742,
 				"y": 179
 			},
-			"dialog_text": "In summary they seem to probing your interest and promise to be \nin touch very soon."
+			"dialog_text": "\"Meet me by the fountain in the courtyard\" Who could this be from?"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 5193,
+				"y": 179
+			},
+			"dialog_text": "You start reading the letter, \"I have a confession to make\" it  begins\n\"I've been admiring you from afar, but now I want to tell you \nhow I really feel\""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3201,
+				"y": 516
+			},
+			"dialog_text": "I'm so disappointed I can't even go on with class, whatever\nClass dismissed - because of this loser right here."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3201,
+				"y": 174
+			},
+			"dialog_text": "Pay Attention numbnutz!\nIt's pupils like you that make me regret ever becoming a teacher..."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 5741,
+				"y": 503
+			},
+			"value_type": "Custom Variable",
+			"var_name": "LetterRead",
+			"var_value": false
 		},
 		{
 			"type": "setter",
@@ -196,61 +137,96 @@
 		{
 			"type": "setter",
 			"meta": {
-				"x": 5741,
-				"y": 503
+				"x": 3725,
+				"y": 347
 			},
-			"value_type": "Custom Variable",
-			"var_name": "LetterRead",
-			"var_value": false
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 2877,
+				"y": 349
+			},
+			"value_type": "Speaker",
+			"speaker_id": "Teacher"
+		},
+		{
+			"type": "event",
+			"meta": {
+				"x": -155,
+				"y": 331
+			},
+			"name": "open eyes",
+			"outputs": 1
 		},
 		{
 			"type": "dialog",
 			"meta": {
-				"x": 3201,
-				"y": 174
+				"x": 223,
+				"y": 187
 			},
-			"dialog_text": "Pay Attention numbnutz!\n\nIt's pupils like you that make me regret ever becoming a teacher..."
+			"dialog_text": "You wake up with your face flat against a school desk.\nThere is a puddle of drool pooling around you on the table \ncoming from your mouth."
+		},
+		{
+			"type": "event",
+			"meta": {
+				"x": 1452,
+				"y": 576
+			},
+			"name": "bottle miss",
+			"outputs": 1
+		},
+		{
+			"type": "event",
+			"meta": {
+				"x": 1451,
+				"y": 253
+			},
+			"name": "bottle hit",
+			"outputs": 1
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 780,
+				"y": 271
+			},
+			"header": "Something's flying twords you!",
+			"choices": [
+				"Dodge!",
+				"Stay where you are."
+			]
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 4569,
+				"y": 293
+			},
+			"header": "Open It?",
+			"choices": [
+				"Open the letter",
+				"Leave it and move on"
+			]
 		}
 	],
 	"connections": [
 		{
-			"node_idx": 8,
+			"node_idx": 19,
 			"outputs": [
-				7
+				3
 			]
 		},
 		{
-			"node_idx": 10,
+			"node_idx": 9,
 			"outputs": [
-				16
+				4
 			]
 		},
 		{
-			"node_idx": 11,
-			"outputs": [
-				16
-			]
-		},
-		{
-			"node_idx": 16,
-			"outputs": [
-				15
-			]
-		},
-		{
-			"node_idx": 15,
-			"outputs": [
-				23
-			]
-		},
-		{
-			"node_idx": 23,
-			"outputs": [
-				18
-			]
-		},
-		{
-			"node_idx": 18,
+			"node_idx": 4,
 			"outputs": [
 				17
 			]
@@ -258,85 +234,85 @@
 		{
 			"node_idx": 17,
 			"outputs": [
-				14
-			]
-		},
-		{
-			"node_idx": 14,
-			"outputs": [
 				13
 			]
 		},
 		{
-			"node_idx": 1,
+			"node_idx": 13,
 			"outputs": [
-				19,
 				12
 			]
 		},
 		{
 			"node_idx": 12,
 			"outputs": [
-				22
+				16
 			]
 		},
 		{
-			"node_idx": 19,
+			"node_idx": 16,
 			"outputs": [
+				6
+			]
+		},
+		{
+			"node_idx": 23,
+			"outputs": [
+				11,
+				1
+			]
+		},
+		{
+			"node_idx": 1,
+			"outputs": [
+				14
+			]
+		},
+		{
+			"node_idx": 11,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 10,
+			"outputs": [
+				15
+			]
+		},
+		{
+			"node_idx": 0,
+			"outputs": [
+				18
+			]
+		},
+		{
+			"node_idx": 18,
+			"outputs": [
+				19
+			]
+		},
+		{
+			"node_idx": 22,
+			"outputs": [
+				21,
 				20
 			]
 		},
 		{
 			"node_idx": 20,
 			"outputs": [
-				21
-			]
-		},
-		{
-			"node_idx": 0,
-			"outputs": [
 				9
 			]
 		},
 		{
-			"node_idx": 9,
+			"node_idx": 21,
 			"outputs": [
 				8
 			]
 		},
 		{
-			"node_idx": 4,
-			"outputs": [
-				5,
-				6
-			]
-		},
-		{
-			"node_idx": 6,
-			"outputs": [
-				11
-			]
-		},
-		{
-			"node_idx": 5,
-			"outputs": [
-				10
-			]
-		},
-		{
-			"node_idx": 7,
-			"outputs": [
-				3
-			]
-		},
-		{
 			"node_idx": 3,
-			"outputs": [
-				4
-			]
-		},
-		{
-			"node_idx": 13,
 			"outputs": [
 				2
 			]
@@ -344,7 +320,31 @@
 		{
 			"node_idx": 2,
 			"outputs": [
-				1
+				22
+			]
+		},
+		{
+			"node_idx": 5,
+			"outputs": [
+				23
+			]
+		},
+		{
+			"node_idx": 8,
+			"outputs": [
+				7
+			]
+		},
+		{
+			"node_idx": 7,
+			"outputs": [
+				4
+			]
+		},
+		{
+			"node_idx": 6,
+			"outputs": [
+				5
 			]
 		}
 	]
