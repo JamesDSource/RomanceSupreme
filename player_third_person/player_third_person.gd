@@ -34,6 +34,12 @@ func _ready():
 	add_to_group("player3p")
 	camera_pivot = $CameraPivot
 
+	if rotation_degrees.y != 0:
+		player_model.rotation_degrees.y = rotation_degrees.y
+		dir_angle = rotation_degrees.y
+		rotation_degrees.y = 0
+		camera_pivot.rotation.y = -rotation_degrees.y
+
 func _input(event):
 	if event is InputEventMouseMotion and not lock_movement:
 		camera_pivot.rotation.y -= event.relative.x*0.001

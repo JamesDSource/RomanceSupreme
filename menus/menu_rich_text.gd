@@ -2,6 +2,7 @@ extends RichTextLabel
 
 func _ready():
 	add_to_group("settings_aware", true)
+	_settings_changed()
 
 func _settings_changed():
 	if(GlobalSettings.open_dyslexia):

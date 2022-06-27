@@ -22,6 +22,12 @@
 		]
 	},
 	{
+		"name": "Bee",
+		"roles": [
+			"Assistant Writer",
+		]
+	},
+	{
 		"name": "@fkryall: instagram",
 		"roles": [
 			"\"Lemon Tea\" font"
@@ -61,6 +67,12 @@
 		"name": "joedeshon: freesound.org",
 		"roles": [
 			"Classroom Ambiance"
+		]
+	},
+	{
+		"name": "mgamabile: freesound.org",
+		"roles": [
+			"Glass smashing sound"
 		]
 	}
 ]

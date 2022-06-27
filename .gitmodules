@@ -1,0 +1,6 @@
+[submodule "godot_scatter_plugin"]
+	path = godot_scatter_plugin
+	url = https://github.com/Zylann/godot_scatter_plugin.git
+[submodule "addons/scatter"]
+	path = addons/scatter
+	url = https://github.com/HungryProton/scatter

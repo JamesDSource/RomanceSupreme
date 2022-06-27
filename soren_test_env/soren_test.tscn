@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://player_third_person/player_third_person.tscn" type="PackedScene" id=1]
 [ext_resource path="res://gui/gui.tscn" type="PackedScene" id=2]
@@ -25,6 +25,13 @@
 [ext_resource path="res://assets/anime_high_school/map/toilet/toilet.gltf" type="PackedScene" id=23]
 [ext_resource path="res://assets/anime_high_school/map/bathroom_sink/bathroom_sink.gltf" type="PackedScene" id=24]
 [ext_resource path="res://assets/anime_high_school/map/bathroom/bathroom.tscn" type="PackedScene" id=25]
+[ext_resource path="res://assets/spookytown/map/spookytown_terrain/spooky_town_terrain.tscn" type="PackedScene" id=26]
+[ext_resource path="res://assets/spookytown/map/ocean/ocean.tscn" type="PackedScene" id=27]
+[ext_resource path="res://assets/spookytown/map/invisible_wall/island_wall.tscn" type="PackedScene" id=28]
+[ext_resource path="res://assets/spookytown/map/gallows1/gallows1.gltf" type="PackedScene" id=29]
+[ext_resource path="res://assets/spookytown/map/house_1/spooky_town_house1.gltf" type="PackedScene" id=30]
+[ext_resource path="res://assets/spookytown/map/plaza/spooky_plaza.gltf" type="PackedScene" id=31]
+[ext_resource path="res://assets/spookytown/map/well/spooky_well_1.gltf" type="PackedScene" id=32]
 
 [sub_resource type="ProceduralSky" id=12]
 
@@ -251,7 +258,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.3592, -0.0573902, 0.661915 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 27.7736, -0.05739, 1.10508 )
 
 [node name="toilet3" parent="." instance=ExtResource( 23 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.1559, -0.0573897, 0.423613 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 146.028, -67.7707, -158.292 )
+
+[node name="ocean" parent="toilet3" instance=ExtResource( 27 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -164.078, 76.5125, -12.3137 )
 
 [node name="toilet4" parent="." instance=ExtResource( 23 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.498, -0.0573897, 2.46119 )
@@ -306,3 +316,21 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 43.6064, 2.96626, 0.026422 )
 
 [node name="bathroom" parent="." instance=ExtResource( 25 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5867, -0.0647359, 1.02981 )
+
+[node name="gallows1" parent="." instance=ExtResource( 29 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32.7687, 20.8931, -127.708 )
+
+[node name="spooky_town_house1" parent="." instance=ExtResource( 30 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6632, 23.8708, -150.72 )
+
+[node name="spooky_town_terrain" parent="." instance=ExtResource( 26 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.62258, 9.79763, -114.887 )
+
+[node name="island_wall" parent="." instance=ExtResource( 28 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.84604, 8.95099, -114.968 )
+
+[node name="spooky_well_1" parent="." instance=ExtResource( 32 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6906, 9.78351, -110.164 )
+
+[node name="spooky_plaza" parent="." instance=ExtResource( 31 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6326, 9.78306, -111.034 )

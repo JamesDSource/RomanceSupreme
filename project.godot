@@ -57,7 +57,7 @@ _global_script_class_icons={
 [application]
 
 config/name="RomanceSupreme"
-run/main_scene="res://james_test_env/test_env.tscn"
+run/main_scene="res://menus/main_menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -68,6 +68,7 @@ GlobalSettings="*res://global_settings.gd"
 SequenceManager="*res://sequence_manager.gd"
 Transition="*res://transition.gd"
 Resources="*res://resources.gd"
+Progress="*res://progress.gd"
 
 [display]
 

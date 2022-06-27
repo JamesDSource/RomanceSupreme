@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/smashing_glass.wav-d544d9317f8d2915f95f4f034a2ba274.sample"
+
+[deps]
+
+source_file="res://assets/sounds/cutscenes/smashing_glass.wav"
+dest_files=[ "res://.import/smashing_glass.wav-d544d9317f8d2915f95f4f034a2ba274.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

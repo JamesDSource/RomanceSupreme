@@ -1,0 +1,248 @@
+{
+	"nodes": [
+		{
+			"type": "start",
+			"meta": {
+				"x": -32,
+				"y": 1122
+			},
+			"sequence_name": "third thing"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": -562,
+				"y": -399
+			},
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": -21,
+				"y": 327
+			},
+			"sequence_name": "main"
+		},
+		{
+			"type": "event",
+			"meta": {
+				"x": 2774,
+				"y": 831
+			},
+			"name": "fuck",
+			"outputs": 1
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 3315,
+				"y": 869
+			},
+			"sequence_name": "third thing"
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 1609,
+				"y": 251
+			},
+			"header": "This is a cool header",
+			"choices": [
+				"Repeat",
+				"Dont",
+				"third thing"
+			]
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 473,
+				"y": 248
+			},
+			"value_type": "Speaker",
+			"speaker_id": "guy"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 988,
+				"y": 461
+			},
+			"dialog_text": "This is some cool test dialog\nasfasdffffffffasdfasdfasdfasdfaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 2333,
+				"y": 646
+			},
+			"value_type": "Camera Angle",
+			"cam_index": 1
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 399,
+				"y": 1329
+			},
+			"value_type": "Speaker",
+			"speaker_id": "Fucker"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1622,
+				"y": 1603
+			},
+			"dialog_text": "Why did you do that?? You get a second chance, don't mess this up!\npppppooopopopopopooppoppoooopy\nbkrarrappprrappapapappapappprtttrprprprp\n\n\n\n"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1311,
+				"y": 1193
+			},
+			"dialog_text": "You are suck a fool for trying this again"
+		},
+		{
+			"type": "condition",
+			"meta": {
+				"x": 818,
+				"y": 1394
+			},
+			"v1_is_var": false,
+			"v1": true,
+			"op": "==",
+			"v2_is_var": true,
+			"v2": "stupid"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 149,
+				"y": -331
+			},
+			"value_type": "Custom Variable",
+			"var_name": "stupid",
+			"var_value": false
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 630,
+				"y": -283
+			},
+			"sequence_name": "main"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 2387,
+				"y": 202
+			},
+			"sequence_name": "main"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 2326,
+				"y": 1645
+			},
+			"sequence_name": "main"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 1227,
+				"y": 1705
+			},
+			"value_type": "Custom Variable",
+			"var_name": "stupid",
+			"var_value": true
+		}
+	],
+	"connections": [
+		{
+			"node_idx": 5,
+			"outputs": [
+				15,
+				null,
+				8
+			]
+		},
+		{
+			"node_idx": 7,
+			"outputs": [
+				5
+			]
+		},
+		{
+			"node_idx": 6,
+			"outputs": [
+				7
+			]
+		},
+		{
+			"node_idx": 0,
+			"outputs": [
+				9
+			]
+		},
+		{
+			"node_idx": 9,
+			"outputs": [
+				12
+			]
+		},
+		{
+			"node_idx": 10,
+			"outputs": [
+				16
+			]
+		},
+		{
+			"node_idx": 1,
+			"outputs": [
+				13
+			]
+		},
+		{
+			"node_idx": 12,
+			"outputs": [
+				11,
+				17
+			]
+		},
+		{
+			"node_idx": 17,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 2,
+			"outputs": [
+				6
+			]
+		},
+		{
+			"node_idx": 13,
+			"outputs": [
+				14
+			]
+		},
+		{
+			"node_idx": 8,
+			"outputs": [
+				3
+			]
+		},
+		{
+			"node_idx": 3,
+			"outputs": [
+				4
+			]
+		}
+	]
+}
