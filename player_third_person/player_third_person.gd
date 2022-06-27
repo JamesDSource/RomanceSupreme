@@ -21,7 +21,7 @@ var current_anim_state = null
 var camera_pivot: Spatial
 var camera_verticle_rot: float = 0
 
-var velocity = Vector3(0, 0, 0)
+var velocity = Vector3.ZERO
 var dir_angle: float = 0
 
 var lock_movement: bool = false

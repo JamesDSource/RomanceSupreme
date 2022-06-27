@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/anime_high_school/characters/anime_boyfriend/shield/shield.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+flags_transparent = true
+albedo_color = Color( 1, 0.972549, 0, 0.0392157 )
+emission_enabled = true
+emission = Color( 0.980392, 1, 0, 1 )
+emission_energy = 16.0
+emission_operator = 0
+emission_on_uv2 = false
+
+[node name="Shield" type="MeshInstance"]
+transform = Transform( 0.998892, 0, 0, 0, 0.998892, 0, 0, 0, 0.998892, 0, 0, 0 )
+mesh = ExtResource( 1 )
+material/0 = SubResource( 1 )

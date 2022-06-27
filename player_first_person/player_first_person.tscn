@@ -7,7 +7,8 @@
 [ext_resource path="res://assets/fonts/GrinchedRegular.otf" type="DynamicFontData" id=5]
 
 [sub_resource type="CapsuleShape" id=2]
-radius = 0.3
+radius = 0.35
+height = 0.8
 
 [sub_resource type="RayShape" id=3]
 length = 0.2
@@ -256,6 +257,8 @@ valign = 1
 [node name="AimCast" type="RayCast" parent="CameraPivotH/CameraPivotV/Camera"]
 enabled = true
 cast_to = Vector3( 0, 0, -50 )
+collision_mask = 4
+collide_with_areas = true
 
 [node name="PPSH" parent="CameraPivotH/CameraPivotV" instance=ExtResource( 4 )]
 transform = Transform( -6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 0.25, -0.35, -0.15 )
