@@ -1,0 +1,274 @@
+{
+	"nodes": [
+		{
+			"type": "start",
+			"meta": {
+				"x": 276,
+				"y": 330
+			},
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3201,
+				"y": 174
+			},
+			"dialog_text": "Pay Attention numbnutz!\n\nIt's pupils like you that make me regret ever becoming a teacher..."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 5741,
+				"y": 503
+			},
+			"value_type": "Custom Variable",
+			"var_name": "LetterRead",
+			"var_value": false
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 6291,
+				"y": 179
+			},
+			"value_type": "Custom Variable",
+			"var_name": "LetterRead",
+			"var_value": true
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 634,
+				"y": 187
+			},
+			"dialog_text": "You wake up with your face flat against a school desk.\nThere is a puddle of drool pooling around you on the table \ncoming from your mouth."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 5742,
+				"y": 179
+			},
+			"dialog_text": "In summary they seem to probing your interest and promise to be \nin touch very soon."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 5193,
+				"y": 179
+			},
+			"dialog_text": "You read through an anonymous love letter of sorts, presumably\nfrom a well wisher."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3201,
+				"y": 516
+			},
+			"dialog_text": "I'm so disappointed I can't even go on with class, whatever\n\nClass dismissed - because of this loser right here."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 3725,
+				"y": 347
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 1170,
+				"y": 296
+			},
+			"choices": [
+				"Dodge!",
+				"Stay where you are."
+			]
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 635,
+				"y": 507
+			},
+			"dialog_text": "\nYou hear a shout and the sound of something flying at you."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2348,
+				"y": 349
+			},
+			"dialog_text": "\nLooking up you see your teacher"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1805,
+				"y": 505
+			},
+			"dialog_text": "[glass bottle event - miss]\nWith nerves of steel you don't even flinch, and a glass soda bottle\nsmashes to pieces on the floor next to you."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1805,
+				"y": 193
+			},
+			"dialog_text": "[glass bottle event - hit]\nYou skillfully dodge away from your desk-\nand right into the path of a glass soda bottle!"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 2877,
+				"y": 349
+			},
+			"value_type": "Speaker",
+			"speaker_id": "Teacher"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 4042,
+				"y": 173
+			},
+			"dialog_text": "You do your best to collect yourself and shrug off the remarks.\nAs you go to get up you notice a little folded note left on your desk,\nprobably left there while you were taking your nap."
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 4569,
+				"y": 293
+			},
+			"choices": [
+				"Open the letter",
+				"Leave it and move on"
+			]
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 4044,
+				"y": 507
+			},
+			"dialog_text": "\nOpen it?"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 5193,
+				"y": 503
+			},
+			"dialog_text": "You know to mind your own business and go on with your life, time\nto move on."
+		}
+	],
+	"connections": [
+		{
+			"node_idx": 0,
+			"outputs": [
+				4
+			]
+		},
+		{
+			"node_idx": 4,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 10,
+			"outputs": [
+				9
+			]
+		},
+		{
+			"node_idx": 9,
+			"outputs": [
+				13,
+				12
+			]
+		},
+		{
+			"node_idx": 13,
+			"outputs": [
+				11
+			]
+		},
+		{
+			"node_idx": 12,
+			"outputs": [
+				11
+			]
+		},
+		{
+			"node_idx": 11,
+			"outputs": [
+				14
+			]
+		},
+		{
+			"node_idx": 14,
+			"outputs": [
+				1
+			]
+		},
+		{
+			"node_idx": 1,
+			"outputs": [
+				7
+			]
+		},
+		{
+			"node_idx": 7,
+			"outputs": [
+				8
+			]
+		},
+		{
+			"node_idx": 8,
+			"outputs": [
+				15
+			]
+		},
+		{
+			"node_idx": 15,
+			"outputs": [
+				17
+			]
+		},
+		{
+			"node_idx": 17,
+			"outputs": [
+				16
+			]
+		},
+		{
+			"node_idx": 16,
+			"outputs": [
+				6,
+				18
+			]
+		},
+		{
+			"node_idx": 18,
+			"outputs": [
+				2
+			]
+		},
+		{
+			"node_idx": 6,
+			"outputs": [
+				5
+			]
+		},
+		{
+			"node_idx": 5,
+			"outputs": [
+				3
+			]
+		}
+	]
+}
