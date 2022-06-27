@@ -57,6 +57,15 @@
 			"sequence_name": "[root]"
 		},
 		{
+			"type": "setter",
+			"meta": {
+				"x": 1593,
+				"y": 68
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
 			"type": "condition",
 			"meta": {
 				"x": 2237,
@@ -202,15 +211,6 @@
 			"speaker_id": "guy"
 		},
 		{
-			"type": "setter",
-			"meta": {
-				"x": 1593,
-				"y": 68
-			},
-			"value_type": "Speaker",
-			"speaker_id": ""
-		},
-		{
 			"type": "dialog",
 			"meta": {
 				"x": 1593,
@@ -223,23 +223,11 @@
 		{
 			"node_idx": 6,
 			"outputs": [
-				21
-			]
-		},
-		{
-			"node_idx": 21,
-			"outputs": [
 				22
 			]
 		},
 		{
 			"node_idx": 22,
-			"outputs": [
-				15
-			]
-		},
-		{
-			"node_idx": 15,
 			"outputs": [
 				23
 			]
@@ -247,11 +235,29 @@
 		{
 			"node_idx": 23,
 			"outputs": [
+				16
+			]
+		},
+		{
+			"node_idx": 16,
+			"outputs": [
+				7
+			]
+		},
+		{
+			"node_idx": 7,
+			"outputs": [
 				24
 			]
 		},
 		{
 			"node_idx": 24,
+			"outputs": [
+				11
+			]
+		},
+		{
+			"node_idx": 11,
 			"outputs": [
 				10
 			]
@@ -263,40 +269,34 @@
 			]
 		},
 		{
-			"node_idx": 9,
-			"outputs": [
-				8
-			]
-		},
-		{
-			"node_idx": 14,
-			"outputs": [
-				13,
-				20,
-				18,
-				17
-			]
-		},
-		{
-			"node_idx": 12,
-			"outputs": [
-				16,
-				19,
-				18,
-				17
-			]
-		},
-		{
-			"node_idx": 7,
+			"node_idx": 15,
 			"outputs": [
 				14,
-				12
+				21,
+				19,
+				18
+			]
+		},
+		{
+			"node_idx": 13,
+			"outputs": [
+				17,
+				20,
+				19,
+				18
 			]
 		},
 		{
 			"node_idx": 8,
 			"outputs": [
-				7
+				15,
+				13
+			]
+		},
+		{
+			"node_idx": 9,
+			"outputs": [
+				8
 			]
 		}
 	]
