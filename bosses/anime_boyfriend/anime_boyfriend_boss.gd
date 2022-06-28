@@ -18,10 +18,6 @@ var nav: Navigation
 var path_pos: int = -1
 var path: PoolVector3Array = []
 
-const MAX_SPIN: float = 45.0
-var spin: float = 0
-var spin_velocity: Vector3
-
 onready var arm_lower_left_hit_box: HitBox = $animeboyfriend/Skeleton/ArmLowerLeftAttachment/HitBox
 onready var arm_upper_left_hit_box: HitBox = $animeboyfriend/Skeleton/ArmUpperLeftAttachment/HitBox
 onready var hand_left_hit_box: HitBox = $animeboyfriend/Skeleton/HandLeftAttachment/HitBox
@@ -29,6 +25,12 @@ onready var hand_left_hit_box: HitBox = $animeboyfriend/Skeleton/HandLeftAttachm
 onready var arm_lower_right_hit_box: HitBox = $animeboyfriend/Skeleton/ArmLowerRightAttachment/HitBox
 onready var arm_upper_right_hit_box: HitBox = $animeboyfriend/Skeleton/ArmUpperRightAttachment/HitBox
 onready var hand_right_hit_box: HitBox = $animeboyfriend/Skeleton/HandRightAttachment/HitBox
+
+const MAX_SPIN: float = 45.0
+var spin: float = 0
+var spin_velocity: Vector3
+const SPIN_BOOST: float = 30.0
+var spin_boosts_left: int
 
 var spin_hurt_boxes_open = false
 onready var spin_hurt_boxes = [
@@ -39,6 +41,15 @@ onready var spin_hurt_boxes = [
 	arm_upper_right_hit_box,
 	hand_right_hit_box
 ]
+
+enum BiKickState {
+	JUMP,
+	KICKING,
+	LANDING
+}
+var bi_kick_state = BiKickState.JUMP
+
+var guard_has_launched: bool = false
 
 const IDEAL_DISTANCE: int = 10
 
@@ -62,8 +73,16 @@ func _physics_process(_delta):
 			var distance_squared = global_transform.origin.distance_squared_to(player_pos)
 			
 			if distance_squared < IDEAL_DISTANCE*IDEAL_DISTANCE:
-				spin = 0
-				state = State.SPIN
+				#spin = 0
+				#state = State.SPIN
+				#spin_boosts_left = 2 + randi()%4
+
+				#state = State.BI_KICK
+				#bi_kick_state = BiKickState.JUMP
+
+				state = State.GUARD
+				guard_has_launched = false
+				return
 
 			if path_pos == -1 || last_player_pos.distance_squared_to(player_pos) > 2*2:
 				path = nav.get_simple_path(
@@ -95,14 +114,59 @@ func _physics_process(_delta):
 			spin = min(MAX_SPIN, lerp(spin, MAX_SPIN, 0.05))
 			rotation_degrees.y += spin
 
-			if abs(spin - MAX_SPIN) < 1 and !spin_hurt_boxes_open:
-				for hurt_box in spin_hurt_boxes:
-					hurt_box.hurt_box_open()
-				spin_hurt_boxes_open = true
+			if abs(spin - MAX_SPIN) < 1:
+				if !spin_hurt_boxes_open:
+					for hurt_box in spin_hurt_boxes:
+						hurt_box.hurt_box_open()
+					spin_hurt_boxes_open = true
+
+				if spin_velocity.length_squared() < 0.1*0.1:
+					if spin_boosts_left == 0:
+						spin_velocity = Vector3.ZERO
+						for hurt_box in spin_hurt_boxes:
+							hurt_box.hurt_box_close()
+						spin_hurt_boxes_open = false
+
+						state = State.FOLLOW
+						return
+
+					spin_boosts_left -= 1
+					var player_pos: Vector3 = player.global_transform.origin
+					spin_velocity += (player_pos - global_transform.origin).normalized()*SPIN_BOOST
+
+				spin_velocity = move_and_slide(spin_velocity, Vector3.UP)
+				spin_velocity = spin_velocity.move_toward(Vector3.ZERO, 0.4)
 		State.BI_KICK:
-			pass
+			match bi_kick_state:
+				BiKickState.JUMP:
+					var dir = (player.global_transform.origin - global_transform.origin).normalized()
+					var dir_angle = atan2(dir.x, dir.z)
+					rotation.y = lerp_angle(rotation.y, dir_angle, 0.4)
+
+					set_anim = "bikickjump"
+					if playing_anim == "bikickjump" and !$AnimationPlayer.is_playing():
+						bi_kick_state = BiKickState.KICKING
+						$BiKickTimer.start()
+				BiKickState.KICKING:
+					set_anim = "bikick"
+					move_and_slide(global_transform.basis.z.normalized()*20)
+				BiKickState.LANDING:
+					set_anim = "bikickland"
+					if playing_anim == "bikickland" and !$AnimationPlayer.is_playing():
+						state = State.FOLLOW
 		State.GUARD:
-			pass
+			set_anim = "guard"
+			if !$ShieldAnimPlayer.is_playing():
+				if !guard_has_launched:
+					$ShieldAnimPlayer.play("shieldcharge")
+					guard_has_launched = true
+				else:
+					state = State.FOLLOW
+					return
+
+			var dir = (player.global_transform.origin - global_transform.origin).normalized()
+			var dir_angle = atan2(dir.x, dir.z)
+			rotation.y = lerp_angle(rotation.y, dir_angle, 0.4)
 
 func close_all_hurt_boxes():
 	var children = $animeboyfriend/Skeleton.get_children()
@@ -110,6 +174,11 @@ func close_all_hurt_boxes():
 		var hit_box = child.get_node_or_null("HitBox")
 		if hit_box != null:
 			hit_box.hurt_box_close()
+	
+func launch_shield():
+	print("Launched")
+	$ShieldBody.visible = false
+	$ShieldBody/CollisionShape.disabled = true
 
 func _on_hit(id, dmg):
 	match id.strip_edges():
@@ -126,8 +195,12 @@ func _on_hurt(id, player):
 	print(id)
 	match id.strip_edges():
 		"foot right", "foot_left":
-			player.damage(0, 20, global_transform.basis.z)
+			player.damage(20, 20, global_transform.basis.z)
 		"hand left", "hand right", "arm lower left", "arm lower right":
 			var dif = global_transform.origin - player.global_transform.origin
 			dif.y = 0
-			player.damage(0, 20, -dif.normalized())
+			player.damage(10, 20, -dif.normalized())
+
+func _on_BiKickTimer_timeout():
+	if bi_kick_state == BiKickState.KICKING:
+		bi_kick_state = BiKickState.LANDING

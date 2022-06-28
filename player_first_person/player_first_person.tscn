@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://player_first_person/player_first_person.gd" type="Script" id=1]
 [ext_resource path="res://assets/first_person_HUD/crosshair_needle.png" type="Texture" id=2]
 [ext_resource path="res://player_first_person/Crosshair.gd" type="Script" id=3]
 [ext_resource path="res://assets/FPS/PPSH/PPSH.tscn" type="PackedScene" id=4]
-[ext_resource path="res://assets/fonts/GrinchedRegular.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://player_first_person/GrinchedRegular.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://assets/fonts/flintstone.tres" type="DynamicFont" id=6]
 
 [sub_resource type="CapsuleShape" id=2]
 radius = 0.35
@@ -18,6 +19,15 @@ font_data = ExtResource( 5 )
 
 [sub_resource type="Theme" id=7]
 default_font = SubResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.756863, 0.141176, 0.141176, 1 )
+
+[sub_resource type="Theme" id=11]
+default_font = ExtResource( 6 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.756863, 0.141176, 0.141176, 1 )
 
 [sub_resource type="Animation" id=4]
 length = 0.001
@@ -193,6 +203,8 @@ height = 0.2
 
 [node name="Player1P" type="KinematicBody"]
 script = ExtResource( 1 )
+dash_free_color = Color( 0.952941, 0.929412, 0.337255, 1 )
+dash_used_color = Color( 0.733333, 0.686275, 0.686275, 1 )
 
 [node name="CollisionCapsule" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1.25, 0 )
@@ -253,6 +265,50 @@ text = "70/210"
 align = 1
 valign = 1
 
+[node name="Health" type="ProgressBar" parent="CameraPivotH/CameraPivotV/Camera/HUD"]
+anchor_left = 0.05
+anchor_top = 0.88
+anchor_right = 0.3
+anchor_bottom = 0.9
+custom_styles/fg = SubResource( 10 )
+value = 23.67
+percent_visible = false
+
+[node name="Dash1" type="ColorRect" parent="CameraPivotH/CameraPivotV/Camera/HUD"]
+anchor_left = 0.05
+anchor_top = 0.91
+anchor_right = 0.17
+anchor_bottom = 0.93
+
+[node name="Dash2" type="ColorRect" parent="CameraPivotH/CameraPivotV/Camera/HUD"]
+anchor_left = 0.18
+anchor_top = 0.91
+anchor_right = 0.3
+anchor_bottom = 0.93
+
+[node name="BossName" type="Label" parent="CameraPivotH/CameraPivotV/Camera/HUD"]
+anchor_left = 0.4
+anchor_top = 0.05
+anchor_right = 0.6
+anchor_bottom = 0.05
+margin_right = 40.0
+margin_bottom = 14.0
+theme = SubResource( 11 )
+text = "Boss Name"
+align = 1
+valign = 1
+
+[node name="BossHealth" type="ProgressBar" parent="CameraPivotH/CameraPivotV/Camera/HUD"]
+anchor_left = 0.2
+anchor_top = 0.1
+anchor_right = 0.8
+anchor_bottom = 0.12
+margin_right = 4.0
+margin_bottom = 14.0
+custom_styles/fg = SubResource( 12 )
+value = 11.47
+percent_visible = false
+
 [node name="AimCast" type="RayCast" parent="CameraPivotH/CameraPivotV/Camera"]
 enabled = true
 cast_to = Vector3( 0, 0, -200 )
@@ -270,5 +326,10 @@ anims/ads = SubResource( 5 )
 mesh = SubResource( 8 )
 material/0 = null
 
+[node name="DashRecharge" type="Timer" parent="."]
+wait_time = 1.5
+one_shot = true
+
 [connection signal="on_fire" from="CameraPivotH/CameraPivotV/PPSH" to="." method="_on_PPSH_on_fire"]
 [connection signal="on_reloaded" from="CameraPivotH/CameraPivotV/PPSH" to="." method="_on_PPSH_on_reloaded"]
+[connection signal="timeout" from="DashRecharge" to="." method="_on_DashRecharge_timeout"]

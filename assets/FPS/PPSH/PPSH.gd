@@ -5,7 +5,8 @@ signal on_reloaded
 
 enum State {
 	IDLE,
-	RELOAD
+	RELOAD,
+	DEACTIVE
 }
 var state = State.IDLE
 

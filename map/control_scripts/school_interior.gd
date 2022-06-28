@@ -8,6 +8,8 @@ func _ready():
 	if !Progress.played_opening_cutscene:
 		SequenceManager.start_seq("scene1Wakeup", $InitialCutscene/Cameras.get_children(), funcref(self, "_on_sequence_finished"), funcref(self, "_on_sequence_event"))
 		$Player3P.visible = false
+	else:
+		$InitialCutscene/PlayerCharacterProp.visible = false
 
 func _on_sequence_finished(custom_vars):
 	$Player3P.visible = true
