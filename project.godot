@@ -75,6 +75,7 @@ Progress="*res://progress.gd"
 window/size/width=2560
 window/size/height=1440
 window/dpi/allow_hidpi=true
+window/vsync/use_vsync=false
 
 [editor_plugins]
 

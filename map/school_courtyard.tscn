@@ -172,6 +172,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0 )
 
 [node name="Gate" parent="." instance=ExtResource( 9 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0803, 4.76837e-07, -0.854004 )
+out_port = 1
 scene = "res://map/school_interior.tscn"
 spawn_point = NodePath("Spatial")
 

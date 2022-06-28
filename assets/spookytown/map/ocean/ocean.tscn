@@ -7,6 +7,5 @@
 script = ExtResource( 2 )
 
 [node name="Plane" parent="." index="0"]
-blend_shapes/frame_0000 = 0.0
-blend_shapes/frame_0235 = 0.652888
-blend_shapes/frame_0240 = 0.347112
+blend_shapes/frame_0000 = 0.761907
+blend_shapes/frame_0495 = 0.238093
