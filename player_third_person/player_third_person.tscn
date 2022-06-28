@@ -10,7 +10,7 @@ height = 2.0
 [sub_resource type="SphereShape" id=3]
 radius = 0.3
 
-[node name="Player3P" type="KinematicBody"]
+[node name="Player3P" type="KinematicBody" groups=["player3p"]]
 script = ExtResource( 1 )
 
 [node name="CollisionCapsule" type="CollisionShape" parent="."]

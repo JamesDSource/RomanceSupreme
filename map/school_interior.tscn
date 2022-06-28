@@ -635,7 +635,7 @@ stream = ExtResource( 19 )
 [node name="Cameras" type="Spatial" parent="InitialCutscene"]
 
 [node name="Camera" type="Camera" parent="InitialCutscene/Cameras"]
-transform = Transform( 0.0436371, -0.624248, 0.780006, 0.0348681, 0.781226, 0.623274, -0.998439, -5.47618e-07, 0.0558568, 7.06313, 2.26187, -9.23013 )
+transform = Transform( 0.0436371, -0.624248, 0.780006, 0.0348681, 0.781226, 0.623274, -0.998439, -5.43892e-07, 0.0558568, 7.06313, 2.26187, -9.23013 )
 
 [node name="Camera2" type="Camera" parent="InitialCutscene/Cameras"]
 transform = Transform( 0.0228094, 0, 0.99974, 0, 1, 0, -0.99974, 0, 0.0228094, 9.26631, 2.51768, -10.3887 )

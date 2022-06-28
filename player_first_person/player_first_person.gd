@@ -50,8 +50,6 @@ onready var boss_health: ProgressBar = $CameraPivotH/CameraPivotV/Camera/HUD/Bos
 var boss: Boss = null
 
 func _ready():
-	add_to_group("player1p")
-
 	aim_cast.add_exception(self)
 
 	update_ammo_display()

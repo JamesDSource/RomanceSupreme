@@ -31,7 +31,6 @@ onready var camera: Camera = $CameraPivot/SpringArm/Camera
 onready var animation_player: AnimationPlayer = $PlayerModel/AnimationPlayer
 
 func _ready():
-	add_to_group("player3p")
 	camera_pivot = $CameraPivot
 
 	if rotation_degrees.y != 0:

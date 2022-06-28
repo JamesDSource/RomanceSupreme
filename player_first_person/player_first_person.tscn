@@ -201,7 +201,7 @@ material = SubResource( 9 )
 radius = 0.1
 height = 0.2
 
-[node name="Player1P" type="KinematicBody"]
+[node name="Player1P" type="KinematicBody" groups=["player1p"]]
 script = ExtResource( 1 )
 dash_free_color = Color( 0.952941, 0.929412, 0.337255, 1 )
 dash_used_color = Color( 0.733333, 0.686275, 0.686275, 1 )

@@ -7,6 +7,7 @@ enum State {
 	GUARD
 }
 var state = State.FOLLOW
+var last_attack = null
 
 var set_anim: String = "idleanimation"
 var playing_anim: String = ""
@@ -49,13 +50,15 @@ enum BiKickState {
 }
 var bi_kick_state = BiKickState.JUMP
 
-onready var shield_body: KinematicBody = $ShieldBody
+onready var shield_body: ShieldBody = $ShieldBody
+onready var shield_pos = shield_body.transform
 var guard_has_launched: bool = false
 
 const IDEAL_DISTANCE: int = 10
 
 func _ready():
 	nav = get_tree().root.get_node("Arena/Navigation")
+	shield_body.add_collision_exception_with(self)
 	
 	var players = get_tree().get_nodes_in_group("player1p")
 	if players.size() > 0:
@@ -74,15 +77,31 @@ func _physics_process(_delta):
 			var distance_squared = global_transform.origin.distance_squared_to(player_pos)
 			
 			if distance_squared < IDEAL_DISTANCE*IDEAL_DISTANCE:
-				#spin = 0
-				#state = State.SPIN
-				#spin_boosts_left = 2 + randi()%4
+				var choosen_state = -1
 
-				#state = State.BI_KICK
-				#bi_kick_state = BiKickState.JUMP
+				while choosen_state == -1:
+					var possible_states = [
+						State.SPIN,
+						State.BI_KICK,
+						State.GUARD
+					]
+					var i = randi()%possible_states.size()
+					var rand_state = possible_states[i]
+					if rand_state != last_attack:
+						last_attack = rand_state
+						choosen_state = rand_state
 
-				state = State.GUARD
-				guard_has_launched = false
+				match choosen_state:
+					State.SPIN:
+						spin = 0
+						state = State.SPIN
+						spin_boosts_left = 2 + randi()%4
+					State.BI_KICK:
+						state = State.BI_KICK
+						bi_kick_state = BiKickState.JUMP
+					State.GUARD:
+						state = State.GUARD
+						guard_has_launched = false
 				return
 
 			if path_pos == -1 || last_player_pos.distance_squared_to(player_pos) > 2*2:
@@ -161,9 +180,6 @@ func _physics_process(_delta):
 				if !guard_has_launched:
 					$ShieldAnimPlayer.play("shieldcharge")
 					guard_has_launched = true
-				else:
-					state = State.FOLLOW
-					return
 
 			var dir = (player.global_transform.origin - global_transform.origin).normalized()
 			var dir_angle = atan2(dir.x, dir.z)
@@ -177,9 +193,20 @@ func close_all_hurt_boxes():
 			hit_box.hurt_box_close()
 	
 func launch_shield():
-	print("Launched")
-	$ShieldBody.visible = false
-	$ShieldBody/CollisionShape.disabled = true
+	var pos = shield_body.global_transform
+	remove_child(shield_body)
+	get_tree().root.add_child(shield_body)
+	shield_body.global_transform = pos
+	
+	shield_body.release(funcref(self, "on_shield_hit"))
+
+func on_shield_hit():
+	shield_body.get_parent().remove_child(shield_body)
+	add_child(shield_body)
+	shield_body.transform = shield_pos
+	shield_body.reset()
+	
+	state = State.FOLLOW
 
 func _on_hit(id, dmg):
 	match id.strip_edges():

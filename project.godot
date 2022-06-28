@@ -39,6 +39,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://player_third_person/player_third_person.gd"
 }, {
+"base": "RigidBody",
+"class": "ShieldBody",
+"language": "GDScript",
+"path": "res://bosses/anime_boyfriend/shield_body.gd"
+}, {
 "base": "NinePatchRect",
 "class": "TextBox",
 "language": "GDScript",
@@ -51,6 +56,7 @@ _global_script_class_icons={
 "HitBox": "",
 "Player1P": "",
 "Player3P": "",
+"ShieldBody": "",
 "TextBox": ""
 }
 
