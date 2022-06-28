@@ -137,7 +137,7 @@ tracks/7/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/8/type = "value"
 tracks/8/path = NodePath("InitialCutscene/ViewportContainer/BlinkBottom:visible")
@@ -149,7 +149,7 @@ tracks/8/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ true ]
+"values": [ false ]
 }
 tracks/9/type = "value"
 tracks/9/path = NodePath("InitialCutscene/Cameras/Camera:rotation_degrees")
@@ -633,13 +633,11 @@ anchor_bottom = 1.0
 mouse_filter = 2
 
 [node name="BlinkTop" type="ColorRect" parent="InitialCutscene/ViewportContainer"]
-visible = false
 anchor_right = 1.0
 mouse_filter = 2
 color = Color( 0, 0, 0, 0.627451 )
 
 [node name="BlinkBottom" type="ColorRect" parent="InitialCutscene/ViewportContainer"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 1.0

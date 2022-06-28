@@ -49,6 +49,7 @@ enum BiKickState {
 }
 var bi_kick_state = BiKickState.JUMP
 
+onready var shield_body: KinematicBody = $ShieldBody
 var guard_has_launched: bool = false
 
 const IDEAL_DISTANCE: int = 10

@@ -30,6 +30,11 @@ _global_script_classes=[ {
 "path": "res://bosses/hit_box/hit_box.gd"
 }, {
 "base": "KinematicBody",
+"class": "Player1P",
+"language": "GDScript",
+"path": "res://player_first_person/player_first_person.gd"
+}, {
+"base": "KinematicBody",
 "class": "Player3P",
 "language": "GDScript",
 "path": "res://player_third_person/player_third_person.gd"
@@ -44,6 +49,7 @@ _global_script_class_icons={
 "Crosshair": "",
 "Gui": "",
 "HitBox": "",
+"Player1P": "",
 "Player3P": "",
 "TextBox": ""
 }
