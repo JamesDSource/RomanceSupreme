@@ -6,7 +6,8 @@ export(String, FILE) var scene
 export var spawn_point: NodePath
 
 func _ready():
-	if Transition.port == in_port:
+	print(Transition.port)
+	if Transition.port == out_port:
 		var player = get_tree().get_nodes_in_group("player3p")
 		if player.size() > 0:
 			player[0].global_transform.origin = get_node(spawn_point).global_transform.origin
