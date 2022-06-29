@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/spindash_wind_down.wav-d5c1f03e2702d55a3ef7450ee5817b70.sample"
+
+[deps]
+
+source_file="res://assets/sounds/bosses/spindash_wind_down.wav"
+dest_files=[ "res://.import/spindash_wind_down.wav-d5c1f03e2702d55a3ef7450ee5817b70.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

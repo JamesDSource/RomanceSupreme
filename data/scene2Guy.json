@@ -3,26 +3,26 @@
 		{
 			"type": "start",
 			"meta": {
-				"x": 196,
-				"y": 2201
+				"x": 194,
+				"y": 370
 			},
-			"sequence_name": "WhatLetter"
+			"sequence_name": "[root]"
 		},
 		{
 			"type": "start",
 			"meta": {
 				"x": 195,
-				"y": 1870
+				"y": 1202
 			},
-			"sequence_name": "Lie"
+			"sequence_name": "Negative"
 		},
 		{
 			"type": "start",
 			"meta": {
 				"x": 194,
-				"y": 869
+				"y": 1537
 			},
-			"sequence_name": "Positive"
+			"sequence_name": "Confusion"
 		},
 		{
 			"type": "start",
@@ -36,33 +36,145 @@
 			"type": "start",
 			"meta": {
 				"x": 194,
-				"y": 1537
+				"y": 869
 			},
-			"sequence_name": "Confusion"
+			"sequence_name": "Positive"
 		},
 		{
 			"type": "start",
 			"meta": {
 				"x": 195,
-				"y": 1202
+				"y": 1870
 			},
-			"sequence_name": "Negative"
+			"sequence_name": "Lie"
 		},
 		{
 			"type": "start",
 			"meta": {
-				"x": 194,
+				"x": 196,
+				"y": 2201
+			},
+			"sequence_name": "WhatLetter"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3880,
+				"y": 1007
+			},
+			"dialog_text": "Maybe that's a good omen."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3877,
+				"y": 675
+			},
+			"dialog_text": "Oh. It was just asking you to come out here to meet me,,. Good\nthing you somehow found your way here"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 3473,
+				"y": 619
+			},
+			"value_type": "Speaker",
+			"speaker_id": "guy"
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 2679,
+				"y": 243
+			},
+			"header": "Did you read my letter?",
+			"choices": [
+				"I did",
+				"To be honest, it  was a bit creepy",
+				"I didn't"
+			]
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2114,
+				"y": -244
+			},
+			"dialog_text": "Oh yeah you were supposed to be answering if you got his note..."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1894,
+				"y": 68
+			},
+			"dialog_text": "Somehow despite that you know that he is one of the popular kids\nat your school, always respected, liked and even fawned over, but \nyou can never remember what for."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1473,
+				"y": 367
+			},
+			"dialog_text": "The last time you saw Takashi was in woodshop last semester.\nYou didn't think much of him back then, he was never anything\nspecial. "
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 1471,
+				"y": 68
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 924,
 				"y": 370
 			},
-			"sequence_name": "[root]"
+			"dialog_text": "I take it you got the note? Thank you for meeting me out here."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 575,
+				"y": 370
+			},
+			"value_type": "Speaker",
+			"speaker_id": "guy"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 710,
+				"y": 2534
+			},
+			"dialog_text": "Death"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 581,
+				"y": 869
+			},
+			"dialog_text": "Takashi really bashful and gracious, light flirting and promise to\nmeet up later"
 		},
 		{
 			"type": "dialog",
 			"meta": {
 				"x": 580,
-				"y": 2201
+				"y": 1202
 			},
-			"dialog_text": "chains into confusion sequence"
+			"dialog_text": "Takashi is put down and really sad. if you continue to insult him he\nmay even start to cry before running away, something something\nyou'll regret this"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 580,
+				"y": 1537
+			},
+			"dialog_text": "Takashi pulls out a spare letter and offers it for reading\n\nactually read letter and be nice -> positive sequence\n\nread letter and be disgusted -> negative sequence\n\nmake fun of takashi -> negative sequence"
 		},
 		{
 			"type": "dialog",
@@ -76,261 +188,16 @@
 			"type": "dialog",
 			"meta": {
 				"x": 580,
-				"y": 1537
+				"y": 2201
 			},
-			"dialog_text": "Takashi pulls out a spare letter and offers it for reading\n\nactually read letter and be nice -> positive sequence\n\nread letter and be disgusted -> negative sequence\n\nmake fun of takashi -> negative sequence"
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 580,
-				"y": 1202
-			},
-			"dialog_text": "Takashi is put down and really sad. if you continue to insult him he\nmay even start to cry before running away, something something\nyou'll regret this"
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 581,
-				"y": 869
-			},
-			"dialog_text": "Takashi really bashful and gracious, light flirting and promise to\nmeet up later"
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 710,
-				"y": 2534
-			},
-			"dialog_text": "Death"
-		},
-		{
-			"type": "setter",
-			"meta": {
-				"x": 1593,
-				"y": 68
-			},
-			"value_type": "Speaker",
-			"speaker_id": ""
-		},
-		{
-			"type": "condition",
-			"meta": {
-				"x": 2237,
-				"y": 368
-			},
-			"v1_is_var": false,
-			"v1": true,
-			"op": "==",
-			"v2_is_var": false,
-			"v2": "LetterRead"
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 2159,
-				"y": -534
-			},
-			"dialog_text": "Oh yeah you were supposed to be answering if you got his note..."
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 2015,
-				"y": -233
-			},
-			"dialog_text": "Somehow despite that you know that he is one of the popular kids\nat your school, always respected, liked and even fawned over, but \nyou can never remember what for."
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 1894,
-				"y": 68
-			},
-			"dialog_text": "You recognize him from around your school as someone who \nyou've actually shared quite a few classes with, and aside from a few\nbrief interactions he usually had a quiet demeanor."
-		},
-		{
-			"type": "choice",
-			"meta": {
-				"x": 2707,
-				"y": 699
-			},
-			"header": "Did you read my letter?",
-			"choices": [
-				"Uhhh, no sorry, I didn't realize it was for me",
-				"[Lie] Yes, of course! I should have a response back to you in 2 days",
-				"What Letter?",
-				"[Punch]"
-			]
-		},
-		{
-			"type": "jump",
-			"meta": {
-				"x": 3894,
-				"y": 91
-			},
-			"sequence_name": "Positive"
-		},
-		{
-			"type": "choice",
-			"meta": {
-				"x": 2708,
-				"y": 69
-			},
-			"header": "Did you read my letter?",
-			"choices": [
-				"Of course, it was really sweet actually",
-				"I mean I did but you're a bit of a creep",
-				"What Letter?",
-				"[Punch]"
-			]
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 1062,
-				"y": 368
-			},
-			"dialog_text": "Hey there.. did you get my note?\nI left it on your desk but you were kinda asleep at the time.\nSurely you read it?"
-		},
-		{
-			"type": "jump",
-			"meta": {
-				"x": 3890,
-				"y": 504
-			},
-			"sequence_name": "Confusion"
-		},
-		{
-			"type": "jump",
-			"meta": {
-				"x": 4105,
-				"y": 1173
-			},
-			"sequence_name": "Punch"
-		},
-		{
-			"type": "jump",
-			"meta": {
-				"x": 3753,
-				"y": 989
-			},
-			"sequence_name": "WhatLetter"
-		},
-		{
-			"type": "jump",
-			"meta": {
-				"x": 4220,
-				"y": 686
-			},
-			"sequence_name": "Lie"
-		},
-		{
-			"type": "jump",
-			"meta": {
-				"x": 4216,
-				"y": 276
-			},
-			"sequence_name": "Negative"
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 537,
-				"y": 370
-			},
-			"dialog_text": "\"Hello?\" a voice calls down to you from the hallway"
-		},
-		{
-			"type": "setter",
-			"meta": {
-				"x": 1062,
-				"y": 68
-			},
-			"value_type": "Speaker",
-			"speaker_id": "guy"
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 1593,
-				"y": 368
-			},
-			"dialog_text": "You are approached by a boy who aside from intense eyes looks \ncompletely average. It would seem he is your secret penpal."
+			"dialog_text": "chains into confusion sequence"
 		}
 	],
 	"connections": [
 		{
-			"node_idx": 6,
-			"outputs": [
-				27
-			]
-		},
-		{
-			"node_idx": 27,
-			"outputs": [
-				28
-			]
-		},
-		{
-			"node_idx": 28,
-			"outputs": [
-				21
-			]
-		},
-		{
-			"node_idx": 21,
-			"outputs": [
-				13
-			]
-		},
-		{
-			"node_idx": 13,
-			"outputs": [
-				29
-			]
-		},
-		{
-			"node_idx": 29,
-			"outputs": [
-				17
-			]
-		},
-		{
-			"node_idx": 17,
-			"outputs": [
-				16
-			]
-		},
-		{
 			"node_idx": 16,
 			"outputs": [
 				15
-			]
-		},
-		{
-			"node_idx": 20,
-			"outputs": [
-				19,
-				26,
-				24,
-				23
-			]
-		},
-		{
-			"node_idx": 18,
-			"outputs": [
-				22,
-				25,
-				24,
-				23
-			]
-		},
-		{
-			"node_idx": 14,
-			"outputs": [
-				20,
-				18
 			]
 		},
 		{
@@ -340,37 +207,87 @@
 			]
 		},
 		{
-			"node_idx": 3,
+			"node_idx": 14,
+			"outputs": [
+				13
+			]
+		},
+		{
+			"node_idx": 13,
 			"outputs": [
 				12
 			]
 		},
 		{
-			"node_idx": 2,
+			"node_idx": 3,
 			"outputs": [
-				11
-			]
-		},
-		{
-			"node_idx": 5,
-			"outputs": [
-				10
+				17
 			]
 		},
 		{
 			"node_idx": 4,
 			"outputs": [
-				9
+				18
 			]
 		},
 		{
 			"node_idx": 1,
 			"outputs": [
-				8
+				19
+			]
+		},
+		{
+			"node_idx": 2,
+			"outputs": [
+				20
+			]
+		},
+		{
+			"node_idx": 5,
+			"outputs": [
+				21
+			]
+		},
+		{
+			"node_idx": 6,
+			"outputs": [
+				22
 			]
 		},
 		{
 			"node_idx": 0,
+			"outputs": [
+				16
+			]
+		},
+		{
+			"node_idx": 12,
+			"outputs": [
+				11
+			]
+		},
+		{
+			"node_idx": 11,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 10,
+			"outputs": [
+				null,
+				null,
+				9
+			]
+		},
+		{
+			"node_idx": 9,
+			"outputs": [
+				8
+			]
+		},
+		{
+			"node_idx": 8,
 			"outputs": [
 				7
 			]
