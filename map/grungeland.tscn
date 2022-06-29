@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://assets/grungeland/map/grungelandterrain.tscn" type="PackedScene" id=1]
+[ext_resource path="res://player_third_person/player_third_person.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/grungeland/map/grassplane.tscn" type="PackedScene" id=3]
+
+[sub_resource type="ProceduralSky" id=1]
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+fog_enabled = true
+fog_depth_end = 6000.0
+
+[node name="Spatial" type="Spatial"]
+
+[node name="grungelandterrain" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 241.661, -37 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( -0.0736052, 0.658264, -0.74918, 0.882065, 0.393495, 0.259082, 0.465343, -0.641755, -0.609595, -50, 3, 0 )
+light_color = Color( 1, 0.964706, 0.827451, 1 )
+shadow_enabled = true
+
+[node name="Player3P" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82459, 0.55848, -0.536339 )
+
+[node name="grassplane" parent="." instance=ExtResource( 3 )]
+transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )
