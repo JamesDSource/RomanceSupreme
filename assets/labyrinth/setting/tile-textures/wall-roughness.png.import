@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/roof-tile.png-ac138916fee573680a4d929ddae4d3c2.stex"
+path="res://.import/wall-roughness.png-c8e71e9ee6f7e011b3910402f6cc2cc3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/labyrinth/setting/tile-textures/roof-tile.png"
-dest_files=[ "res://.import/roof-tile.png-ac138916fee573680a4d929ddae4d3c2.stex" ]
+source_file="res://assets/labyrinth/setting/tile-textures/wall-roughness.png"
+dest_files=[ "res://.import/wall-roughness.png-c8e71e9ee6f7e011b3910402f6cc2cc3.stex" ]
 
 [params]
 
@@ -23,7 +23,7 @@ flags/repeat=0
 flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
-flags/srgb=1
+flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
