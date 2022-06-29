@@ -341,8 +341,9 @@ func fill_node(nodes: Array, node_index: int, connections: Array) -> SeqStep:
 			var name = node["name"]
 
 			var paths: Array = []
-			for con in node_connection["outputs"]:
-				paths.append(fill_node(nodes, con, connections))
+			if node_connection != null:
+				for con in node_connection["outputs"]:
+					paths.append(fill_node(nodes, con, connections))
 			var event = SeqStepEvent.new(name, paths)
 			return event
 		"condition":

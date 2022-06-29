@@ -1,0 +1,307 @@
+{
+	"nodes": [
+		{
+			"type": "start",
+			"meta": {
+				"x": 656,
+				"y": 434
+			},
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "event",
+			"meta": {
+				"x": 4013,
+				"y": 592
+			},
+			"name": "drug trip",
+			"outputs": 1
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3425,
+				"y": 323
+			},
+			"dialog_text": "He hands you a Flintstone Gummy which you immediately pop down \nyour gullet."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3545,
+				"y": 1198
+			},
+			"dialog_text": "He blows a big ol' puff of smoke into your face and it's like getting \nhit with a train."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1069,
+				"y": 430
+			},
+			"dialog_text": "Hey kid you wanna try something fun. I've got something that'll \nreally make everything you see stars."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 757,
+				"y": 10
+			},
+			"dialog_text": "You walk into the bathroom and you see some random cool dude, \nwearing a leather jacket and a choker. He's smoking something."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1402,
+				"y": -17
+			},
+			"dialog_text": "As he sees you come in he takes whatever he's smoking out of his \nmouth and jumps up to talk to you."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 1251,
+				"y": 672
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 1616,
+				"y": 451
+			},
+			"header": "Try some nibbles?",
+			"choices": [
+				"Hit me with it",
+				"Never!"
+			]
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 1361,
+				"y": 189
+			},
+			"value_type": "Speaker",
+			"speaker_id": "Cool Degenerate"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 2250,
+				"y": 269
+			},
+			"value_type": "Speaker",
+			"speaker_id": "Cool Degenerate"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2573,
+				"y": 403
+			},
+			"dialog_text": "Awesome sauce! You know what's good for you, now you can have \nyour medicine"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 3094,
+				"y": 354
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 2283,
+				"y": 831
+			},
+			"value_type": "Speaker",
+			"speaker_id": "Cool Degenerate"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 3165,
+				"y": 1047
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2613,
+				"y": 913
+			},
+			"dialog_text": "Well tough. I wanna see how a little novice like you reacts."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 4290,
+				"y": 994
+			},
+			"dialog_text": "Your vision starts getting wavy, with popping flashes of color. You fall \nover onto an open toilet and everything starts fading to black."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 4434,
+				"y": 622
+			},
+			"dialog_text": "Colorful dots continue to flash in your vision, until a big bright spike \nappears, and splits into many spikes, and you witness in your minds' \neye a massive looming cube in empty space before you."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 4957,
+				"y": 989
+			},
+			"dialog_text": "When you see the cube you feel afraid, and a looming sense of \ndoom comes over you."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 5065,
+				"y": 700
+			},
+			"dialog_text": "But then everything fades away and you slip into the darkness."
+		},
+		{
+			"type": "event",
+			"meta": {
+				"x": 5613,
+				"y": 690
+			},
+			"name": "halloween town",
+			"outputs": 1
+		}
+	],
+	"connections": [
+		{
+			"node_idx": 0,
+			"outputs": [
+				5
+			]
+		},
+		{
+			"node_idx": 5,
+			"outputs": [
+				6
+			]
+		},
+		{
+			"node_idx": 6,
+			"outputs": [
+				9
+			]
+		},
+		{
+			"node_idx": 9,
+			"outputs": [
+				4
+			]
+		},
+		{
+			"node_idx": 4,
+			"outputs": [
+				7
+			]
+		},
+		{
+			"node_idx": 7,
+			"outputs": [
+				8
+			]
+		},
+		{
+			"node_idx": 8,
+			"outputs": [
+				10,
+				13
+			]
+		},
+		{
+			"node_idx": 10,
+			"outputs": [
+				11
+			]
+		},
+		{
+			"node_idx": 11,
+			"outputs": [
+				12
+			]
+		},
+		{
+			"node_idx": 12,
+			"outputs": [
+				2
+			]
+		},
+		{
+			"node_idx": 13,
+			"outputs": [
+				15
+			]
+		},
+		{
+			"node_idx": 15,
+			"outputs": [
+				14
+			]
+		},
+		{
+			"node_idx": 14,
+			"outputs": [
+				3
+			]
+		},
+		{
+			"node_idx": 2,
+			"outputs": [
+				1
+			]
+		},
+		{
+			"node_idx": 3,
+			"outputs": [
+				1
+			]
+		},
+		{
+			"node_idx": 1,
+			"outputs": [
+				16
+			]
+		},
+		{
+			"node_idx": 16,
+			"outputs": [
+				17
+			]
+		},
+		{
+			"node_idx": 17,
+			"outputs": [
+				18
+			]
+		},
+		{
+			"node_idx": 18,
+			"outputs": [
+				19
+			]
+		},
+		{
+			"node_idx": 19,
+			"outputs": [
+				20
+			]
+		}
+	]
+}
