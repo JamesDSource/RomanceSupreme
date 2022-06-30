@@ -44,6 +44,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://bosses/anime_boyfriend/shield_body.gd"
 }, {
+"base": "KinematicBody",
+"class": "SkellA",
+"language": "GDScript",
+"path": "res://bosses/bimbones/skell_a.gd"
+}, {
+"base": "KinematicBody",
+"class": "SkellB",
+"language": "GDScript",
+"path": "res://bosses/bimbones/skell_b.gd"
+}, {
 "base": "NinePatchRect",
 "class": "TextBox",
 "language": "GDScript",
@@ -57,6 +67,8 @@ _global_script_class_icons={
 "Player1P": "",
 "Player3P": "",
 "ShieldBody": "",
+"SkellA": "",
+"SkellB": "",
 "TextBox": ""
 }
 

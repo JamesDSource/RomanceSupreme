@@ -201,10 +201,11 @@ func launch_shield():
 	shield_body.release(funcref(self, "on_shield_hit"))
 
 func on_shield_hit():
-	shield_body.get_parent().remove_child(shield_body)
-	add_child(shield_body)
-	shield_body.transform = shield_pos
-	shield_body.reset()
+	if state == State.GUARD:
+		shield_body.get_parent().remove_child(shield_body)
+		add_child(shield_body)
+		shield_body.transform = shield_pos
+		shield_body.reset()
 	
 	state = State.FOLLOW
 
@@ -214,7 +215,7 @@ func _on_hit(id, dmg):
 			dmg *= 1.3
 		"leg lower right", "leg upper right", "leg lower left", "leg upper left", "arm upper right", "arm lower right", "arm upper left", "arm lower left":
 			dmg *= 0.9
-		"foot right", "foot_left":
+		"foot right", "foot left", "hand right", "hand left":
 			dmg *= 0.85
 	
 	hp -= dmg

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://bosses/bimbones/bimbones.gd" type="Script" id=1]
+[ext_resource path="res://bosses/bimbones/skell_a.tscn" type="PackedScene" id=2]
+[ext_resource path="res://bosses/bimbones/skell_b.tscn" type="PackedScene" id=3]
+
+[node name="Bimbones" type="KinematicBody"]
+script = ExtResource( 1 )
+boss_name = "The Bad Bones"
+
+[node name="SkellA" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0 )
+
+[node name="SkellB" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 0 )
+
+[connection signal="on_hit" from="SkellA" to="." method="_on_hit"]
+[connection signal="on_hit" from="SkellB" to="." method="_on_hit"]

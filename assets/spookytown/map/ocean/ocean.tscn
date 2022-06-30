@@ -5,7 +5,3 @@
 
 [node name="ocean" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
-
-[node name="Plane" parent="." index="0"]
-blend_shapes/frame_0000 = 0.761907
-blend_shapes/frame_0495 = 0.238093

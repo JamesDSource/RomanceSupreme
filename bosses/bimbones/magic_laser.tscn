@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://bosses/bimbones/magic_laser.gd" type="Script" id=1]
+[ext_resource path="res://bosses/bimbones/noise_stripes.jpg" type="Texture" id=2]
+
+[sub_resource type="Shader" id=2]
+code = "shader_type spatial;
+
+uniform sampler2D noise;
+
+void vertex() {
+	VERTEX += NORMAL*sin(VERTEX.z*12.0 + TIME*2.0)*0.005;
+}
+
+void fragment() {
+	vec4 tex = texture(noise, UV + vec2(TIME*0.1, TIME))*vec4(0.1, 0.3, 0.8, 1.0);
+	ALBEDO = tex.rgb;
+	//ALPHA = ((tex.r + tex.g + tex.b)/3.0)*8.0;
+	EMISSION = vec3(0.1, 0.3, 0.8);
+}"
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 2 )
+shader_param/noise = ExtResource( 2 )
+
+[sub_resource type="CapsuleMesh" id=1]
+material = SubResource( 3 )
+radius = 0.025
+mid_height = 0.0
+radial_segments = 30
+rings = 1
+
+[node name="MagicLaser" type="RayCast"]
+enabled = true
+cast_to = Vector3( 0, 0, 1 )
+script = ExtResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.5 )
+mesh = SubResource( 1 )
+material/0 = null
