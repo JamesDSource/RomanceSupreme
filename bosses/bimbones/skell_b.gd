@@ -51,6 +51,5 @@ func fire_magic_bolt():
 	if players.size() > 0:
 		var player_pos = players[0].global_transform.origin
 		player_pos.y += 1
-		bolt.look_at(player_pos, Vector3.UP)
-		var ang = -atan2(player_pos.y - bolt.global_transform.origin.y, player_pos.x - bolt.global_transform.origin.x)
-		bolt.rotation.x = ang
+		bolt.look_at(player_pos, Vector3.DOWN)
+		bolt.transform.basis.z *= -1
