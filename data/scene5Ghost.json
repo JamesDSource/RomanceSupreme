@@ -1,0 +1,142 @@
+{
+	"nodes": [
+		{
+			"type": "start",
+			"meta": {
+				"x": 624,
+				"y": -277
+			},
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 1540,
+				"y": -427
+			},
+			"header": "Spooky Chat",
+			"choices": [
+				"Please leave me alone",
+				"Hello Sir",
+				"Hello Ma'am",
+				"Wassup captain",
+				"Please help me, I am scared",
+				"What's rockin",
+				"You look like a fart",
+				"Howya doin",
+				"Have you seen my mom"
+			]
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 2269,
+				"y": -279
+			},
+			"value_type": "Speaker",
+			"speaker_id": "Spooky Ghost"
+		},
+		{
+			"type": "event",
+			"meta": {
+				"x": 2655,
+				"y": -279
+			},
+			"name": "random",
+			"outputs": 2
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3023,
+				"y": -810
+			},
+			"dialog_text": "..."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2431,
+				"y": -632
+			},
+			"dialog_text": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3043,
+				"y": -66
+			},
+			"dialog_text": "BOO"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3051,
+				"y": -485
+			},
+			"dialog_text": "WoooOOOoooH"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 975,
+				"y": -277
+			},
+			"dialog_text": "You go to talk to the ghost"
+		}
+	],
+	"connections": [
+		{
+			"node_idx": 0,
+			"outputs": [
+				8
+			]
+		},
+		{
+			"node_idx": 8,
+			"outputs": [
+				1
+			]
+		},
+		{
+			"node_idx": 3,
+			"outputs": [
+				7,
+				6
+			]
+		},
+		{
+			"node_idx": 1,
+			"outputs": [
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2,
+				2
+			]
+		},
+		{
+			"node_idx": 2,
+			"outputs": [
+				5
+			]
+		},
+		{
+			"node_idx": 5,
+			"outputs": [
+				4
+			]
+		},
+		{
+			"node_idx": 4,
+			"outputs": [
+				3
+			]
+		}
+	]
+}
