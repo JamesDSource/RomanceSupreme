@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://assets/spookytown/characters/skell_a/bone.material" type="Material" id=1]
 [ext_resource path="res://assets/spookytown/characters/skell_a/legsidle.anim" type="Animation" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://assets/spookytown/characters/skell_a/spell2.anim" type="Animation" id=13]
 [ext_resource path="res://assets/spookytown/characters/skell_a/spell1.anim" type="Animation" id=14]
 [ext_resource path="res://assets/spookytown/characters/skell_a/getup.anim" type="Animation" id=15]
+[ext_resource path="res://bosses/bimbones/magic_laser.tscn" type="PackedScene" id=16]
 
 [sub_resource type="CapsuleShape" id=5]
 radius = 0.248283
@@ -330,7 +331,7 @@ skin = SubResource( 2 )
 material/0 = null
 
 [node name="LegRightUpperAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( 1.96701e-06, -0.0219743, -0.99977, 3.72529e-09, -0.999759, 0.0219745, -1, -7.45058e-08, -1.92365e-06, 0.177651, 1.56962, -0.00687973 )
+transform = Transform( 2.14577e-06, -0.0219754, -0.99977, 1.40443e-06, -0.999759, 0.0219756, -1, -1.47894e-06, -2.07161e-06, 0.177651, 1.56962, -0.00687973 )
 bone_name = "upperlegright"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/LegRightUpperAttachment"]
@@ -344,7 +345,7 @@ transform = Transform( 1, 9.51377e-09, 1.83946e-07, 1.8781e-07, -0.0954646, -0.9
 shape = SubResource( 19 )
 
 [node name="LegRightLowerAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( 1.95699e-06, -0.0445017, -0.999021, -2.25133e-07, -0.99901, 0.0445016, -1, 1.11235e-07, -1.92165e-06, 0.159966, 0.765016, -0.00687979 )
+transform = Transform( 2.13574e-06, -0.0445027, -0.999021, 1.17558e-06, -0.999009, 0.0445027, -1, -1.29618e-06, -2.03792e-06, 0.159965, 0.765016, -0.00688092 )
 bone_name = "lowerlegright"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/LegRightLowerAttachment"]
@@ -357,7 +358,7 @@ transform = Transform( 1, 8.4483e-09, -7.52382e-08, -7.711e-08, 0.0391206, -0.99
 shape = SubResource( 18 )
 
 [node name="FootRightAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( -9.68575e-08, -1.32481e-06, -1.00001, 0.990063, -0.140627, 4.58211e-07, -0.140627, -0.990064, 1.3853e-06, 0.128775, 0.0648227, -0.00687971 )
+transform = Transform( 9.98378e-07, -1.30059e-06, -1.00001, 0.990063, -0.140626, 1.55345e-06, -0.140626, -0.990064, 1.20703e-06, 0.128774, 0.0648232, -0.00688183 )
 bone_name = "footright"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/FootRightAttachment"]
@@ -370,7 +371,7 @@ transform = Transform( 0.989713, -2.14046e-07, -0.143061, -0.14306, -6.55846e-08
 shape = SubResource( 17 )
 
 [node name="LegLeftUpperAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( -3.57645e-06, 0.0219731, -0.99977, 2.38419e-07, -0.999758, -0.0219734, -1, -3.53903e-07, 3.53775e-06, -0.180592, 1.57227, -0.00687972 )
+transform = Transform( -3.57629e-06, 0.0219732, -0.99977, -6.89179e-07, -0.999758, -0.0219735, -1, 5.73695e-07, 3.55789e-06, -0.180592, 1.57227, -0.00687972 )
 bone_name = "upperlegleft"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/LegLeftUpperAttachment"]
@@ -383,7 +384,7 @@ transform = Transform( 0.999192, 0.000883709, -0.040209, -0.0401333, 0.0870523, 
 shape = SubResource( 16 )
 
 [node name="LegLeftLowerAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( -3.45269e-06, 0.0445005, -0.999021, -8.98742e-09, -0.999009, -0.0445004, -1, -1.80877e-07, 3.41624e-06, -0.162908, 0.767659, -0.00688001 )
+transform = Transform( -3.45252e-06, 0.0445005, -0.999021, -9.36585e-07, -0.999009, -0.0445005, -1, 7.4603e-07, 3.45728e-06, -0.162908, 0.767659, -0.00687926 )
 bone_name = "lowerlegleft"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/LegLeftLowerAttachment"]
@@ -396,7 +397,7 @@ transform = Transform( 0.999999, 2.04636e-12, 7.10543e-15, -7.10543e-15, -2.6077
 shape = SubResource( 15 )
 
 [node name="FootLeftAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( -7.22706e-07, 9.74629e-07, -1.00001, 0.990062, -0.140627, -1.35973e-06, -0.140628, -0.990063, -9.1528e-07, -0.131718, 0.0674664, -0.00688013 )
+transform = Transform( -8.04663e-07, 9.86736e-07, -1.00001, 0.990062, -0.140628, -1.44169e-06, -0.140629, -0.990063, -9.1559e-07, -0.131718, 0.0674664, -0.00687874 )
 bone_name = "footleft"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/FootLeftAttachment"]
@@ -409,7 +410,7 @@ transform = Transform( 0.99679, 8.84658e-08, -0.0800599, -0.0800595, 5.30738e-08
 shape = SubResource( 14 )
 
 [node name="ArmRightUpperAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( -0.0235316, 0.999723, -1.48422e-08, -0.999723, -0.0235315, -8.08388e-07, -8.49366e-07, -5.70435e-09, 0.999999, 0.227347, 2.56476, -0.0164998 )
+transform = Transform( -0.737439, -0.473261, -0.48188, 0.538052, 0.0196323, -0.842682, 0.408269, -0.880703, 0.240161, 0.227347, 2.56476, -0.0164998 )
 bone_name = "upperarmright"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/ArmRightUpperAttachment"]
@@ -422,7 +423,7 @@ transform = Transform( 0.999999, -1.13687e-13, 3.33646e-14, -1.30385e-08, -4.371
 shape = SubResource( 11 )
 
 [node name="ArmRightLowerAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( 4.28408e-08, 1, 2.82476e-10, -1, 1.11759e-07, -9.26606e-07, -9.67482e-07, -8.40405e-10, 0.999999, 0.808337, 2.55109, -0.0164998 )
+transform = Transform( -0.748372, -0.45577, -0.481885, 0.538365, 0.00697627, -0.842682, 0.387431, -0.890069, 0.24015, -0.0476886, 2.57617, -0.528321 )
 bone_name = "lowerarmright"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/ArmRightLowerAttachment"]
@@ -435,7 +436,7 @@ transform = Transform( 1, 1.13687e-13, -9.44496e-16, 7.36493e-15, -4.37114e-08, 
 shape = SubResource( 12 )
 
 [node name="HandRightAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( 4.09782e-08, 1, 2.82476e-10, -1, 1.09896e-07, -9.26606e-07, -9.67482e-07, -8.40407e-10, 0.999999, 1.2817, 2.55109, -0.0164998 )
+transform = Transform( -0.536694, -0.486293, 0.68955, 0.750662, -0.648363, 0.127012, 0.385314, 0.585785, 0.713013, -0.263434, 2.57948, -0.949648 )
 bone_name = "handright"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/HandRightAttachment"]
@@ -450,8 +451,14 @@ shape = SubResource( 13 )
 [node name="TipOfWand" type="Spatial" parent="skell-a/Skeleton/HandRightAttachment"]
 transform = Transform( 1, -1.98173e-13, 1.13687e-13, 3.82597e-15, 1, -2.77556e-17, 0, 1.11022e-16, 1, 0.0303588, 0.106811, -0.501824 )
 
+[node name="MagicLaser" parent="skell-a/Skeleton/HandRightAttachment/TipOfWand" instance=ExtResource( 16 )]
+transform = Transform( 1, -8.74227e-08, -8.74226e-08, -8.74228e-08, -1, -8.88178e-16, -8.74227e-08, 8.43769e-15, -1, 0, 0, 0 )
+visible = false
+enabled = false
+cast_to = Vector3( 0, 0, 0 )
+
 [node name="ArmLeftUpperAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( -0.0235311, -0.999723, -3.37019e-08, 0.999723, -0.0235311, 1.60187e-06, -1.5609e-06, 7.45058e-09, 0.999999, -0.230288, 2.5674, -0.0165002 )
+transform = Transform( -0.0764903, -0.651384, -0.754883, 0.989202, 0.0453498, -0.139365, 0.125014, -0.757391, 0.640881, -0.230288, 2.5674, -0.0165002 )
 bone_name = "upperarmleft"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/ArmLeftUpperAttachment"]
@@ -464,7 +471,7 @@ transform = Transform( 1, 7.95808e-13, 3.72538e-09, 1.86264e-09, -4.37115e-08, -
 shape = SubResource( 10 )
 
 [node name="ArmLeftLowerAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( -1.87571e-08, -1, -9.87202e-08, 1.12526e-06, 7.07805e-08, -1, 0.999999, -1.43801e-08, 1.0838e-06, -0.811278, 2.55372, -0.0165002 )
+transform = Transform( -0.771987, 0.632691, 0.0611418, 0.043886, 0.149013, -0.987861, -0.634121, -0.759932, -0.142802, -0.60884, 2.59375, -0.456659 )
 bone_name = "lowerarmleft"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/ArmLeftLowerAttachment"]
@@ -477,7 +484,7 @@ transform = Transform( 1, 0, 0, -8.88178e-15, -4.37113e-08, -1, 0, 1, -4.37114e-
 shape = SubResource( 8 )
 
 [node name="HandLeftAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( -1.87472e-08, -1, -9.87201e-08, 1.10756e-06, 7.07805e-08, -1, 0.999999, -1.43702e-08, 1.06611e-06, -1.28464, 2.55372, -0.0165002 )
+transform = Transform( -0.771987, 0.632691, 0.0611418, 0.043886, 0.149013, -0.987861, -0.634121, -0.759932, -0.142802, -0.309347, 2.66429, -0.816383 )
 bone_name = "handleft"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/HandLeftAttachment"]

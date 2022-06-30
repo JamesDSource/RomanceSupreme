@@ -18,16 +18,18 @@ enum SkellAState {
 var skell_a_state = SkellAState.FOLLOW
 var skell_a_moving: bool = false
 
-const SKELL_A_ATTACK_COOLDOWN: float = 3.0
-var skell_a_attack_cooldown_left: float = SKELL_A_ATTACK_COOLDOWN
+const SKELL_A_ATTACK_COOLDOWNS = [3.0, 2.0]
+var skell_a_attack_cooldown_left: float = SKELL_A_ATTACK_COOLDOWNS[0]
 
 var skell_a_path: PoolVector3Array
 var skell_a_path_index: int = -1
 
 enum SkellBState {
 	FOLLOW,
+	FIRE_BOLT,
 	MOUNTING,
-	MOUNTED
+	MOUNTED,
+	FIRE_BOLT_MOUNTED
 }
 var skell_b_state = SkellBState.FOLLOW
 var skell_b_moving: bool = false
@@ -38,6 +40,9 @@ var skell_b_path_index: int = -1
 var skell_b_path_to_a: PoolVector3Array
 var skell_b_path_to_a_index = -1
 var skell_a_last_pos: Vector3
+
+const SKELL_B_ATTACK_COOLDOWNS = [2.0, 0.5]
+var skell_b_attack_cooldown_left: float = SKELL_A_ATTACK_COOLDOWNS[0]
 
 var nav: Navigation
 
@@ -86,6 +91,11 @@ func skell_a_state_machine(delta):
 			else:
 				if dis_sqr > 8*8:
 					skell_a_moving = true
+
+				var dir = (player_pos - skell_a.global_transform.origin).normalized()
+				var dir_angle = atan2(-dir.x, -dir.z)
+				skell_a.rotation.y = lerp_angle(skell_a.rotation.y, dir_angle, 0.3)
+
 				skell_a.set_anim2 = "legsidle"
 
 			if skell_a_attack_cooldown_left > 0:
@@ -95,11 +105,12 @@ func skell_a_state_machine(delta):
 					skell_a_state = SkellAState.FIRE_BUBBLE
 				elif phase == 1:
 					var possible_states = [
-						SkellAState.FIRE_BUBBLE
+						SkellAState.FIRE_BUBBLE,
+						SkellAState.SWEEP
 					]
 					skell_a_state = possible_states[randi()%possible_states.size()]
 
-				skell_a_attack_cooldown_left = SKELL_A_ATTACK_COOLDOWN
+				skell_a_attack_cooldown_left = SKELL_A_ATTACK_COOLDOWNS[phase]
 		SkellAState.FIRE_BUBBLE:
 			skell_a.set_anim1 = "spell1"
 			skell_a.set_anim2 = "legsidle"
@@ -107,7 +118,11 @@ func skell_a_state_machine(delta):
 			if skell_a.anim_playing1 == "spell1" and !skell_a.anim_player1.is_playing():
 				skell_a_state = SkellAState.FOLLOW
 		SkellAState.SWEEP:
-			pass
+			skell_a.set_anim1 = "spell2"
+			skell_a.set_anim2 = "legsidle"
+
+			if skell_a.anim_playing1 == "spell2" and !skell_a.anim_player1.is_playing():
+				skell_a_state = SkellAState.FOLLOW
 		SkellAState.MOUNTING:
 			if !skell_a_available_to_mount and !mounted:
 				skell_a.set_anim1 = "getdown"
@@ -139,7 +154,25 @@ func skell_b_state_machine(delta):
 			else:
 				if dis_sqr > 3*3:
 					skell_b_moving = true
+
+				var dir = (player_pos - skell_b.global_transform.origin).normalized()
+				var dir_angle = atan2(-dir.x, -dir.z)
+				skell_b.rotation.y = lerp_angle(skell_b.rotation.y, dir_angle, 0.3)
+
 				skell_b.set_anim2 = "legsidle"
+
+			print(skell_b_attack_cooldown_left)
+			if skell_b_attack_cooldown_left > 0:
+				skell_b_attack_cooldown_left -= delta
+			elif dis_sqr < 5*5:
+				skell_b_state = SkellBState.FIRE_BOLT
+				skell_b_attack_cooldown_left = SKELL_B_ATTACK_COOLDOWNS[0]
+		SkellBState.FIRE_BOLT:
+			skell_b.set_anim1 = "spell1"
+			skell_b.set_anim2 = "legsidle"
+
+			if skell_b.anim_playing1 == "spell1" and !skell_b.anim_player1.is_playing():
+				skell_b_state = SkellBState.FOLLOW
 		SkellBState.MOUNTING:
 			var dis_sqr: float = skell_a.global_transform.origin.distance_squared_to(skell_b.global_transform.origin)
 			skell_b.set_anim1 = "armswing"
@@ -163,8 +196,23 @@ func skell_b_state_machine(delta):
 					skell_b_state = SkellBState.MOUNTED
 		SkellBState.MOUNTED:
 			skell_b.global_transform.origin = skell_a.mount.global_transform.origin
-			skell_b.rotation = Vector3.ZERO
-			pass
+			skell_b.rotation = skell_a.rotation
+			skell_b.set_anim1 = "armswing"
+			skell_b.set_anim2 = "mounted"
+
+			if skell_b_attack_cooldown_left > 0:
+				skell_b_attack_cooldown_left -= delta
+			else:
+				skell_b_state = SkellBState.FIRE_BOLT_MOUNTED
+				skell_b_attack_cooldown_left = SKELL_B_ATTACK_COOLDOWNS[1]
+		SkellBState.FIRE_BOLT_MOUNTED:
+			skell_b.global_transform.origin = skell_a.mount.global_transform.origin
+			skell_b.rotation = skell_a.rotation
+			skell_b.set_anim1 = "spell1"
+			skell_b.set_anim2 = "mounted"
+
+			if skell_b.anim_playing1 == "spell1" and !skell_b.anim_player1.is_playing():
+				skell_b_state = SkellBState.MOUNTED
 
 
 func follow_along_path(path: PoolVector3Array, path_pos: int, entity: KinematicBody) -> int:

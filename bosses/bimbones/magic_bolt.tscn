@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://addons/scatter/demos/assets/grass/data/t_noise.png" type="Texture" id=1]
+[ext_resource path="res://bosses/bimbones/magic_bolt.gd" type="Script" id=2]
+
+[sub_resource type="CapsuleMesh" id=1]
+radius = 0.3
+mid_height = 1.2
+rings = 6
+
+[sub_resource type="Shader" id=2]
+code = "shader_type spatial;
+
+uniform sampler2D tex;
+uniform float tail_cutoff;
+uniform float hightlight_strength;
+
+void vertex() {
+	if(VERTEX.z < tail_cutoff) {
+		VERTEX -= NORMAL*(1.0 - VERTEX.z)*0.17;
+		VERTEX.x += sin((TIME*12.0)+(VERTEX.z*5.0))*0.05;
+	} else {
+		float r = sin(VERTEX.z*2.0 - TIME)*0.5;
+		VERTEX += + NORMAL*(-0.5 + r)*0.1;
+	}
+}
+
+void fragment() {
+	ALBEDO = vec3(0.1, 0.3, 0.8) + vec3(NORMAL.z*hightlight_strength);
+	EMISSION = vec3(0.1, 0.3, 0.8);
+}"
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = SubResource( 2 )
+shader_param/tail_cutoff = 0.1
+shader_param/hightlight_strength = 2.5
+shader_param/tex = ExtResource( 1 )
+
+[sub_resource type="CapsuleShape" id=4]
+radius = 0.210718
+height = 0.0861236
+
+[node name="MagicBolt" type="Area"]
+script = ExtResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = SubResource( 3 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.494422 )
+shape = SubResource( 4 )
+
+[node name="Life" type="Timer" parent="."]
+wait_time = 3.0
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_MagicBolt_body_entered"]
+[connection signal="timeout" from="Life" to="." method="_on_Life_timeout"]

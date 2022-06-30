@@ -3,6 +3,9 @@ class_name SkellB
 
 signal on_hit(dmg)
 
+var magic_bolt = preload("res://bosses/bimbones/magic_bolt.tscn")
+
+onready var tip_of_wand = $"skell-b/Skeleton/HandRightAttachment/TipOfWand"
 onready var anim_player1 = $AnimationPlayer
 onready var anim_player2 = $AnimationPlayer2
 
@@ -12,7 +15,7 @@ var anim_playing1: String = ""
 var set_anim2: String = ""
 var anim_playing2: String = ""
 
-func _process(delta):
+func _process(_delta):
 	if set_anim1 != anim_playing1:
 		if set_anim1 == "":
 			anim_player1.stop()
@@ -38,3 +41,16 @@ func _on_hit(id, dmg):
 
 	emit_signal("on_hit", dmg)
 
+func fire_magic_bolt():
+	var bolt = magic_bolt.instance()
+	get_tree().root.add_child(bolt)
+
+	bolt.global_transform.origin = tip_of_wand.global_transform.origin
+
+	var players = get_tree().get_nodes_in_group("player1p")
+	if players.size() > 0:
+		var player_pos = players[0].global_transform.origin
+		player_pos.y += 1
+		bolt.look_at(player_pos, Vector3.UP)
+		var ang = -atan2(player_pos.y - bolt.global_transform.origin.y, player_pos.x - bolt.global_transform.origin.x)
+		bolt.rotation.x = ang
