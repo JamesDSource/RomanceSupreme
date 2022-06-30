@@ -221,7 +221,6 @@ func _on_hit(id, dmg):
 	hp -= dmg
 
 func _on_hurt(id, player):
-	print(id)
 	match id.strip_edges():
 		"foot right", "foot_left":
 			player.damage(20, 20, global_transform.basis.z)

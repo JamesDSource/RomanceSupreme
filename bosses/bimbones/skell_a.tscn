@@ -410,7 +410,7 @@ transform = Transform( 0.99679, 8.84658e-08, -0.0800599, -0.0800595, 5.30738e-08
 shape = SubResource( 14 )
 
 [node name="ArmRightUpperAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( -0.737439, -0.473261, -0.48188, 0.538052, 0.0196323, -0.842682, 0.408269, -0.880703, 0.240161, 0.227347, 2.56476, -0.0164998 )
+transform = Transform( -0.0235318, 0.999723, -9.31322e-09, -0.999723, -0.0235317, -8.00937e-07, -8.41916e-07, -1.11759e-08, 0.999999, 0.227347, 2.56476, -0.0164998 )
 bone_name = "upperarmright"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/ArmRightUpperAttachment"]
@@ -423,7 +423,7 @@ transform = Transform( 0.999999, -1.13687e-13, 3.33646e-14, -1.30385e-08, -4.371
 shape = SubResource( 11 )
 
 [node name="ArmRightLowerAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( -0.748372, -0.45577, -0.481885, 0.538365, 0.00697627, -0.842682, 0.387431, -0.890069, 0.24015, -0.0476886, 2.57617, -0.528321 )
+transform = Transform( -1.99303e-07, 1, 5.81139e-09, -0.999999, -1.35973e-07, -9.19155e-07, -9.60162e-07, -6.48574e-09, 0.999999, 0.808337, 2.55109, -0.0164998 )
 bone_name = "lowerarmright"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/ArmRightLowerAttachment"]
@@ -436,7 +436,7 @@ transform = Transform( 1, 1.13687e-13, -9.44496e-16, 7.36493e-15, -4.37114e-08, 
 shape = SubResource( 12 )
 
 [node name="HandRightAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( -0.536694, -0.486293, 0.68955, 0.750662, -0.648363, 0.127012, 0.385314, 0.585785, 0.713013, -0.263434, 2.57948, -0.949648 )
+transform = Transform( -2.01166e-07, 1, 5.81139e-09, -0.999999, -1.37836e-07, -9.19155e-07, -9.60162e-07, -6.48574e-09, 0.999999, 1.2817, 2.55109, -0.0164998 )
 bone_name = "handright"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/HandRightAttachment"]
@@ -453,12 +453,11 @@ transform = Transform( 1, -1.98173e-13, 1.13687e-13, 3.82597e-15, 1, -2.77556e-1
 
 [node name="MagicLaser" parent="skell-a/Skeleton/HandRightAttachment/TipOfWand" instance=ExtResource( 16 )]
 transform = Transform( 1, -8.74227e-08, -8.74226e-08, -8.74228e-08, -1, -8.88178e-16, -8.74227e-08, 8.43769e-15, -1, 0, 0, 0 )
-visible = false
 enabled = false
 cast_to = Vector3( 0, 0, 0 )
 
 [node name="ArmLeftUpperAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( -0.0764903, -0.651384, -0.754883, 0.989202, 0.0453498, -0.139365, 0.125014, -0.757391, 0.640881, -0.230288, 2.5674, -0.0165002 )
+transform = Transform( -0.0235311, -0.999723, -2.98023e-08, 0.999723, -0.0235311, 1.59442e-06, -1.55345e-06, 1.11759e-08, 0.999999, -0.230288, 2.5674, -0.0165002 )
 bone_name = "upperarmleft"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/ArmLeftUpperAttachment"]
@@ -471,7 +470,7 @@ transform = Transform( 1, 7.95808e-13, 3.72538e-09, 1.86264e-09, -4.37115e-08, -
 shape = SubResource( 10 )
 
 [node name="ArmLeftLowerAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( -0.771987, 0.632691, 0.0611418, 0.043886, 0.149013, -0.987861, -0.634121, -0.759932, -0.142802, -0.60884, 2.59375, -0.456659 )
+transform = Transform( -1.48575e-08, -1, -1.00583e-07, 1.11781e-06, 6.51926e-08, -1, 0.999999, -1.04805e-08, 1.07644e-06, -0.811278, 2.55372, -0.0165002 )
 bone_name = "lowerarmleft"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/ArmLeftLowerAttachment"]
@@ -484,7 +483,7 @@ transform = Transform( 1, 0, 0, -8.88178e-15, -4.37113e-08, -1, 0, 1, -4.37114e-
 shape = SubResource( 8 )
 
 [node name="HandLeftAttachment" type="BoneAttachment" parent="skell-a/Skeleton"]
-transform = Transform( -0.771987, 0.632691, 0.0611418, 0.043886, 0.149013, -0.987861, -0.634121, -0.759932, -0.142802, -0.309347, 2.66429, -0.816383 )
+transform = Transform( -1.48476e-08, -1, -1.00583e-07, 1.10011e-06, 6.51925e-08, -1, 0.999999, -1.04706e-08, 1.05875e-06, -1.28464, 2.55372, -0.0165002 )
 bone_name = "handleft"
 
 [node name="HitBox" type="Area" parent="skell-a/Skeleton/HandLeftAttachment"]

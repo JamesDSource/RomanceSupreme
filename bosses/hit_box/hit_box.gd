@@ -29,6 +29,7 @@ func hurt_box_close():
 
 func _on_HitBox_body_entered(body):
 	if body.is_in_group("player1p"):
+		print("detected player", is_hurt_box, id)
 		player = body
 
 		if is_hurt_box:
@@ -37,3 +38,11 @@ func _on_HitBox_body_entered(body):
 func _on_HitBox_body_exited(body):
 	if player == body:
 		player = null
+
+
+func _on_HitBox_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	pass # Replace with function body.
+
+
+func _on_HitBox_body_shape_exited(body_rid, body, body_shape_index, local_shape_index):
+	pass # Replace with function body.
