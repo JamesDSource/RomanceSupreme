@@ -1,0 +1,15 @@
+{
+	"nodes": [
+		{
+			"type": "start",
+			"meta": {
+				"x": 1719,
+				"y": -204
+			},
+			"sequence_name": "[root]"
+		}
+	],
+	"connections": [
+
+	]
+}
