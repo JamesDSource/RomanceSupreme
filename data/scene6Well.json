@@ -1,0 +1,48 @@
+{
+	"nodes": [
+		{
+			"type": "start",
+			"meta": {
+				"x": 1627,
+				"y": -221
+			},
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "event",
+			"meta": {
+				"x": 2733,
+				"y": -345
+			},
+			"name": "labyrinth",
+			"outputs": 1
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 2010,
+				"y": -365
+			},
+			"header": "Would you like to go down the well?",
+			"choices": [
+				"Jump in",
+				"Not yet"
+			]
+		}
+	],
+	"connections": [
+		{
+			"node_idx": 0,
+			"outputs": [
+				2
+			]
+		},
+		{
+			"node_idx": 2,
+			"outputs": [
+				1,
+				null
+			]
+		}
+	]
+}
