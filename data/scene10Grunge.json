@@ -3,13 +3,249 @@
 		{
 			"type": "start",
 			"meta": {
-				"x": 1798,
-				"y": -136
+				"x": 1434,
+				"y": -125
 			},
 			"sequence_name": "[root]"
+		},
+		{
+			"type": "event",
+			"meta": {
+				"x": 6978,
+				"y": -130
+			},
+			"name": "arena",
+			"outputs": 1
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 6439,
+				"y": -263
+			},
+			"dialog_text": "Lets get to it then ay?"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 5902,
+				"y": -27
+			},
+			"dialog_text": "You'll pick one special lad who you'll fight for, and you'll have to kill \nthe rest. Should be a right good barney and if you when then you can \ndo whatever you want with your special chosen one."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 5790,
+				"y": -338
+			},
+			"dialog_text": "Gimme just one moment, one mo. I'm gonna ring up some special \nblokes on the telephone."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 5241,
+				"y": -261
+			},
+			"dialog_text": "Y'know what we need luv? We need ourselves a bloody big fight we \ndo."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 4920,
+				"y": -274
+			},
+			"value_type": "Speaker",
+			"speaker_id": "grung"
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 4269,
+				"y": -446
+			},
+			"header": "",
+			"choices": [
+				"I'm here to vassalize",
+				"A buff minotaur sent me this way",
+				"I'm tired, what's next"
+			]
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 3963,
+				"y": -534
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3761,
+				"y": 19
+			},
+			"dialog_text": "Begone quickly or I shall feast on your bones."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3482,
+				"y": -426
+			},
+			"dialog_text": "Why dare thee to enter my province?"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3157,
+				"y": -69
+			},
+			"dialog_text": "It is I, Grungledord, Last King of Britain, Lord Emperor of this Bastion \nunder the bridge and Emperor of Treasured Trash!"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 2914,
+				"y": -431
+			},
+			"value_type": "Speaker",
+			"speaker_id": "grung"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2454,
+				"y": -33
+			},
+			"dialog_text": "An estranged man wearing a garbage bag and a bucket on his head \njumps out from behind a pile of trash shouting in a british accent."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1800,
+				"y": -81
+			},
+			"dialog_text": "graaaaaahh!"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 2313,
+				"y": -400
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 1754,
+				"y": -415
+			},
+			"value_type": "Speaker",
+			"speaker_id": "grung"
 		}
 	],
 	"connections": [
-
+		{
+			"node_idx": 0,
+			"outputs": [
+				16
+			]
+		},
+		{
+			"node_idx": 16,
+			"outputs": [
+				14
+			]
+		},
+		{
+			"node_idx": 14,
+			"outputs": [
+				15
+			]
+		},
+		{
+			"node_idx": 15,
+			"outputs": [
+				13
+			]
+		},
+		{
+			"node_idx": 13,
+			"outputs": [
+				12
+			]
+		},
+		{
+			"node_idx": 12,
+			"outputs": [
+				11
+			]
+		},
+		{
+			"node_idx": 11,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 10,
+			"outputs": [
+				9
+			]
+		},
+		{
+			"node_idx": 8,
+			"outputs": [
+				7
+			]
+		},
+		{
+			"node_idx": 9,
+			"outputs": [
+				8
+			]
+		},
+		{
+			"node_idx": 7,
+			"outputs": [
+				6,
+				6,
+				6
+			]
+		},
+		{
+			"node_idx": 6,
+			"outputs": [
+				5
+			]
+		},
+		{
+			"node_idx": 5,
+			"outputs": [
+				4
+			]
+		},
+		{
+			"node_idx": 4,
+			"outputs": [
+				3
+			]
+		},
+		{
+			"node_idx": 3,
+			"outputs": [
+				2
+			]
+		},
+		{
+			"node_idx": 2,
+			"outputs": [
+				1
+			]
+		}
 	]
 }

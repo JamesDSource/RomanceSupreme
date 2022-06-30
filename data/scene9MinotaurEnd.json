@@ -3,13 +3,139 @@
 		{
 			"type": "start",
 			"meta": {
-				"x": 1719,
-				"y": -204
+				"x": 335,
+				"y": 291
 			},
 			"sequence_name": "[root]"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3170,
+				"y": 243
+			},
+			"dialog_text": "Good luck, I hope I see you again."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1582,
+				"y": -156
+			},
+			"dialog_text": "Oh wow."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2793,
+				"y": -111
+			},
+			"dialog_text": "Well, you probably need to be getting on, the next part of your \nadventure is down this next hole here."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2168,
+				"y": -79
+			},
+			"dialog_text": "All my other visitors either came back the way they came or starved \nbefore they could get out."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2344,
+				"y": 304
+			},
+			"dialog_text": "Here, have one of my flowers. I do hope to see more of you in the \nfuture."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1632,
+				"y": 261
+			},
+			"dialog_text": "I actually didn't expect you to get through that."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 1267,
+				"y": -23
+			},
+			"value_type": "Speaker",
+			"speaker_id": "mino"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 778,
+				"y": 283
+			},
+			"dialog_text": "To noones surprise, the minotaur is there waiting for you"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 676,
+				"y": -75
+			},
+			"dialog_text": "You finally get to the end of the maze."
 		}
 	],
 	"connections": [
-
+		{
+			"node_idx": 0,
+			"outputs": [
+				9
+			]
+		},
+		{
+			"node_idx": 9,
+			"outputs": [
+				8
+			]
+		},
+		{
+			"node_idx": 8,
+			"outputs": [
+				7
+			]
+		},
+		{
+			"node_idx": 7,
+			"outputs": [
+				2
+			]
+		},
+		{
+			"node_idx": 2,
+			"outputs": [
+				6
+			]
+		},
+		{
+			"node_idx": 6,
+			"outputs": [
+				4
+			]
+		},
+		{
+			"node_idx": 4,
+			"outputs": [
+				5
+			]
+		},
+		{
+			"node_idx": 5,
+			"outputs": [
+				3
+			]
+		},
+		{
+			"node_idx": 3,
+			"outputs": [
+				1
+			]
+		}
 	]
 }

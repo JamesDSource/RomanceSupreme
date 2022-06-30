@@ -3,13 +3,197 @@
 		{
 			"type": "start",
 			"meta": {
-				"x": 1647,
-				"y": -249
+				"x": 170,
+				"y": 416
 			},
 			"sequence_name": "[root]"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 4709,
+				"y": 330
+			},
+			"dialog_text": "Good luck"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 4133,
+				"y": 465
+			},
+			"dialog_text": "If you get lost I'll probably be along to point you in the right \ndirection"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 4084,
+				"y": 97
+			},
+			"dialog_text": "Well, I don't have much for you but if you get through my maze here \nyou'll find another hole that should take you on to the next part."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2742,
+				"y": 379
+			},
+			"dialog_text": "Yo"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 3733,
+				"y": 79
+			},
+			"value_type": "Speaker",
+			"speaker_id": "mino"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3393,
+				"y": 454
+			},
+			"dialog_text": "He helps you to your feet."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 3399,
+				"y": 100
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2882,
+				"y": 45
+			},
+			"dialog_text": "You okay? Most of my visitors land on their feet."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 2443,
+				"y": 65
+			},
+			"value_type": "Speaker",
+			"speaker_id": "mino"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2061,
+				"y": 517
+			},
+			"dialog_text": "Looking up, you see what can what could only be described as a \nreal minotaur. And this must be his maze."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 501,
+				"y": 310
+			},
+			"dialog_text": "You peer over the edge of the well, and hoping for the best, make \nthe plunge."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1540,
+				"y": 154
+			},
+			"dialog_text": "With a smack, you land face flat on cold stone tiles. Your nose is \nbleeding a little bit but it could be much worse. Still shoulda took \nthe stairs."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1025,
+				"y": 494
+			},
+			"dialog_text": "You fall for a very long time, screaming the whole way."
 		}
 	],
 	"connections": [
-
+		{
+			"node_idx": 0,
+			"outputs": [
+				11
+			]
+		},
+		{
+			"node_idx": 11,
+			"outputs": [
+				13
+			]
+		},
+		{
+			"node_idx": 13,
+			"outputs": [
+				12
+			]
+		},
+		{
+			"node_idx": 12,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 10,
+			"outputs": [
+				9
+			]
+		},
+		{
+			"node_idx": 9,
+			"outputs": [
+				4
+			]
+		},
+		{
+			"node_idx": 4,
+			"outputs": [
+				8
+			]
+		},
+		{
+			"node_idx": 8,
+			"outputs": [
+				7
+			]
+		},
+		{
+			"node_idx": 7,
+			"outputs": [
+				6
+			]
+		},
+		{
+			"node_idx": 6,
+			"outputs": [
+				5
+			]
+		},
+		{
+			"node_idx": 5,
+			"outputs": [
+				3
+			]
+		},
+		{
+			"node_idx": 3,
+			"outputs": [
+				2
+			]
+		},
+		{
+			"node_idx": 2,
+			"outputs": [
+				1
+			]
+		}
 	]
 }

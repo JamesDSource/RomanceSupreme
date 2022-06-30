@@ -3,6 +3,14 @@
 		{
 			"type": "start",
 			"meta": {
+				"x": 15025,
+				"y": 1136
+			},
+			"sequence_name": "wrong answer"
+		},
+		{
+			"type": "start",
+			"meta": {
 				"x": 6175,
 				"y": 244
 			},
@@ -17,6 +25,528 @@
 			"sequence_name": "[root]"
 		},
 		{
+			"type": "dialog",
+			"meta": {
+				"x": 20105,
+				"y": 3096
+			},
+			"dialog_text": "They wait for you expectantly."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 20258,
+				"y": 2739
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 18134,
+				"y": 2811
+			},
+			"dialog_text": "They'’re a decent aphrodisiac!"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 19674,
+				"y": 2746
+			},
+			"dialog_text": "Just down this well here, ma’am! "
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 19273,
+				"y": 2763
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-b"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 18737,
+				"y": 2745
+			},
+			"dialog_text": "They lead you down the street to a well just on the outskirts of town."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 20225,
+				"y": 2406
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 19660,
+				"y": 2418
+			},
+			"dialog_text": "Yes yes, would you like to continue this adventure, madame?"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 19303,
+				"y": 2428
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-a"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 18727,
+				"y": 2410
+			},
+			"dialog_text": "We cannot seem to get to know you enough"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 20196,
+				"y": 2072
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-b"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 19645,
+				"y": 2074
+			},
+			"dialog_text": "The three of you all talk until the ghost barista starts booing you out \nso they can close up for a few hours."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 19071,
+				"y": 2072
+			},
+			"dialog_text": "Your date continues as well as it started: after a few bumps in the \nroad, you guys hit it off great! You guys talk about everything from \ngood books to your relationships with your fathers."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 18715,
+				"y": 2074
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 17773,
+				"y": 2814
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-a"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 16898,
+				"y": 2824
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 17236,
+				"y": 2827
+			},
+			"dialog_text": "Samantha leans back over to you with a whisper."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 15992,
+				"y": 2748
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-a"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 16362,
+				"y": 2818
+			},
+			"dialog_text": "Strawberry smoothie for the lady."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 17843,
+				"y": 2463
+			},
+			"dialog_text": "You hesitate for a moment, what flavours do they have?"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 17503,
+				"y": 2448
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 16939,
+				"y": 2465
+			},
+			"dialog_text": "What flavour smoothie you want hun?"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 16584,
+				"y": 2463
+			},
+			"value_type": "Speaker",
+			"speaker_id": "Ghosty Barista"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 16003,
+				"y": 2436
+			},
+			"dialog_text": "A ghostly barista calls you out."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 17815,
+				"y": 2107
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 17259,
+				"y": 2111
+			},
+			"dialog_text": "Good choice!"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 16921,
+				"y": 2116
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-b"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 16376,
+				"y": 2125
+			},
+			"dialog_text": "Oh, that's the ticket! I forgot about the smoothies here, they are a \nbit much as a regular drink but they're so delicious."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 16044,
+				"y": 2120
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-a"
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 15375,
+				"y": 1535
+			},
+			"header": "What drink do you get",
+			"choices": [
+				"Order the frappuccino",
+				"Order a hot black coffee",
+				"Order a smoothie"
+			]
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 18639,
+				"y": 1712
+			},
+			"sequence_name": "wrong answer"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 18092,
+				"y": 1429
+			},
+			"dialog_text": "they rattle a bunch"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 17760,
+				"y": 1458
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 17302,
+				"y": 1774
+			},
+			"dialog_text": "_XX_$4M4NTH4_XX means your teeth. And if you regularly drink \nblack coffee, we might have to break up. Stained bones are a turn \noff for us."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 16947,
+				"y": 1772
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-a"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 16409,
+				"y": 1772
+			},
+			"dialog_text": "Blech! Why would you want something like that?!? It’'ll stain your \nbones!"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 16079,
+				"y": 1773
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-b"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 17200,
+				"y": 1511
+			},
+			"dialog_text": "Yeah"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 16872,
+				"y": 1473
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-b"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 17181,
+				"y": 1158
+			},
+			"dialog_text": "Yeah, we like a Dominant Woman who Takes Charge. None of that “\nsubmissive house wife” shit."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 16858,
+				"y": 1155
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-a"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 16345,
+				"y": 1466
+			},
+			"dialog_text": "This ain’t it."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 16010,
+				"y": 1465
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-b"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 16335,
+				"y": 1146
+			},
+			"dialog_text": "Wow, you really just did exactly what we told you huh."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 16009,
+				"y": 1154
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-a"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 14891,
+				"y": 1515
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 14750,
+				"y": 1876
+			},
+			"dialog_text": "Agreed, it really chills the bones"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 14407,
+				"y": 1877
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-a"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 14337,
+				"y": 1500
+			},
+			"dialog_text": "The frapuccino here is simply to die for! "
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 13970,
+				"y": 1518
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-b"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 12601,
+				"y": 1862
+			},
+			"dialog_text": "Hey there! Glad to see that ya were able to make it!"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 13844,
+				"y": 1887
+			},
+			"dialog_text": "_XX_$4M4NTH4_XX_ leans over to whisper something"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 13498,
+				"y": 1883
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 13423,
+				"y": 1508
+			},
+			"dialog_text": "Yes! Mighty fine to see ya here!"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 13154,
+				"y": 1850
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-b"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 13055,
+				"y": 1494
+			},
+			"value_type": "Speaker",
+			"speaker_id": "skell-a"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 12518,
+				"y": 1411
+			},
+			"dialog_text": "_XX_$4M4NTH4_XX_makes eye contact with you and smiles. He puts \ndown the mallet he was using to play the xylophone on his ribs and \nnudges Samantha, who grins at the sight of you. They walk over. "
+		},
+		{
+			"type": "event",
+			"meta": {
+				"x": 11669,
+				"y": 1830
+			},
+			"name": "cafe",
+			"outputs": 1
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 12022,
+				"y": 1749
+			},
+			"dialog_text": "You glance over, seeing both Samantha and _XX_$4M4NTH4_XX_ in \nthis corner, jamming their hearts out. Or at least they would be, if \nthey had hearts."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 11977,
+				"y": 1405
+			},
+			"dialog_text": "As you open the door to the cafe, you hear music coming from one \nof the corners, garnished with the signature rattle you have come to \nrecognize."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 10669,
+				"y": 1921
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
 			"type": "choice",
 			"meta": {
 				"x": 11004,
@@ -24,7 +554,7 @@
 			},
 			"header": "Coffee Date?",
 			"choices": [
-				"Let me keep asking questions and I'll get back to you on that",
+				"Let me keep asking questions first",
 				"Y'know what why not"
 			]
 		},
@@ -146,15 +676,6 @@
 				"y": 338
 			},
 			"dialog_text": "They rattle regretfully"
-		},
-		{
-			"type": "event",
-			"meta": {
-				"x": 11669,
-				"y": 1830
-			},
-			"name": "cafe",
-			"outputs": 1
 		},
 		{
 			"type": "dialog",
@@ -544,14 +1065,6 @@
 			"dialog_text": "what typa skeleton you hiding under that rack?"
 		},
 		{
-			"type": "dialog",
-			"meta": {
-				"x": 2085,
-				"y": 588
-			},
-			"dialog_text": "Do those boobs have nipples?"
-		},
-		{
 			"type": "setter",
 			"meta": {
 				"x": 1782,
@@ -601,23 +1114,208 @@
 				"y": 555
 			},
 			"dialog_text": "Wassup baaaaaabe"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2085,
+				"y": 588
+			},
+			"dialog_text": "Do those boobs have nipples?"
 		}
 	],
 	"connections": [
 		{
+			"node_idx": 2,
+			"outputs": [
+				128
+			]
+		},
+		{
+			"node_idx": 128,
+			"outputs": [
+				125
+			]
+		},
+		{
+			"node_idx": 125,
+			"outputs": [
+				129
+			]
+		},
+		{
+			"node_idx": 129,
+			"outputs": [
+				127
+			]
+		},
+		{
+			"node_idx": 127,
+			"outputs": [
+				126
+			]
+		},
+		{
+			"node_idx": 126,
+			"outputs": [
+				124
+			]
+		},
+		{
+			"node_idx": 124,
+			"outputs": [
+				130
+			]
+		},
+		{
+			"node_idx": 130,
+			"outputs": [
+				113
+			]
+		},
+		{
+			"node_idx": 113,
+			"outputs": [
+				123
+			]
+		},
+		{
+			"node_idx": 123,
+			"outputs": [
+				122
+			]
+		},
+		{
+			"node_idx": 122,
+			"outputs": [
+				121
+			]
+		},
+		{
+			"node_idx": 121,
+			"outputs": [
+				120
+			]
+		},
+		{
+			"node_idx": 120,
+			"outputs": [
+				119
+			]
+		},
+		{
+			"node_idx": 118,
+			"outputs": [
+				117
+			]
+		},
+		{
+			"node_idx": 119,
+			"outputs": [
+				118
+			]
+		},
+		{
+			"node_idx": 117,
+			"outputs": [
+				116
+			]
+		},
+		{
+			"node_idx": 116,
+			"outputs": [
+				114
+			]
+		},
+		{
+			"node_idx": 114,
+			"outputs": [
+				112
+			]
+		},
+		{
+			"node_idx": 112,
+			"outputs": [
+				115
+			]
+		},
+		{
+			"node_idx": 115,
+			"outputs": [
+				111
+			]
+		},
+		{
+			"node_idx": 111,
+			"outputs": [
+				110
+			]
+		},
+		{
+			"node_idx": 110,
+			"outputs": [
+				89
+			]
+		},
+		{
 			"node_idx": 1,
 			"outputs": [
-				68
+				89
 			]
 		},
 		{
-			"node_idx": 68,
+			"node_idx": 89,
 			"outputs": [
-				65
+				78,
+				93,
+				100,
+				88
 			]
 		},
 		{
-			"node_idx": 65,
+			"node_idx": 78,
+			"outputs": [
+				77
+			]
+		},
+		{
+			"node_idx": 77,
+			"outputs": [
+				76
+			]
+		},
+		{
+			"node_idx": 76,
+			"outputs": [
+				75
+			]
+		},
+		{
+			"node_idx": 75,
+			"outputs": [
+				109
+			]
+		},
+		{
+			"node_idx": 109,
+			"outputs": [
+				74
+			]
+		},
+		{
+			"node_idx": 74,
+			"outputs": [
+				108
+			]
+		},
+		{
+			"node_idx": 108,
+			"outputs": [
+				107
+			]
+		},
+		{
+			"node_idx": 107,
 			"outputs": [
 				69
 			]
@@ -625,11 +1323,192 @@
 		{
 			"node_idx": 69,
 			"outputs": [
-				67
+				106
 			]
 		},
 		{
-			"node_idx": 67,
+			"node_idx": 106,
+			"outputs": [
+				72
+			]
+		},
+		{
+			"node_idx": 93,
+			"outputs": [
+				94
+			]
+		},
+		{
+			"node_idx": 94,
+			"outputs": [
+				85
+			]
+		},
+		{
+			"node_idx": 85,
+			"outputs": [
+				105
+			]
+		},
+		{
+			"node_idx": 105,
+			"outputs": [
+				84
+			]
+		},
+		{
+			"node_idx": 84,
+			"outputs": [
+				104
+			]
+		},
+		{
+			"node_idx": 104,
+			"outputs": [
+				103
+			]
+		},
+		{
+			"node_idx": 103,
+			"outputs": [
+				102
+			]
+		},
+		{
+			"node_idx": 102,
+			"outputs": [
+				101
+			]
+		},
+		{
+			"node_idx": 100,
+			"outputs": [
+				99
+			]
+		},
+		{
+			"node_idx": 99,
+			"outputs": [
+				98
+			]
+		},
+		{
+			"node_idx": 98,
+			"outputs": [
+				97
+			]
+		},
+		{
+			"node_idx": 97,
+			"outputs": [
+				96
+			]
+		},
+		{
+			"node_idx": 96,
+			"outputs": [
+				95
+			]
+		},
+		{
+			"node_idx": 95,
+			"outputs": [
+				91
+			]
+		},
+		{
+			"node_idx": 91,
+			"outputs": [
+				92
+			]
+		},
+		{
+			"node_idx": 92,
+			"outputs": [
+				73
+			]
+		},
+		{
+			"node_idx": 73,
+			"outputs": [
+				90
+			]
+		},
+		{
+			"node_idx": 88,
+			"outputs": [
+				87
+			]
+		},
+		{
+			"node_idx": 87,
+			"outputs": [
+				86
+			]
+		},
+		{
+			"node_idx": 86,
+			"outputs": [
+				83
+			]
+		},
+		{
+			"node_idx": 83,
+			"outputs": [
+				82
+			]
+		},
+		{
+			"node_idx": 82,
+			"outputs": [
+				81
+			]
+		},
+		{
+			"node_idx": 81,
+			"outputs": [
+				80
+			]
+		},
+		{
+			"node_idx": 80,
+			"outputs": [
+				79
+			]
+		},
+		{
+			"node_idx": 64,
+			"outputs": [
+				71,
+				60
+			]
+		},
+		{
+			"node_idx": 101,
+			"outputs": [
+				71
+			]
+		},
+		{
+			"node_idx": 90,
+			"outputs": [
+				71
+			]
+		},
+		{
+			"node_idx": 71,
+			"outputs": [
+				70
+			]
+		},
+		{
+			"node_idx": 72,
+			"outputs": [
+				68
+			]
+		},
+		{
+			"node_idx": 68,
 			"outputs": [
 				66
 			]
@@ -637,11 +1516,23 @@
 		{
 			"node_idx": 66,
 			"outputs": [
-				64
+				67
 			]
 		},
 		{
-			"node_idx": 64,
+			"node_idx": 67,
+			"outputs": [
+				65
+			]
+		},
+		{
+			"node_idx": 65,
+			"outputs": [
+				71
+			]
+		},
+		{
+			"node_idx": 79,
 			"outputs": [
 				63
 			]
@@ -649,11 +1540,11 @@
 		{
 			"node_idx": 63,
 			"outputs": [
-				52
+				64
 			]
 		},
 		{
-			"node_idx": 52,
+			"node_idx": 60,
 			"outputs": [
 				62
 			]
@@ -667,13 +1558,13 @@
 		{
 			"node_idx": 61,
 			"outputs": [
-				60
+				59
 			]
 		},
 		{
-			"node_idx": 60,
+			"node_idx": 58,
 			"outputs": [
-				59
+				53
 			]
 		},
 		{
@@ -683,15 +1574,15 @@
 			]
 		},
 		{
-			"node_idx": 57,
+			"node_idx": 53,
 			"outputs": [
-				56
+				57
 			]
 		},
 		{
-			"node_idx": 58,
+			"node_idx": 57,
 			"outputs": [
-				57
+				56
 			]
 		},
 		{
@@ -703,23 +1594,23 @@
 		{
 			"node_idx": 55,
 			"outputs": [
-				53
+				54
 			]
 		},
 		{
-			"node_idx": 53,
+			"node_idx": 54,
+			"outputs": [
+				52
+			]
+		},
+		{
+			"node_idx": 52,
 			"outputs": [
 				51
 			]
 		},
 		{
 			"node_idx": 51,
-			"outputs": [
-				54
-			]
-		},
-		{
-			"node_idx": 54,
 			"outputs": [
 				50
 			]
@@ -733,58 +1624,27 @@
 		{
 			"node_idx": 49,
 			"outputs": [
-				28
-			]
-		},
-		{
-			"node_idx": 0,
-			"outputs": [
-				28
-			]
-		},
-		{
-			"node_idx": 28,
-			"outputs": [
-				16,
-				32,
-				39,
-				27
-			]
-		},
-		{
-			"node_idx": 16,
-			"outputs": [
-				15
-			]
-		},
-		{
-			"node_idx": 15,
-			"outputs": [
-				14
-			]
-		},
-		{
-			"node_idx": 14,
-			"outputs": [
-				13
-			]
-		},
-		{
-			"node_idx": 13,
-			"outputs": [
 				48
 			]
 		},
 		{
 			"node_idx": 48,
 			"outputs": [
-				12
+				32
 			]
 		},
 		{
-			"node_idx": 12,
+			"node_idx": 0,
 			"outputs": [
-				47
+				32
+			]
+		},
+		{
+			"node_idx": 32,
+			"outputs": [
+				47,
+				39,
+				31
 			]
 		},
 		{
@@ -796,47 +1656,17 @@
 		{
 			"node_idx": 46,
 			"outputs": [
-				7
-			]
-		},
-		{
-			"node_idx": 7,
-			"outputs": [
 				45
 			]
 		},
 		{
 			"node_idx": 45,
 			"outputs": [
-				10
-			]
-		},
-		{
-			"node_idx": 32,
-			"outputs": [
-				33
-			]
-		},
-		{
-			"node_idx": 33,
-			"outputs": [
-				24
-			]
-		},
-		{
-			"node_idx": 24,
-			"outputs": [
 				44
 			]
 		},
 		{
 			"node_idx": 44,
-			"outputs": [
-				23
-			]
-		},
-		{
-			"node_idx": 23,
 			"outputs": [
 				43
 			]
@@ -857,6 +1687,24 @@
 			"node_idx": 41,
 			"outputs": [
 				40
+			]
+		},
+		{
+			"node_idx": 40,
+			"outputs": [
+				35
+			]
+		},
+		{
+			"node_idx": 35,
+			"outputs": [
+				34
+			]
+		},
+		{
+			"node_idx": 34,
+			"outputs": [
+				33
 			]
 		},
 		{
@@ -884,13 +1732,7 @@
 			]
 		},
 		{
-			"node_idx": 35,
-			"outputs": [
-				34
-			]
-		},
-		{
-			"node_idx": 34,
+			"node_idx": 31,
 			"outputs": [
 				30
 			]
@@ -898,19 +1740,19 @@
 		{
 			"node_idx": 30,
 			"outputs": [
-				31
-			]
-		},
-		{
-			"node_idx": 31,
-			"outputs": [
-				11
-			]
-		},
-		{
-			"node_idx": 11,
-			"outputs": [
 				29
+			]
+		},
+		{
+			"node_idx": 29,
+			"outputs": [
+				28
+			]
+		},
+		{
+			"node_idx": 28,
+			"outputs": [
+				27
 			]
 		},
 		{
@@ -928,29 +1770,35 @@
 		{
 			"node_idx": 25,
 			"outputs": [
+				24
+			]
+		},
+		{
+			"node_idx": 24,
+			"outputs": [
+				23
+			]
+		},
+		{
+			"node_idx": 23,
+			"outputs": [
 				22
-			]
-		},
-		{
-			"node_idx": 22,
-			"outputs": [
-				21
-			]
-		},
-		{
-			"node_idx": 21,
-			"outputs": [
-				20
 			]
 		},
 		{
 			"node_idx": 20,
 			"outputs": [
-				19
+				21
 			]
 		},
 		{
-			"node_idx": 19,
+			"node_idx": 22,
+			"outputs": [
+				20
+			]
+		},
+		{
+			"node_idx": 21,
 			"outputs": [
 				18
 			]
@@ -958,24 +1806,65 @@
 		{
 			"node_idx": 18,
 			"outputs": [
-				2
+				19
 			]
 		},
 		{
-			"node_idx": 2,
+			"node_idx": 19,
 			"outputs": [
-				9,
 				17
 			]
 		},
 		{
-			"node_idx": 40,
+			"node_idx": 17,
 			"outputs": [
-				9
+				5
 			]
 		},
 		{
-			"node_idx": 29,
+			"node_idx": 5,
+			"outputs": [
+				16
+			]
+		},
+		{
+			"node_idx": 16,
+			"outputs": [
+				15
+			]
+		},
+		{
+			"node_idx": 15,
+			"outputs": [
+				14
+			]
+		},
+		{
+			"node_idx": 14,
+			"outputs": [
+				13
+			]
+		},
+		{
+			"node_idx": 13,
+			"outputs": [
+				12
+			]
+		},
+		{
+			"node_idx": 12,
+			"outputs": [
+				11
+			]
+		},
+		{
+			"node_idx": 11,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 10,
 			"outputs": [
 				9
 			]
@@ -987,7 +1876,13 @@
 			]
 		},
 		{
-			"node_idx": 10,
+			"node_idx": 8,
+			"outputs": [
+				7
+			]
+		},
+		{
+			"node_idx": 7,
 			"outputs": [
 				6
 			]
@@ -1001,19 +1896,7 @@
 		{
 			"node_idx": 4,
 			"outputs": [
-				5
-			]
-		},
-		{
-			"node_idx": 5,
-			"outputs": [
 				3
-			]
-		},
-		{
-			"node_idx": 3,
-			"outputs": [
-				9
 			]
 		}
 	]
