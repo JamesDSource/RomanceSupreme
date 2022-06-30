@@ -4,17 +4,25 @@
 			"type": "start",
 			"meta": {
 				"x": 194,
-				"y": 1537
+				"y": 370
 			},
-			"sequence_name": "ConfusionResolve"
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 274,
+				"y": -249
+			},
+			"sequence_name": "Response"
 		},
 		{
 			"type": "start",
 			"meta": {
 				"x": 194,
-				"y": 370
+				"y": 1537
 			},
-			"sequence_name": "[root]"
+			"sequence_name": "ConfusionResolve"
 		},
 		{
 			"type": "start",
@@ -49,12 +57,65 @@
 			"sequence_name": "Negative"
 		},
 		{
-			"type": "start",
+			"type": "choice",
 			"meta": {
-				"x": 274,
-				"y": -249
+				"x": 2708,
+				"y": 69
 			},
-			"sequence_name": "Response"
+			"header": "Did you read my letter?",
+			"choices": [
+				"Yeah lets hear what you have to say",
+				"I mean I did but you're a bit of a creep",
+				"What Letter?"
+			]
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 537,
+				"y": 370
+			},
+			"dialog_text": "You meet Takashi at the fountain."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 250,
+				"y": 110
+			},
+			"value_type": "Custom Variable",
+			"var_name": "LetterRead",
+			"var_value": false
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": -375,
+				"y": -77
+			},
+			"header": "Did you read the note earlier",
+			"choices": [
+				"Yes",
+				"No"
+			]
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 690,
+				"y": -1
+			},
+			"value_type": "Custom Variable",
+			"var_name": "LetterRead",
+			"var_value": true
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 652,
+				"y": -289
+			},
+			"dialog_text": "That was a lot to take in. Takashi looks like he's about to pass out \nfrom the stress of getting through that. How do you respond?"
 		},
 		{
 			"type": "dialog",
@@ -125,19 +186,6 @@
 				"y": 2101
 			},
 			"sequence_name": "ConfusionResolve"
-		},
-		{
-			"type": "choice",
-			"meta": {
-				"x": 2708,
-				"y": 69
-			},
-			"header": "Did you read my letter?",
-			"choices": [
-				"Yeah lets here what you have to say",
-				"I mean I did but you're a bit of a creep",
-				"What Letter?"
-			]
 		},
 		{
 			"type": "jump",
@@ -281,14 +329,6 @@
 		{
 			"type": "dialog",
 			"meta": {
-				"x": 537,
-				"y": 370
-			},
-			"dialog_text": "\"Hello?\" a voice calls down to you from the hallway"
-		},
-		{
-			"type": "dialog",
-			"meta": {
 				"x": 1593,
 				"y": 368
 			},
@@ -344,7 +384,7 @@
 			"v1_is_var": false,
 			"v1": true,
 			"op": "==",
-			"v2_is_var": false,
+			"v2_is_var": true,
 			"v2": "LetterRead"
 		},
 		{
@@ -545,14 +585,6 @@
 			"sequence_name": "Response"
 		},
 		{
-			"type": "dialog",
-			"meta": {
-				"x": 652,
-				"y": -289
-			},
-			"dialog_text": "That was a lot to take in. Takashi looks like he's about to pass out \nfrom the stress of getting through that. How do you respond?"
-		},
-		{
 			"type": "jump",
 			"meta": {
 				"x": 3913,
@@ -563,43 +595,7 @@
 	],
 	"connections": [
 		{
-			"node_idx": 1,
-			"outputs": [
-				32
-			]
-		},
-		{
-			"node_idx": 32,
-			"outputs": [
-				34
-			]
-		},
-		{
-			"node_idx": 34,
-			"outputs": [
-				7
-			]
-		},
-		{
-			"node_idx": 7,
-			"outputs": [
-				40
-			]
-		},
-		{
-			"node_idx": 40,
-			"outputs": [
-				33
-			]
-		},
-		{
-			"node_idx": 33,
-			"outputs": [
-				37
-			]
-		},
-		{
-			"node_idx": 37,
+			"node_idx": 8,
 			"outputs": [
 				38
 			]
@@ -611,48 +607,90 @@
 			]
 		},
 		{
-			"node_idx": 15,
-			"outputs": [
-				16,
-				35,
-				28
-			]
-		},
-		{
-			"node_idx": 21,
-			"outputs": [
-				26,
-				36,
-				28
-			]
-		},
-		{
-			"node_idx": 39,
-			"outputs": [
-				15,
-				21
-			]
-		},
-		{
 			"node_idx": 13,
 			"outputs": [
-				39
+				44
+			]
+		},
+		{
+			"node_idx": 44,
+			"outputs": [
+				37
+			]
+		},
+		{
+			"node_idx": 37,
+			"outputs": [
+				41
+			]
+		},
+		{
+			"node_idx": 41,
+			"outputs": [
+				42
+			]
+		},
+		{
+			"node_idx": 42,
+			"outputs": [
+				19
+			]
+		},
+		{
+			"node_idx": 7,
+			"outputs": [
+				21,
+				39,
+				33
+			]
+		},
+		{
+			"node_idx": 26,
+			"outputs": [
+				31,
+				40,
+				33
+			]
+		},
+		{
+			"node_idx": 43,
+			"outputs": [
+				7,
+				26
 			]
 		},
 		{
 			"node_idx": 19,
 			"outputs": [
-				59
+				43
 			]
 		},
 		{
-			"node_idx": 3,
+			"node_idx": 24,
 			"outputs": [
-				31
+				63
 			]
 		},
 		{
-			"node_idx": 31,
+			"node_idx": 4,
+			"outputs": [
+				36
+			]
+		},
+		{
+			"node_idx": 36,
+			"outputs": [
+				35
+			]
+		},
+		{
+			"node_idx": 35,
+			"outputs": [
+				32
+			]
+		},
+		{
+			"node_idx": 32,
 			"outputs": [
 				30
 			]
@@ -660,11 +698,42 @@
 		{
 			"node_idx": 30,
 			"outputs": [
+				56
+			]
+		},
+		{
+			"node_idx": 31,
+			"outputs": [
+				29
+			]
+		},
+		{
+			"node_idx": 29,
+			"outputs": [
+				28
+			]
+		},
+		{
+			"node_idx": 28,
+			"outputs": [
 				27
 			]
 		},
 		{
-			"node_idx": 27,
+			"node_idx": 56,
+			"outputs": [
+				20,
+				57
+			]
+		},
+		{
+			"node_idx": 2,
+			"outputs": [
+				49
+			]
+		},
+		{
+			"node_idx": 3,
 			"outputs": [
 				25
 			]
@@ -672,17 +741,23 @@
 		{
 			"node_idx": 25,
 			"outputs": [
-				52
-			]
-		},
-		{
-			"node_idx": 26,
-			"outputs": [
 				24
 			]
 		},
 		{
-			"node_idx": 24,
+			"node_idx": 63,
+			"outputs": [
+				62
+			]
+		},
+		{
+			"node_idx": 62,
+			"outputs": [
+				61
+			]
+		},
+		{
+			"node_idx": 61,
 			"outputs": [
 				23
 			]
@@ -694,56 +769,19 @@
 			]
 		},
 		{
-			"node_idx": 52,
+			"node_idx": 6,
 			"outputs": [
-				14,
-				53
+				51
 			]
 		},
 		{
-			"node_idx": 0,
+			"node_idx": 51,
 			"outputs": [
 				45
 			]
 		},
 		{
-			"node_idx": 2,
-			"outputs": [
-				20
-			]
-		},
-		{
-			"node_idx": 20,
-			"outputs": [
-				19
-			]
-		},
-		{
-			"node_idx": 59,
-			"outputs": [
-				58
-			]
-		},
-		{
-			"node_idx": 58,
-			"outputs": [
-				57
-			]
-		},
-		{
-			"node_idx": 57,
-			"outputs": [
-				18
-			]
-		},
-		{
-			"node_idx": 18,
-			"outputs": [
-				17
-			]
-		},
-		{
-			"node_idx": 5,
+			"node_idx": 45,
 			"outputs": [
 				47
 			]
@@ -751,78 +789,60 @@
 		{
 			"node_idx": 47,
 			"outputs": [
-				41
-			]
-		},
-		{
-			"node_idx": 41,
-			"outputs": [
-				43
-			]
-		},
-		{
-			"node_idx": 43,
-			"outputs": [
-				44
-			]
-		},
-		{
-			"node_idx": 44,
-			"outputs": [
-				42
-			]
-		},
-		{
-			"node_idx": 45,
-			"outputs": [
-				46
-			]
-		},
-		{
-			"node_idx": 46,
-			"outputs": [
 				48
 			]
 		},
 		{
 			"node_idx": 48,
 			"outputs": [
-				49
+				46
 			]
 		},
 		{
 			"node_idx": 49,
 			"outputs": [
-				51,
 				50
 			]
 		},
 		{
-			"node_idx": 17,
+			"node_idx": 50,
 			"outputs": [
-				64
+				52
 			]
 		},
 		{
-			"node_idx": 4,
+			"node_idx": 52,
 			"outputs": [
+				53
+			]
+		},
+		{
+			"node_idx": 53,
+			"outputs": [
+				55,
 				54
 			]
 		},
 		{
-			"node_idx": 54,
+			"node_idx": 22,
 			"outputs": [
-				55
+				67
 			]
 		},
 		{
-			"node_idx": 55,
+			"node_idx": 5,
 			"outputs": [
-				56
+				58
 			]
 		},
 		{
-			"node_idx": 56,
+			"node_idx": 58,
+			"outputs": [
+				59
+			]
+		},
+		{
+			"node_idx": 59,
 			"outputs": [
 				60
 			]
@@ -830,46 +850,77 @@
 		{
 			"node_idx": 60,
 			"outputs": [
-				61
+				64
 			]
 		},
 		{
-			"node_idx": 61,
+			"node_idx": 64,
 			"outputs": [
-				62
+				65
 			]
 		},
 		{
-			"node_idx": 6,
+			"node_idx": 65,
 			"outputs": [
-				63
+				66
 			]
 		},
 		{
-			"node_idx": 63,
+			"node_idx": 12,
 			"outputs": [
-				11
+				17
 			]
 		},
 		{
-			"node_idx": 11,
+			"node_idx": 17,
 			"outputs": [
-				8,
-				8,
-				12,
-				12
+				14,
+				14,
+				18,
+				18
 			]
 		},
 		{
-			"node_idx": 8,
+			"node_idx": 14,
 			"outputs": [
-				10
+				16
+			]
+		},
+		{
+			"node_idx": 16,
+			"outputs": [
+				15
 			]
 		},
 		{
 			"node_idx": 10,
 			"outputs": [
+				11,
 				9
+			]
+		},
+		{
+			"node_idx": 1,
+			"outputs": [
+				12
+			]
+		},
+		{
+			"node_idx": 0,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 9,
+			"outputs": [
+				8
+			]
+		},
+		{
+			"node_idx": 11,
+			"outputs": [
+				8
 			]
 		}
 	]
