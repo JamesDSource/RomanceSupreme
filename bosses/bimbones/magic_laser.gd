@@ -13,7 +13,7 @@ func _physics_process(delta):
 		$MeshInstance.transform.origin = cast_to/2
 	
 	$MeshInstance.mesh.mid_height = length
-	$MeshInstance.mesh.rings = min(50, length*5)
+#	$MeshInstance.mesh.rings = min(20, length*5)
 
 	if !Engine.editor_hint:
 		var body: PhysicsBody = get_collider()
