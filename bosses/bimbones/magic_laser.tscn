@@ -26,9 +26,8 @@ shader_param/noise = ExtResource( 2 )
 [sub_resource type="CapsuleMesh" id=1]
 material = SubResource( 3 )
 radius = 0.025
-mid_height = 0.0
 radial_segments = 30
-rings = 1
+rings = 5
 
 [node name="MagicLaser" type="RayCast"]
 enabled = true
