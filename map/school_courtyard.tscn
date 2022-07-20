@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://gui/gui.tscn" type="PackedScene" id=1]
 [ext_resource path="res://courtyard.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://assets/anime_high_school/map/grass_plate/grass_plate.gltf" type="PackedScene" id=12]
 [ext_resource path="res://assets/anime_high_school/map/exterior_assets/house_exterior_white.gltf" type="PackedScene" id=13]
 [ext_resource path="res://assets/anime_high_school/map/cherry_tree_1/cherry_tree_1.tscn" type="PackedScene" id=14]
+[ext_resource path="res://npcs/anime_boy/anime_boy_npc.tscn" type="PackedScene" id=15]
 
 [sub_resource type="ProceduralSky" id=13]
 
@@ -160,6 +161,7 @@ transform = Transform( -0.93868, 0, 0.34479, 0, 1, 0, -0.34479, 0, -0.93868, 9.3
 
 [node name="school_wall_1_mirrored" parent="Geometry" instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.001, 0 )
+is_open = true
 
 [node name="school_wall_back" parent="Geometry" instance=ExtResource( 3 )]
 
@@ -217,3 +219,12 @@ transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 17.0381, 2.03832, 0.993964 )
 cast_shadow = 0
 mesh = SubResource( 14 )
 material/0 = SubResource( 15 )
+
+[node name="AnimeBoyfriendNPC" parent="." instance=ExtResource( 15 )]
+transform = Transform( -0.929712, 0, 0.368287, 0, 1, 0, -0.368287, 0, -0.929712, 2.81442, 1.66886, 1.5915 )
+
+[node name="Cameras" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.50111, 0, 6.00392 )
+
+[node name="Camera" type="Camera" parent="Cameras"]
+transform = Transform( -0.723763, 0, 0.690049, 0, 1, 0, -0.690049, 0, -0.723763, 1.76438, 2.03596, -6.43052 )

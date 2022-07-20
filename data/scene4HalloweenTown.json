@@ -9,29 +9,12 @@
 			"sequence_name": "[root]"
 		},
 		{
-			"type": "event",
-			"meta": {
-				"x": 6587,
-				"y": 239
-			},
-			"name": "anime land",
-			"outputs": 1
-		},
-		{
 			"type": "dialog",
 			"meta": {
-				"x": 6005,
-				"y": 392
+				"x": 5988,
+				"y": 350
 			},
-			"dialog_text": "You slump against the side of the cage and fall asleep to the mess \nof a ceremony before you."
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 5917,
-				"y": 33
-			},
-			"dialog_text": "This goes on for several hours, and eventually you grow weary, your \neyes grow heavy."
+			"dialog_text": "This goes on and on for hours until they finally stop"
 		},
 		{
 			"type": "dialog",
@@ -44,26 +27,67 @@
 		{
 			"type": "dialog",
 			"meta": {
-				"x": 5327,
-				"y": -62
+				"x": 4031,
+				"y": -397
 			},
-			"dialog_text": "Then, with an abrubt bump in the music the monsters start to dance, \na waltz of sorts if you can even call it that."
+			"dialog_text": "you are nlot normally allowed among our lands,\n but while you're with us you may wlitness our celremony."
 		},
 		{
 			"type": "dialog",
 			"meta": {
-				"x": 4734,
-				"y": -377
+				"x": 3574,
+				"y": 26
 			},
-			"dialog_text": "Some of the monsters step together and use their bodies to create \nsome sort of music, and the rest come together in a big ball."
+			"dialog_text": "this is spooky tlown, and I am it's maylor. Grungulus."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 2561,
+				"y": -438
+			},
+			"value_type": "Speaker",
+			"speaker_id": "mayor"
 		},
 		{
 			"type": "dialog",
 			"meta": {
-				"x": 4542,
-				"y": -38
+				"x": 2350,
+				"y": 191
 			},
-			"dialog_text": "With that, Grungulus steps back, and turns to it's citizens, letting out \na screeching cry. Little flowers uproot themselves and are set alight \ninto little mimics of candles."
+			"dialog_text": "It comes forward"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1200,
+				"y": 191
+			},
+			"dialog_text": "All around, you see a managerie of freaky freaks of all sorts. A \nfew gooey ghosts, a pair of spooky skeletons, an estrangement of \ncackling beasties and fleshy blobs of fun."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1815,
+				"y": -53
+			},
+			"dialog_text": "But most impressive of them all, a gargantuous creature of dazzling \nproportions and luscious of lips, it stands out by some sort of flesh \nprotrusion coming from it's head in the vague shape of a top hat."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2944,
+				"y": -64
+			},
+			"dialog_text": "*gurgles*"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3397,
+				"y": -411
+			},
+			"dialog_text": "greetlings, human."
 		},
 		{
 			"type": "setter",
@@ -77,146 +101,37 @@
 		{
 			"type": "dialog",
 			"meta": {
-				"x": 3574,
-				"y": 26
+				"x": 4542,
+				"y": -38
 			},
-			"dialog_text": "this is halloween tlown, and I am it's maylor. Grungulus."
+			"dialog_text": "With that, Grungulus steps back, and turns to it's citizens, letting out \na screeching cry. Little flowers uproot themselves and are set alight \ninto little mimics of candles."
 		},
 		{
 			"type": "dialog",
 			"meta": {
-				"x": 4031,
-				"y": -397
+				"x": 4734,
+				"y": -377
 			},
-			"dialog_text": "you are nlot allowed among our lands until you flind a way hlere of \nyour own mlerit, but while you're with us you may wlitness our \ncelremony."
+			"dialog_text": "Some of the monsters step together and use their bodies to create \nsome sort of music, and the rest come together in a big ball."
 		},
 		{
 			"type": "dialog",
 			"meta": {
-				"x": 3397,
-				"y": -411
+				"x": 5327,
+				"y": -62
 			},
-			"dialog_text": "greetlings, human."
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 2944,
-				"y": -64
-			},
-			"dialog_text": "*gurgles*"
-		},
-		{
-			"type": "setter",
-			"meta": {
-				"x": 2848,
-				"y": -446
-			},
-			"value_type": "Speaker",
-			"speaker_id": "mayor"
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 2319,
-				"y": 191
-			},
-			"dialog_text": "It comes forward, it's upper face (it has 2?) at the same height as \nyou in your cage."
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 1815,
-				"y": -53
-			},
-			"dialog_text": "But most impressive of them all, a gargantuous creature of dazzling \nproportions and luscious of lips, it stands out by some sort of flesh \nprotrusion coming from it's head in the vague shape of a top hat."
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 1588,
-				"y": 349
-			},
-			"dialog_text": "All around the tree is a managerie of freaky freaks of all sorts. A \nfew gooey ghosts, a pair of spooky skeletons, an estrangement of \ncackling beasties and fleshy blobs of fun."
-		},
-		{
-			"type": "dialog",
-			"meta": {
-				"x": 1065,
-				"y": -77
-			},
-			"dialog_text": "You wake up on metal, and you find yourself in a cage hanging from\nthe branches of tree."
+			"dialog_text": "Then, with an abrubt bump in the music the monsters start to dance, \na waltz of sorts if you can even call it that."
 		}
 	],
 	"connections": [
 		{
-			"node_idx": 0,
-			"outputs": [
-				17
-			]
-		},
-		{
-			"node_idx": 17,
-			"outputs": [
-				16
-			]
-		},
-		{
-			"node_idx": 16,
-			"outputs": [
-				15
-			]
-		},
-		{
-			"node_idx": 15,
-			"outputs": [
-				14
-			]
-		},
-		{
-			"node_idx": 14,
-			"outputs": [
-				13
-			]
-		},
-		{
-			"node_idx": 13,
-			"outputs": [
-				12
-			]
-		},
-		{
-			"node_idx": 12,
-			"outputs": [
-				11
-			]
-		},
-		{
-			"node_idx": 11,
-			"outputs": [
-				9
-			]
-		},
-		{
-			"node_idx": 9,
-			"outputs": [
-				10
-			]
-		},
-		{
-			"node_idx": 10,
+			"node_idx": 7,
 			"outputs": [
 				8
 			]
 		},
 		{
 			"node_idx": 8,
-			"outputs": [
-				7
-			]
-		},
-		{
-			"node_idx": 7,
 			"outputs": [
 				6
 			]
@@ -230,6 +145,18 @@
 		{
 			"node_idx": 5,
 			"outputs": [
+				9
+			]
+		},
+		{
+			"node_idx": 9,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 10,
+			"outputs": [
 				4
 			]
 		},
@@ -242,7 +169,37 @@
 		{
 			"node_idx": 3,
 			"outputs": [
+				11
+			]
+		},
+		{
+			"node_idx": 11,
+			"outputs": [
+				12
+			]
+		},
+		{
+			"node_idx": 12,
+			"outputs": [
+				13
+			]
+		},
+		{
+			"node_idx": 13,
+			"outputs": [
+				14
+			]
+		},
+		{
+			"node_idx": 14,
+			"outputs": [
 				2
+			]
+		},
+		{
+			"node_idx": 0,
+			"outputs": [
+				7
 			]
 		},
 		{

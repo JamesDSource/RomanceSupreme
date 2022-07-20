@@ -93,8 +93,6 @@ var on_finished_callback: FuncRef
 var on_event_callback: FuncRef
 var after_event: Array
 
-var custom_vars: Dictionary
-
 var profiles: Dictionary = {}
 const DEFAULT_TEXT_BOX: String = "default_textbox.png"
 const DEFAULT_FONT: String = "lemon_tea.tres"
@@ -139,7 +137,6 @@ func start_seq(name: String, cameras: Array, on_finished: FuncRef, on_event: Fun
 
 	on_finished_callback = on_finished
 	on_event_callback = on_event
-	custom_vars = {}
 
 	var initial_profile = TextBoxController.CharacterProfile.new(
 		"",
@@ -173,7 +170,7 @@ func play_step(node: SeqStep):
 			original_cam.current = true
 			original_cam = null
 
-		on_finished_callback.call_func(custom_vars)
+		on_finished_callback.call_func()
 	elif node is SeqStepJump:
 		for seq in current_sequences:
 			if(seq.name == node.name):
@@ -202,22 +199,22 @@ func play_step(node: SeqStep):
 		current_cameras[node.cam_index].current = true	
 		play_step(node.next)
 	elif node is SeqStepSetVar:
-		custom_vars[node.name] = node.value
+		Progress.custom_vars[node.name] = node.value
 		play_step(node.next)
 	elif node is SeqStepEvent:
 		after_event = node.paths
-		on_event_callback.call_func(node.name, custom_vars, funcref(self, "finish_event"))
+		on_event_callback.call_func(node.name, funcref(self, "finish_event"))
 	elif node is SeqStepCondition:
 		var v1
 		var v2
 
 		if node.v1_is_var:
-			v1 = custom_vars[node.v1] if custom_vars.has(node.v1) else null
+			v1 = Progress.custom_vars[node.v1] if Progress.custom_vars.has(node.v1) else null
 		else:
 			v1 = node.v1
 
 		if node.v2_is_var:
-			v2 = custom_vars[node.v2] if custom_vars.has(node.v2) else null
+			v2 = Progress.custom_vars[node.v2] if Progress.custom_vars.has(node.v2) else null
 		else:
 			v2 = node.v2
 

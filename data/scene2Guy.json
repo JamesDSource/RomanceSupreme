@@ -1,0 +1,864 @@
+{
+	"nodes": [
+		{
+			"type": "start",
+			"meta": {
+				"x": 241,
+				"y": 332
+			},
+			"sequence_name": "[root]"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 195,
+				"y": 1202
+			},
+			"sequence_name": "Negative"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 194,
+				"y": 869
+			},
+			"sequence_name": "Positive"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 196,
+				"y": 2201
+			},
+			"sequence_name": "WhatLetter"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 195,
+				"y": 1870
+			},
+			"sequence_name": "Lie"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 194,
+				"y": 1537
+			},
+			"sequence_name": "ConfusionResolve"
+		},
+		{
+			"type": "start",
+			"meta": {
+				"x": 274,
+				"y": -249
+			},
+			"sequence_name": "Response"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 2322,
+				"y": 1300
+			},
+			"value_type": "Custom Variable",
+			"var_name": "[AnimeBoyOut]",
+			"var_value": true
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1767,
+				"y": 1202
+			},
+			"dialog_text": "He turns and runs off sobbing"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 2677,
+				"y": 1336
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 3055,
+				"y": 1336
+			},
+			"sequence_name": "Response"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 1579,
+				"y": 1395
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 958,
+				"y": 1365
+			},
+			"value_type": "Speaker",
+			"speaker_id": "guy"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 5668,
+				"y": 1483
+			},
+			"sequence_name": "Negative"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 5648,
+				"y": 1032
+			},
+			"sequence_name": "Positive"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 1571,
+				"y": 376
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1894,
+				"y": 68
+			},
+			"dialog_text": "You recognize him from around your school as someone who \nyou've actually shared quite a few classes with, and aside from a few\nbrief interactions he usually had a quiet demeanor."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1017,
+				"y": 376
+			},
+			"dialog_text": "Hey there.. did you get my note?\nI left it on your desk but you were kinda asleep at the time.\nSurely you read it?"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 637,
+				"y": 373
+			},
+			"value_type": "Speaker",
+			"speaker_id": "guy"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": -326,
+				"y": 872
+			},
+			"dialog_text": "Takashi really bashful and gracious, light flirting and promise to\nmeet up later"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 3913,
+				"y": 1883
+			},
+			"sequence_name": "Response"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1979,
+				"y": 884
+			},
+			"dialog_text": "My life simply isn't complete without you. The air I breathe doesn't \nkeep me alive unless you have first breathed it into your supple \nlungs. I want to be around you all of the time, forever and ever."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1398,
+				"y": 1870
+			},
+			"dialog_text": "Wow! I, uhhhh, I didn't even expect you to meet me here, to be \nhonest. I guess, here I go!"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1930,
+				"y": 1870
+			},
+			"dialog_text": "The thing is, um, I have been crushing on you for a long time."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2467,
+				"y": 1870
+			},
+			"dialog_text": "My life simply isn't complete without you. The air I breathe doesn't \nkeep me alive unless you have first breathed it into your supple \nlungs. I want to be around you all of the time, forever and ever."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1448,
+				"y": 867
+			},
+			"dialog_text": "The thing is, um, I have been crushing on you for a long time. \nA really long time."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 922,
+				"y": 869
+			},
+			"dialog_text": "Well uhh, I, uhhhh, I didn't even expect you to meet me here, to be \nhonest. I guess, here I go!"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 552,
+				"y": 869
+			},
+			"value_type": "Speaker",
+			"speaker_id": "guy"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 2917,
+				"y": 2361
+			},
+			"sequence_name": "Negative"
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 2290,
+				"y": 2051
+			},
+			"header": "Read the letter now?",
+			"choices": [
+				"Yeah I'd love to read your letter",
+				"I don't really care about your letter, can you bother someone else?"
+			]
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 4852,
+				"y": 1198
+			},
+			"header": "What did you think of his letter",
+			"choices": [
+				"Well, yeah lets here what you have to say",
+				"That was a load of steaming hot garbabge"
+			]
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1597,
+				"y": 1541
+			},
+			"dialog_text": "As you finish and look up you can see Takashi looking at you \nexpectantly."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 543,
+				"y": 1202
+			},
+			"dialog_text": "Takashi covers his face, and you see his eyes tear up through his \nfingers."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1053,
+				"y": 1536
+			},
+			"dialog_text": "\"I have a confession to make\" it begins \"I've been admiring you \nfrom afar, but now I want to tell you how I really feel. Meet me \nby the fountain in the courtyard\""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 524,
+				"y": 1537
+			},
+			"dialog_text": "You open up his letter and read through it quickly, Takashi watching\nyour face."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1163,
+				"y": 1203
+			},
+			"dialog_text": "You'll regret this!"
+		},
+		{
+			"type": "condition",
+			"meta": {
+				"x": 2237,
+				"y": 368
+			},
+			"v1_is_var": false,
+			"v1": true,
+			"op": "==",
+			"v2_is_var": true,
+			"v2": "LetterRead"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2015,
+				"y": -233
+			},
+			"dialog_text": "Somehow despite that you know that he is one of the popular kids\nat your school, always respected, liked and even fawned over, but \nyou can never remember what for."
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 4220,
+				"y": 686
+			},
+			"sequence_name": "Lie"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 4216,
+				"y": 276
+			},
+			"sequence_name": "Negative"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 526,
+				"y": 2201
+			},
+			"value_type": "Speaker",
+			"speaker_id": "guy"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 864,
+				"y": 2201
+			},
+			"dialog_text": "Oh, I ummm... I left a letter on your desk? did you not read it?\nWhy are you even here if you didn't read it?"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 3750,
+				"y": 999
+			},
+			"sequence_name": "WhatLetter"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 1403,
+				"y": 2201
+			},
+			"dialog_text": "Well whatever, I guess none of that really matters. I have a spare\nhere if you'd like to read it..."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 3373,
+				"y": 469
+			},
+			"value_type": "Speaker",
+			"speaker_id": "guy"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 1947,
+				"y": 2201
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3702,
+				"y": 469
+			},
+			"dialog_text": "Oh that's a little akward, ummm... Here, I have a spare here if you'd \nlike to read it..."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 4530,
+				"y": 469
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 4865,
+				"y": 469
+			},
+			"sequence_name": "ConfusionResolve"
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 2707,
+				"y": 699
+			},
+			"header": "Did you read my letter?",
+			"choices": [
+				"Uhhh, no sorry, I didn't realize it was for me",
+				"[Lie] Yes, of course I read the letter!",
+				"What Letter?"
+			]
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 530,
+				"y": 1870
+			},
+			"dialog_text": "Lying probably wasn't the best idea, but Takashi clearly has\nsomething prepared that he's about to really get into."
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 1060,
+				"y": 1870
+			},
+			"value_type": "Speaker",
+			"speaker_id": "guy"
+		},
+		{
+			"type": "setter",
+			"meta": {
+				"x": 3011,
+				"y": 1870
+			},
+			"value_type": "Speaker",
+			"speaker_id": ""
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3354,
+				"y": 1870
+			},
+			"dialog_text": "You're realizing that Takashi had written you a love letter."
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 3902,
+				"y": 108
+			},
+			"sequence_name": "Positive"
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 2928,
+				"y": 2101
+			},
+			"sequence_name": "ConfusionResolve"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2253,
+				"y": -536
+			},
+			"dialog_text": "Oh yeah you were supposed to be answering if you got his note..."
+		},
+		{
+			"type": "jump",
+			"meta": {
+				"x": 1922,
+				"y": -537
+			},
+			"sequence_name": "Negative"
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 1224,
+				"y": -830
+			},
+			"header": "How do you respond",
+			"choices": [
+				"That's really sweet actually, I'd love to go on a date with you",
+				"I mean I don't really know you that well, but I wouldn't mind getting to know you.",
+				"You know what? I think I've decided that I actually hate your guts",
+				"Breathe this dipshit [Rip ass and walk away]"
+			]
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2699,
+				"y": -865
+			},
+			"dialog_text": "Okay... Guess I'll see you later?"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 3249,
+				"y": -851
+			},
+			"dialog_text": "You walk away."
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 2063,
+				"y": -923
+			},
+			"dialog_text": "Takashi falls over sobbing. Happy tears you hope?"
+		},
+		{
+			"type": "dialog",
+			"meta": {
+				"x": 652,
+				"y": -289
+			},
+			"dialog_text": "That was a lot to take in. Takashi looks like he's about to pass out \nfrom the stress of getting through that. How do you respond?"
+		},
+		{
+			"type": "choice",
+			"meta": {
+				"x": 2708,
+				"y": 69
+			},
+			"header": "Did you read my letter?",
+			"choices": [
+				"Yeah lets hear what you have to say",
+				"I mean I did but you're a bit of a creep",
+				"What Letter?"
+			]
+		}
+	],
+	"connections": [
+		{
+			"node_idx": 18,
+			"outputs": [
+				17
+			]
+		},
+		{
+			"node_idx": 17,
+			"outputs": [
+				15
+			]
+		},
+		{
+			"node_idx": 16,
+			"outputs": [
+				37
+			]
+		},
+		{
+			"node_idx": 37,
+			"outputs": [
+				56
+			]
+		},
+		{
+			"node_idx": 63,
+			"outputs": [
+				54,
+				39,
+				42
+			]
+		},
+		{
+			"node_idx": 49,
+			"outputs": [
+				44,
+				38,
+				42
+			]
+		},
+		{
+			"node_idx": 36,
+			"outputs": [
+				63,
+				49
+			]
+		},
+		{
+			"node_idx": 56,
+			"outputs": [
+				36
+			]
+		},
+		{
+			"node_idx": 51,
+			"outputs": [
+				22
+			]
+		},
+		{
+			"node_idx": 3,
+			"outputs": [
+				40
+			]
+		},
+		{
+			"node_idx": 40,
+			"outputs": [
+				41
+			]
+		},
+		{
+			"node_idx": 41,
+			"outputs": [
+				43
+			]
+		},
+		{
+			"node_idx": 43,
+			"outputs": [
+				45
+			]
+		},
+		{
+			"node_idx": 45,
+			"outputs": [
+				29
+			]
+		},
+		{
+			"node_idx": 44,
+			"outputs": [
+				46
+			]
+		},
+		{
+			"node_idx": 46,
+			"outputs": [
+				47
+			]
+		},
+		{
+			"node_idx": 47,
+			"outputs": [
+				48
+			]
+		},
+		{
+			"node_idx": 29,
+			"outputs": [
+				55,
+				28
+			]
+		},
+		{
+			"node_idx": 5,
+			"outputs": [
+				34
+			]
+		},
+		{
+			"node_idx": 4,
+			"outputs": [
+				50
+			]
+		},
+		{
+			"node_idx": 50,
+			"outputs": [
+				51
+			]
+		},
+		{
+			"node_idx": 22,
+			"outputs": [
+				23
+			]
+		},
+		{
+			"node_idx": 23,
+			"outputs": [
+				24
+			]
+		},
+		{
+			"node_idx": 24,
+			"outputs": [
+				52
+			]
+		},
+		{
+			"node_idx": 52,
+			"outputs": [
+				53
+			]
+		},
+		{
+			"node_idx": 1,
+			"outputs": [
+				32
+			]
+		},
+		{
+			"node_idx": 32,
+			"outputs": [
+				12
+			]
+		},
+		{
+			"node_idx": 12,
+			"outputs": [
+				35
+			]
+		},
+		{
+			"node_idx": 35,
+			"outputs": [
+				11
+			]
+		},
+		{
+			"node_idx": 11,
+			"outputs": [
+				8
+			]
+		},
+		{
+			"node_idx": 34,
+			"outputs": [
+				33
+			]
+		},
+		{
+			"node_idx": 33,
+			"outputs": [
+				31
+			]
+		},
+		{
+			"node_idx": 31,
+			"outputs": [
+				30
+			]
+		},
+		{
+			"node_idx": 30,
+			"outputs": [
+				14,
+				13
+			]
+		},
+		{
+			"node_idx": 53,
+			"outputs": [
+				20
+			]
+		},
+		{
+			"node_idx": 2,
+			"outputs": [
+				27
+			]
+		},
+		{
+			"node_idx": 27,
+			"outputs": [
+				26
+			]
+		},
+		{
+			"node_idx": 26,
+			"outputs": [
+				25
+			]
+		},
+		{
+			"node_idx": 25,
+			"outputs": [
+				21
+			]
+		},
+		{
+			"node_idx": 21,
+			"outputs": [
+				9
+			]
+		},
+		{
+			"node_idx": 9,
+			"outputs": [
+				10
+			]
+		},
+		{
+			"node_idx": 62,
+			"outputs": [
+				58
+			]
+		},
+		{
+			"node_idx": 58,
+			"outputs": [
+				61,
+				61,
+				57,
+				57
+			]
+		},
+		{
+			"node_idx": 61,
+			"outputs": [
+				59
+			]
+		},
+		{
+			"node_idx": 59,
+			"outputs": [
+				60
+			]
+		},
+		{
+			"node_idx": 6,
+			"outputs": [
+				62
+			]
+		},
+		{
+			"node_idx": 0,
+			"outputs": [
+				18
+			]
+		},
+		{
+			"node_idx": 15,
+			"outputs": [
+				16
+			]
+		},
+		{
+			"node_idx": 8,
+			"outputs": [
+				7
+			]
+		}
+	]
+}

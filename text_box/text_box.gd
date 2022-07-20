@@ -8,9 +8,9 @@ const DIALOG_ANCHOR_TOP: float = 0.7
 const DIALOG_ANCHOR_RIGHT: float = 0.9
 const DIALOG_ANCHOR_BOTTOM: float = 0.9
 
-const CHOICE_ANCHOR_LEFT: float = 0.30
+const CHOICE_ANCHOR_LEFT: float = 0.20
 const CHOICE_ANCHOR_TOP: float = 0.6
-const CHOICE_ANCHOR_RIGHT: float = 0.70
+const CHOICE_ANCHOR_RIGHT: float = 0.80
 const CHOICE_ANCHOR_BOTTOM: float = 0.9
 
 var choice_index: int = -1

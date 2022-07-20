@@ -30,6 +30,8 @@ onready var player_model: Spatial = $PlayerModel
 onready var camera: Camera = $CameraPivot/SpringArm/Camera
 onready var animation_player: AnimationPlayer = $PlayerModel/AnimationPlayer
 
+var interactable = null
+
 func _ready():
 	camera_pivot = $CameraPivot
 
@@ -39,14 +41,37 @@ func _ready():
 		rotation_degrees.y = 0
 		camera_pivot.rotation.y = -rotation_degrees.y
 
+	add_to_group("settings_aware", true)
+	_settings_changed()
+
+func _settings_changed():
+	if(GlobalSettings.open_dyslexia):
+		$ViewportContainer/InteractPrompt.add_font_override("font", GlobalSettings.open_dyslexia_menu_font)
+	else:
+		$ViewportContainer/InteractPrompt.add_font_override("font", null)
+
 func _input(event):
 	if event is InputEventMouseMotion and not lock_movement:
 		camera_pivot.rotation.y -= event.relative.x*0.001
 		camera_verticle_rot = clamp(camera_verticle_rot - event.relative.y*0.001, -.3, .3)
 		camera_pivot.rotation.x = camera_verticle_rot
 
+func _process(delta):
+	if !lock_movement and interactable != null and Input.is_action_just_pressed("interact"):
+		interactable._on_interact()
+
+	if lock_movement:
+		anim_state = AnimationState.Idle
+	if current_anim_state != anim_state:
+		animation_player.play(anim_names[anim_state])
+		current_anim_state = anim_state
+	
+	$ViewportContainer/InteractPrompt.visible = !lock_movement
+
 func _physics_process(delta):
+
 	if(lock_movement):
+		anim_state = AnimationState.Idle
 		return
 
 	# Add the gravity.
@@ -76,6 +101,12 @@ func _physics_process(delta):
 	var end = cur_angle + (dt - 360 if dt > 180 else dt)
 	player_model.rotation_degrees.y += .1 + (end - cur_angle)*.1
 
-	if(current_anim_state != anim_state):
-		animation_player.play(anim_names[anim_state])
-		current_anim_state = anim_state
+func _on_InteractionArea_body_entered(body):
+	if body.has_method("_on_interact") and interactable == null:
+		interactable = body
+		$ViewportContainer/InteractPrompt.text = "Press E: " + body._prompt
+
+func _on_InteractionArea_body_exited(body):
+	if body == interactable:
+		interactable = null
+		$ViewportContainer/InteractPrompt.text = ""
